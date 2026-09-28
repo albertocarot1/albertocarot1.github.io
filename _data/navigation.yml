@@ -1,9 +1,13 @@
 main:
-  - title: "Posts"
-    url: /posts/
-  - title: "Categories"
-    url: /categories/
-  - title: "Tags"
-    url: /tags/
   - title: "About"
     url: /about/
+  - title: "Projects"
+    url: /projects/
+  - title: "Gallery"
+    url: /gallery/
+  - title: "Live"
+    url: /live/
+  - title: "The Studio"
+    url: /studio/
+  - title: "Contact"
+    url: /contact/

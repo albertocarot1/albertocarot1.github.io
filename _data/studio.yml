@@ -1,0 +1,60 @@
+# Studio gear data
+# Used by _pages/studio.md
+
+gear:
+  - category: "DAW & Software"
+    items:
+      - "Reaper"
+      - "FabFilter Pro Bundle"
+      - "iZotope Ozone (Mastering)"
+
+  - category: "Converters & Interface"
+    items:
+      - "BEHRINGER UMC1820"
+      - "BEHRINGER U-PHORIA UMC202HD"
+
+  - category: "Microphones"
+    items:
+      - "Shure Beta 52A (dynamic)"
+      - "Shure SM57 (dynamic)"
+      - "Behringer 19A (condenser)"
+      - "the t.bone RM 700 (ribbon)"
+      - "Shure Beta 56A (dynamic)"
+      - "Rode M5 x2 (condenser)"
+      - "Sennheiser e604 x3 (dynamic)"
+
+  - category: "Monitoring"
+    items:
+      - "db Technologies B-Hype 10"
+      - "Shure cl215 (in-ear monitors)"
+
+  - category: "Acoustic Treatment"
+    items:
+      - "6 Oudimmo bass traps Kombat 20 w/membrane (corner placement)"
+      - "Foam acoustic panels (edges placement)"
+
+drum_gear:
+  - category: "Drum Kit"
+    items:
+      - "Gretsch Catalina maple (22/10/12/16)"
+      - "Gretsch Catalina maple Snare 14×6\""
+      - "Pearl Steel Snare 14×5.5\""
+      - "Mapex Maple piccolo Snare 14×3.5\""
+      - "Evans Genera/HD dry drumheads (snare)"
+      - "Evans G2 drumheads (toms)"
+
+  - category: "Cymbals"
+    items:
+      - "Zultan Caz Hi-Hats 14\""
+      - "UFIP Natural series Crash 17\""
+      - "Paiste PST8 Rock Crash 17\""
+      - "Paiste PST8 Rock Crash 18\""
+      - "Zildjian ZXT Medium Ride 20\""
+      - "Paiste 900 Series Ride 22\""
+      - "Zildjian ZBT China 18\""
+
+  - category: "Hardware"
+    items:
+      - "Pearl Eliminator Bass Drum Pedal (double)"
+      - "Gibraltar, Millenium, Tama Drum Hardware"
+

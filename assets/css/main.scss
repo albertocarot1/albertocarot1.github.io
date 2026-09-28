@@ -1,0 +1,213 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+
+@charset "utf-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Space Grotesk&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wdth,wght@75..100,200..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Unbounded&display=swap');
+@import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}";
+@import "minimal-mistakes";
+
+/* Alberto Caroli – custom overrides */
+:root { --masthead-height: 5rem; }
+
+body,
+button,
+input,
+select,
+textarea {
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+html { scroll-padding-top: calc(var(--masthead-height) + 1rem); }
+
+.masthead {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  min-height: var(--masthead-height);
+  box-sizing: border-box;
+  background-color: $background-color;
+  border-bottom: 2px solid #f0a500;
+}
+.sidebar.sticky,
+.sidebar__right.sticky { top: calc(var(--masthead-height) + 1rem); }
+.greedy-nav .visible-links a:hover { color: #f0a500 !important; }
+.greedy-nav .visible-links a::before { background: #f0a500 !important; }
+.site-title {
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-size: 2em;
+  font-weight: 800 !important;
+  font-stretch: 75% !important;
+  font-variation-settings: 'wdth' 75, 'wght' 800;
+  letter-spacing: -0.04em;
+}
+.page__title, .page__content h2 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+}
+.greedy-nav a {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+}
+.author__avatar img {
+  border-radius: 50%;
+  border: 0;
+  padding: 0;
+  width: min(100%, 300px);
+  max-width: 300px;
+  aspect-ratio: 1;
+  object-fit: cover;
+}
+.author__urls .label {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+.author__urls a i {
+  font-size: 1.5em;
+}
+@media (max-width: 63.999em) {
+  .author__avatar,
+  .author__content,
+  .author__urls-wrapper {
+    display: block;
+    width: auto;
+    height: auto;
+    padding-inline: 0;
+  }
+
+  .author__avatar img {
+    width: min(100%, 180px);
+    max-width: 180px;
+  }
+
+  .author__content,
+  .author__urls-wrapper {
+    margin-top: 15px;
+  }
+}
+.page__title { font-size: 1.8em; }
+.toc__menu a:hover, .toc__menu .active > a { color: #f0a500 !important; }
+
+.landing-page .page {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.landing-page .page__inner-wrap,
+.landing-page .page__content {
+  margin: 0;
+  padding: 0;
+}
+
+.landing-page .page__content {
+  max-width: none;
+}
+
+.landing-hero {
+  display: grid;
+  grid-template-columns: minmax(280px, 46%) minmax(0, 1fr);
+  align-items: center;
+  gap: clamp(3rem, 8vw, 9rem);
+  width: min(1180px, calc(100% - 4rem));
+  min-height: calc(100vh - var(--masthead-height));
+  margin: 0 auto;
+  padding: clamp(3rem, 7vw, 7rem) 0;
+  box-sizing: border-box;
+}
+
+.landing-hero__portrait {
+  position: relative;
+}
+
+.landing-hero__portrait img {
+  display: block;
+  width: min(100%, 520px);
+  aspect-ratio: 1;
+  margin: 0 auto;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.landing-hero__content {
+  max-width: 560px;
+}
+
+.landing-hero__eyebrow {
+  margin: 0 0 1.5rem;
+  color: #f0a500;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  line-height: 1.5;
+  text-transform: uppercase;
+}
+
+.landing-hero h1 {
+  margin: 0;
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-size: clamp(3.5rem, 8vw, 7.5rem);
+  font-weight: 800;
+  line-height: 0.9;
+}
+
+.landing-hero blockquote {
+  max-width: 500px;
+  margin: clamp(2rem, 5vw, 4rem) 0 1.75rem;
+  padding: 0 0 0 1.5rem;
+  border-left: 3px solid #f0a500;
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-size: clamp(1.5rem, 2.6vw, 2.4rem);
+  font-style: normal;
+  line-height: 1.1;
+}
+
+.landing-hero blockquote p { margin: 0; }
+
+.landing-hero__intro {
+  max-width: 430px;
+  color: #b7b7b7;
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+.landing-hero__link {
+  display: inline-flex;
+  gap: 0.75rem;
+  align-items: center;
+  margin-top: 1.25rem;
+  color: #f0a500;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.landing-hero__link span {
+  font-size: 1.4em;
+  line-height: 0;
+  transition: transform 180ms ease;
+}
+
+.landing-hero__link:hover span { transform: translateX(0.3rem); }
+
+@media (max-width: 700px) {
+  .landing-hero {
+    grid-template-columns: 1fr;
+    gap: 3.5rem;
+    width: min(100% - 3rem, 520px);
+    padding: 4rem 0 5rem;
+  }
+
+  .landing-hero__portrait img { width: min(100%, 360px); }
+  .landing-hero h1 { font-size: clamp(3rem, 16vw, 5rem); }
+}

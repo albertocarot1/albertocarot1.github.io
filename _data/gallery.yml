@@ -1,0 +1,10 @@
+gallery:
+  - title: "Professional portrait"
+    image: "/assets/images/gallery/portrait-1.svg"
+    caption: "Professional portrait for press and artist branding."
+  - title: "Live performance"
+    image: "/assets/images/gallery/live-1.svg"
+    caption: "Live setup and stage presence."
+  - title: "Studio session"
+    image: "/assets/images/gallery/studio-1.svg"
+    caption: "Working in the studio with instruments and production equipment."

@@ -1,0 +1,18 @@
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.7.2/css/all.min.css">
+<script>
+	document.addEventListener("click", function (event) {
+		var link = event.target.closest("nav.toc a[href^='#']");
+		if (!link) return;
+
+		var target = document.getElementById(link.hash.slice(1));
+		if (!target) return;
+
+		event.preventDefault();
+		event.stopImmediatePropagation();
+
+		var offset = parseFloat(getComputedStyle(document.documentElement).scrollPaddingTop) || 0;
+		var targetTop = target.getBoundingClientRect().top + window.pageYOffset - offset;
+		window.scrollTo({ top: Math.max(0, targetTop), behavior: "smooth" });
+		history.pushState(null, "", link.hash);
+	}, true);
+</script>
