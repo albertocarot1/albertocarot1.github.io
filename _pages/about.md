@@ -12,7 +12,7 @@ toc: false
 
 Alberto Caroli is an Italian musician, composer, producer, and sound & lights engineer with 20 years experience spanning studio recordings, live performances, and audio production across a wide range of genres.
 
-He works as a **drummer** (both live and in the studio), **music producer**, **mixing engineer**, and **mastering engineer**, bringing a holistic perspective to every project — from the song idea, to the final master. He also works as ligthing technician, and can act as a single **show technician** for FOH and monitor. 
+He works as a **drummer** (both live and in the studio), **music producer**, **mixing engineer**, and **mastering engineer**, bringing a holistic perspective to every project — from the song idea, to the final master. He also works as lights technician, and can act as a single **show technician** for FOH and monitor. 
 
 Alberto's approach to music is rooted in deep listening and an obsession with sound quality, supported by the theory and physics that compose any sound. Whether behind the kit, behind the console, or in front of the speakers, his goal is always the same: to serve the music and the artist's vision with integrity and craft.
 

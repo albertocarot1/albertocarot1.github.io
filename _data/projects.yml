@@ -9,7 +9,7 @@
 portfolio:
   - title: "Sand Monolith"
     artist: "Sand Monolith"
-    link: "https://soundcloud.com/example"
+    link: "https://soundcloud.com/sand-monolith/sets/sand-monolith/s-uEygiF2EO3J?si=adc179aae5d34995b5af4addb9f859c3&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing"
     art: "https://i1.sndcdn.com/avatars-pyimk2a21PAhTZL2-8agy2Q-t500x500.jpg"
     roles:
       - mixing_engineer
@@ -75,32 +75,52 @@ current_projects:
     socials:
       - platform: "instagram"
         icon: "fab fa-instagram"
-        url: "https://instagram.com/projectone"
-      - platform: "facebook"
-        icon: "fab fa-facebook"
-        url: "https://facebook.com/projectone"
+        url: "https://www.instagram.com/heavybalera/"
       - platform: "youtube"
         icon: "fab fa-youtube"
-        url: "https://youtube.com/@projectone"
+        url: "https://www.youtube.com/watch?v=ycRdNK_0c1s"
+
+  - name: "Sand Monolith"
+    description: "Doom metal, english lyrics."
+    link: ""
+    roles: 
+      - vocals
+      - drummer_both                        # optional; uses the available roles above
+      - composer
+      - lyricist
+      - producer
+      - mixing_engineer
+    socials:
 
   - name: "Effigy"
     description: "Grunge/stoner rock, with lyrics in Italian."
     link: ""
+    roles: 
+      - drummer_both                        # optional; uses the available roles above
+      - composer
     socials:
       - platform: "instagram"
         icon: "fab fa-instagram"
-        url: "https://instagram.com/projecttwo"
+        url: "https://www.instagram.com/effigy666/"
       - platform: "facebook"
         icon: "fab fa-facebook"
-        url: "https://facebook.com/projecttwo"
+        url: "https://www.facebook.com/Effigy666/"
+      - platform: "youtube"
+        icon: "fab fa-youtube"
+        url: "https://www.youtube.com/@effigy666"
 
   - name: "ZEMIC"
     description: "Alternative/Indie rock, with lyrics in Italian."
     link: ""
+    roles:
+      - drummer_live
     socials:
       - platform: "instagram"
         icon: "fab fa-instagram"
-        url: "https://instagram.com/projecttwo"
+        url: "https://www.instagram.com/zemic_music/"
       - platform: "facebook"
         icon: "fab fa-facebook"
-        url: "https://facebook.com/projecttwo"
+        url: "https://www.facebook.com/profile.php?id=100090249307359"
+      - platform: "youtube"
+        icon: "fab fa-youtube"
+        url: "https://www.youtube.com/channel/UC3A6E7ZD6_Lg-1prd3cwSLg"

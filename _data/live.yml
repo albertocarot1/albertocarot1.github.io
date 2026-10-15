@@ -9,14 +9,6 @@
 #   youtube_url: (optional URL to YouTube video)
 
 upcoming:
-  - date: "2026-9-19"
-    venue: "Camping Alto Savio"
-    city: "San Piero in Bagno"
-    country: "Italy"
-    project: "Balera"
-    notes: ""
-    youtube_url: ""
-
   - date: "2026-10-24"
     venue: "Fossolo Club"
     city: "Russi"
@@ -27,6 +19,14 @@ upcoming:
 
 
 past:
+  - date: "2026-09-19"
+    venue: "Camping Alto Savio"
+    city: "San Piero in Bagno"
+    country: "Italy"
+    project: "Balera"
+    notes: "Punking Festival, with Le storie di Lisa, Rameric, Objct"
+    youtube_url: "https://www.instagram.com/p/Dc3bkEciFiD/?img_index=1"
+
   - date: "2026-05-08"
     venue: "Villa Pini"
     city: "Bologna"
@@ -40,7 +40,7 @@ past:
     city: "Rimini"
     country: "Italy"
     project: "Effigy"
-    notes: ""
+    notes: "First of may festival"
     youtube_url: ""
 
   - date: "2026-04-26"
@@ -64,7 +64,7 @@ past:
     city: "Bologna"
     country: "Italy"
     project: "Balera"
-    notes: "Supporting Elli de Mon"
+    notes: "Supporting Elli de Mon, Murena"
     youtube_url: "https://www.youtube.com/watch?v=6WgsQm5zkVk"
 
   - date: "2026-02-27"
@@ -82,6 +82,22 @@ past:
     project: "Balera"
     notes: "Supporting Messa, Void of Sleep, Skulld"
     youtube_url: "https://www.youtube.com/watch?v=zS3qTszXtG0"
+
+  - date: "2025-12-06"
+    venue: "Comunità San Patrignano"
+    city: "Coriano"
+    country: "Italy"
+    project: "Rotation stage"
+    notes: "Playing in front of the whole 1000+ people of the community"
+    youtube_url: ""
+
+  - date: "2025-11-30"
+    venue: "Palestra di Acquaviva"
+    city: "Acquaviva"
+    country: "San Marino"
+    project: "EMT"
+    notes: "Il sogno di Elly fundraising event"
+    youtube_url: ""
 
   - date: "2025-11-29"
     venue: "Magazzino Parallelo"
@@ -123,13 +139,29 @@ past:
     notes: ""
     youtube_url: "https://www.youtube.com/watch?v=wKJNeoGCG08"
 
+  - date: "2025-09-09"
+    venue: "Freakout Club"
+    city: "Bologna"
+    country: "Italy"
+    project: "Afterdark"
+    notes: "Supporting Texas Toast Chainsaw Massacre"
+    youtube_url: ""
+
+  - date: "2025-05-11"
+    venue: "Teatro della Regina"
+    city: "Cattolica"
+    country: "Italy"
+    project: "VGDM di Michele Luppi"
+    notes: "Final show of Visione Globale Della Musica, a singing project by Michele Luppi. I played drums for the monthly sessions during the year, and for the show alongside Michele Luppi (on vocals and keyboard) and other musicians."
+    youtube_url: ""
+
   - date: "2025-05-09"
     venue: "Ponte Ospedaletto fest"
     city: "Longiano"
     country: "Italy"
     project: "Effigy"
     notes: ""
-    youtube_url: "https://www.youtube.com/watch?v=8HlPgo5RC_g"
+    youtube_url: "https://www.youtube.com/watch?v=eNsatT42Nv4"
 
   - date: "2025-03-14"
     venue: "Wonderland Club"
@@ -138,6 +170,14 @@ past:
     project: "Effigy"
     notes: "Supporting Savana Funk"
     youtube_url: "https://www.youtube.com/watch?v=BTljzYgs4R4"
+
+  - date: "2025-02-14"
+    venue: "Auditorium Little Tony"
+    city: "Serravalle"
+    country: "San Marino"
+    project: "Reagents"
+    notes: "Eurovision Song Contest 2025 San Marino national selection, semifinal. I played drums for the band, which was backing the singers."
+    youtube_url: "https://www.youtube.com/watch?v=ImBpKfHnUvM&t=1580s"
 
   - date: "2024-09-28"
     venue: "Piazza Bertoldi"
@@ -153,15 +193,7 @@ past:
     country: "Italy"
     project: "Alibi"
     notes: ""
-    youtube_url: "https://www.youtube.com/playlist?list=PLVkjTmjCMLdg"
-
-  - date: "2024-05-10"
-    venue: "Big Barrè"
-    city: "Cesena"
-    country: "Italy"
-    project: "P(a)fanner's Flying Donkeys"
-    notes: ""
-    youtube_url: "https://www.youtube.com/watch?v=UqAM0TYiJWk"
+    youtube_url: "https://www.youtube.com/watch?v=56r7_Hu5ZDM&list=PLVkjTmjCMLdg&index=1"
 
   - date: "2024-07-20"
     venue: "Centro Giovani Flood"
@@ -170,6 +202,14 @@ past:
     project: "P(a)fanner's Flying Donkeys"
     notes: "Gocce di musica contest"
     youtube_url: "https://www.youtube.com/watch?v=LLfB7xglOGUQ"
+
+  - date: "2024-05-10"
+    venue: "Big Barrè"
+    city: "Cesena"
+    country: "Italy"
+    project: "P(a)fanner's Flying Donkeys"
+    notes: ""
+    youtube_url: "https://www.youtube.com/watch?v=UqAM0TYiJWk"
 
   - date: "2023-08-12"
     venue: "House party"
