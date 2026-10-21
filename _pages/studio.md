@@ -128,4 +128,4 @@ Equipment Alberto uses for live and studio drumming performances.
 
 ---
 
-*Gear lists updated periodically. For session inquiries, use the contact links in the sidebar.*
+*Gear lists updated periodically. For session inquiries, use the [Contact page](/contact/).*

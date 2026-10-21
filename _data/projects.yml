@@ -3,14 +3,14 @@
 #   title: (string)
 #   artist: (string)
 #   link: (URL to release/Spotify/etc.)
-#   art: (URL to cover art image — loaded from link when possible)
+#   art: (local path to cover art image under assets/images/portfolio)
 #   roles: list from: drummer_live, drummer_studio, drummer_both, producer, mixing_engineer, mastering_engineer, vocals, recording_engineer, lights_technician, composer, lyricist
 #
 portfolio:
   - title: "Sand Monolith"
     artist: "Sand Monolith"
     link: "https://soundcloud.com/sand-monolith/sets/sand-monolith/s-uEygiF2EO3J?si=adc179aae5d34995b5af4addb9f859c3&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing"
-    art: "https://i1.sndcdn.com/avatars-pyimk2a21PAhTZL2-8agy2Q-t500x500.jpg"
+    art: "/assets/images/portfolio/sand-monolith.jpg"
     roles:
       - mixing_engineer
       - mastering_engineer
@@ -23,14 +23,14 @@ portfolio:
   - title: "Propheteering"
     artist: "Gremlin Special"
     link: "https://gremlinspecial.bandcamp.com/track/propheteering"
-    art: "https://f4.bcbits.com/img/a203588610_1x1_700.avif"
+    art: "/assets/images/portfolio/propheteering.avif"
     roles:
       - drummer_studio
   
   - title: "Diluvio Universale"
     artist: "Effigy"
     link: "https://open.spotify.com/intl-it/track/0RoBYgHyFp9LPrKx3TIiht?si=01369732a33d447e"
-    art: "https://i.scdn.co/image/ab67616d0000e1a373d0de1c852641d53059d27c"
+    art: "/assets/images/portfolio/diluvio-universale.jpg"
     roles:
       - drummer_studio
 
@@ -38,7 +38,7 @@ portfolio:
   - title: "Hikikomori"
     artist: "Effigy"
     link: "https://www.youtube.com/watch?v=TKcGxzEgjmQ"
-    art: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_qiY_UQ8LGqBL_1YxAQqR7dm2S-RQqiNMkqbw6WOKxA&s=10"
+    art: "/assets/images/portfolio/effigy-hikikomori-lars.jpg"
     roles:
       - mixing_engineer
       - recording_engineer
@@ -47,7 +47,7 @@ portfolio:
   - title: "Lars"
     artist: "Effigy"
     link: "https://www.youtube.com/watch?v=caXtnjofwfI"
-    art: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_qiY_UQ8LGqBL_1YxAQqR7dm2S-RQqiNMkqbw6WOKxA&s=10"
+    art: "/assets/images/portfolio/effigy-hikikomori-lars.jpg"
     roles:
       - mixing_engineer
       - recording_engineer
@@ -56,7 +56,7 @@ portfolio:
   - title: "Burning Up the Road"
     artist: "P(a)fanner's Flying Donkeys"
     link: "https://www.youtube.com/playlist?list=OLAK5uy_kgQTGWypvgzALFBIWpA0NkdYvICgP5o3Q"
-    art: "https://c.saavncdn.com/587/Burning-up-the-Road-English-2023-20231112143724-500x500.jpg"
+    art: "/assets/images/portfolio/burning-up-the-road.jpg"
     roles:
       - drummer_studio
       - producer
