@@ -28,7 +28,7 @@ plugins:
 author:
   name: ""
   avatar: "/assets/images/bio-photo.jpg"
-  bio: "Musician · Producer · Sound & Lights Engineer"
+  bio: "Drummer · Producer · Sound Engineer"
   links:
     - label: "YouTube"
       icon: "fab fa-fw fa-youtube"
@@ -39,12 +39,6 @@ author:
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
       url: "https://www.instagram.com/albe.caroli"
-    - label: "Fiverr"
-      icon: "fab fa-fw fa-fiverr"
-      url: "https://www.fiverr.com/albertocaroli"
-    - label: "GitHub"
-      icon: "fab fa-fw fa-github"
-      url: "https://github.com/albertocarot1"
 
 footer:
   links:
@@ -57,12 +51,6 @@ footer:
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
       url: "https://www.instagram.com/albe.caroli"
-    - label: "Fiverr"
-      icon: "fab fa-fw fa-fiverr"
-      url: "https://www.fiverr.com/albertocaroli"
-    - label: "GitHub"
-      icon: "fab fa-fw fa-github"
-      url: "https://github.com/albertocarot1"
 
 atom_feed:
   hide: true
