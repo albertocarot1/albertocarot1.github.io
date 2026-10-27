@@ -1,3 +1,341 @@
+# Alberto Caroli: website rework for live and session drumming
+
+*Based on a read-through of all seven pages (Home, Projects, About, Live, Studio, Gallery, Contact) on 26 Oct 2026. Draft wording is meant to be edited in your voice; anything in \[brackets\] is a fact only you can confirm.*
+
+## The short version
+
+1. **Lead with “drummer”.** Right now the site reads as an audio generalist who also plays drums. Make the recording side the proof of quality, not a competing headline.
+2. **Your credibility is already on the site, just buried.** The Live table holds the best material you have. Pull the highlights onto the homepage as a proof strip.
+3. **Turn the Studio page from a gear list into an explanation:** room, signal chain, drum mic map, audio demos, what the client receives.
+4. **Add a Session drumming page** (process, deliverables, turnaround, audio demos) and make the Live page answer a booker’s questions.
+5. **Let YouTube and Instagram feed the site automatically.** YouTube playlists become your content manager; Instagram works through a Creator account plus a feed service. Code is in section 5.
+6. **Fix the small things that currently cost trust** (end of section 1).
+
+## 1. What I found
+
+### Already strong
+
+- **The Live page.** 27 dated past shows since July 2023, with real names: you opened for Messa, Void of Sleep and Skulld (Rock Planet, Feb 2026), Elli de Mon and Murena (Hex, Apr 2026), Herba Mate (May 2026), Savana Funk (Mar 2025), Texas Toast Chainsaw Massacre (Sep 2025) and Brod (Oct 2025).
+- **Big-room moments:** Rockin’ 1000 Romagna at the Dino Manuzzi stadium (Jul 2023); the San Marino Eurovision 2025 national selection semifinal, drums for Reagents (Feb 2025); Michele Luppi’s VGDM final show (May 2025); San Patrignano in front of 1,000+ people (Dec 2025); the Palazzuolo Drum Battle, where you played an original piece in front of George Kollias, Gergo Borlai, Sebastian Lanser, Mario Riso and Andrea Bessone (Jul 2025).
+- **Four active projects** across heavy and alternative styles (Balera, Sand Monolith, Effigy, ZEMIC) and studio credits for Gremlin Special, Effigy and P(a)fanner’s Flying Donkeys.
+- The contact form already splits by project type (live project / session drummer / production).
+
+### What’s holding it back
+
+1. **The homepage is one sentence and two buttons:** no names, no audio, no video. The tagline (“from the first idea to the final master”) describes a producer.
+2. **Three roles share the headline** (“Drummer · Producer · Sound Engineer” in the sidebar, titles and meta description). A band looking for a drummer has to work out which one you are.
+3. **About is mostly adjectives** (“obsession with sound quality”, “extraordinary ability to hear and to listen”, “artists across Italy and Europe”) and names nobody. The closing quote is generic. Every adjective you can swap for a show, a name, a number or a turnaround time will work harder.
+4. **Projects sends visitors away.** Everything links out to Bandcamp, Spotify, SoundCloud or YouTube instead of playing on the page. Projects from the Live table (Alibi, Afterdark, Reagents, EMT, Rotation Stage, VGDM, Rockin’ 1000) don’t appear on it at all, and it doesn’t distinguish “band I’m a member of” from “hired for this”.
+5. **Studio lists gear but doesn’t say how you use it,** and two claims don’t match the list: About says “industry-standard gear” and the Philosophy section mentions “a curated selection of outboard hardware”, but the gear list shows no outboard. Your list is reasonable for the work. The risk is that a vague claim invites comparison with a gear list that can’t back it up. Specific and audible beats adjectives.
+6. **Missing entirely:** testimonials, a process and rates page, your town and travel radius, a visible email address (I only saw the form), and an Italian version, even though nearly all your shows are in Romagna, San Marino and Bologna.
+7. **Housekeeping**
+   - “Next Dates” still lists 24 Oct 2026 (Fossolo Club, Russi), two days ago. Hand-edited tables will keep doing this (see 5.3).
+   - The 20 Jul 2024 row (Flood, Mordano) links to a YouTube ID with 12 characters (LLfB7xglOGUQ). IDs have 11, so it’s probably a typo.
+   - The 03 Sep 2024 row (Alibi) links to a playlist ID that looks cut off (PLVkjTmjCMLdg). Test both links.
+   - The Gallery page is still the template: placeholder SVGs and a developer note (“Add or replace images in \_data/gallery.yml”) visible to visitors.
+   - Every page shares one meta description, I found no social-sharing image in the metadata, and the author name in the site config is empty.
+   - The “Book a call” section on Contact showed no visible content when I read it. If it’s a scheduler embed, check that it loads, including on mobile.
+
+## 2. Positioning and homepage
+
+**Positioning line (edit to your voice):**
+
+- “Live and session drummer based in \[town\], Italy: heavy, alternative and indie rock. I record my own drums, so what you get back is ready to mix.”
+
+Replace the “Drummer · Producer · Sound Engineer” tag with **“Live & session drummer · Drums recorded in my own studio”**. Mixing and mastering stay on the site as a third, secondary service.
+
+**Homepage, top to bottom**
+
+1. **Hero.** A photo of you at the kit (not a portrait), the positioning line, two buttons: *Book me live* and *Hire me for a session* (each opening the contact form with the right project type preselected), plus a small “Hear the drums” link.
+2. **Proof strip,** written from your own Live data:
+   - *Opened for:* Messa · Savana Funk · Elli de Mon · Herba Mate · Void of Sleep · Texas Toast Chainsaw Massacre · Brod
+   - *Stages:* Stadio Dino Manuzzi with Rockin’ 1000 · San Marino Eurovision 2025 national selection (semifinal) · Comunità San Patrignano (1,000+)
+   - *Drum Battle Palazzuolo:* original piece played in front of Kollias, Borlai, Lanser, Riso and Bessone
+   - *Counter:* “27 shows since 2023”, generated from your shows data so it never goes stale
+   - Keep the Eurovision wording exact (“national selection, semifinal, drummer of the backing band”) so nobody reads it as Eurovision itself.
+3. **Watch.** The three latest videos, filled automatically from your YouTube Live playlist.
+4. **Hear.** Three short audio players, each tagged with a genre (doom/sludge, stoner/grunge, indie).
+5. **How I work with you.** Three cards: Live · Session · Recording and mixing.
+6. **Currently playing with.** Balera, Effigy, Sand Monolith, ZEMIC, each with its genre and next show.
+7. **Latest on Instagram.** Six tiles, filled automatically.
+8. **Closing call to action** with a direct email, WhatsApp and Instagram DM, since many Italian bands start a conversation there.
+
+## 3. Page by page
+
+**Navigation:** Home · Live · Session drumming (new) · Studio · Projects · About · Contact. Drop Gallery as a separate page; its content moves into Home and About.
+
+### Live: answer a booker’s questions
+
+- **Open with five lines** on what you bring. Draft: “\[N\] shows since 2023, from doom/sludge to indie rock, from club nights to a stadium stage. I learn sets quickly, \[play to click and backing tracks / use in-ears\] when the project needs it, and \[bring my own kit / need this backline\].”
+- **Answer the practical questions** (only what’s true): click and tracks? in-ears (you list Shure CL215)? own kit and backline needs? how many songs can you learn, and in how long? travel radius and transport? backing vocals (you sing in Sand Monolith and at Rotation Stage events)? How do you price a live hire?
+- **Your second differentiator:** About says you can run FOH, monitors and lights as a one-person show technician, but the Live page doesn’t. One line plus a downloadable stage plan and tech rider covers it: “Small band with no tech? I can play and run your sound and lights.”
+- **Credits block:** an “Opened for” list with date and venue.
+- **Dates as cards,** newest first, grouped by year: venue, project, a YouTube thumbnail (taken from the video ID automatically), and supporting acts as small labels. “Next dates” hides itself once a date has passed.
+- **Move the data into `_data/shows.yml`:** one entry per show (date, venue, city, project, role, played with, notes, video link). The Live page, homepage counter, “opened for” lists and project cards all derive from that one file.
+
+### Session drumming (new page)
+
+1. **One line:** “Send me the song, get back finished drum tracks.”
+2. **How it works:** (1) you send the demo, tempo map or click, a reference and notes; (2) I quote within \[X\] hours; (3) I record in my treated room; (4) files arrive in \[X\] days with \[N\] revisions included.
+3. **What you receive:** WAV 24-bit/\[48\] kHz in your choice of stereo drum mix, full multitrack (kick, snare, toms, overheads, room) or processed stems; aligned to your click; \[edited / unedited\].
+4. **Sound choices by genre:** see the sound palette in the Studio section below.
+5. **Audio proof:** three demos, each as *raw tracks* and *in the mix*, plus your credits as playable embeds: Gremlin Special “Propheteering”, Effigy “Diluvio Universale”, P(a)fanner’s Flying Donkeys “Burning Up the Road”.
+6. **Testimonials:** two or three named artists, one or two sentences each, linked to their projects.
+7. **Rates:** either “from €\[X\] per song” or “quote within 24 hours”, plus what changes the price (song length, track count, mixing).
+8. **Call to action:** the form preset to *Session drummer*, with a checklist of what to send.
+
+### Studio becomes “Recording setup”
+
+Keep the Philosophy short, then add what’s missing:
+
+1. **Room.** Dimensions, a photo of the live room with the kit in position (today there’s only a control-room photo), and the treatment map: six Oudimmo Kombat 20 corner traps with membrane, foam panels at the edges. You claim a “flat, neutral” response. If you’ve measured the room (REW or similar), publish the response and decay plot; if not, soften the claim.
+2. **Signal chain,** as a simple diagram: microphones → \[preamps: UMC1820 / UMC202HD\] → Reaper at \[48 kHz / 24-bit\] → monitoring. Say how many inputs you can record at once (the UMC1820 has eight preamps, if I remember its spec correctly; add the UMC202HD’s two if you run them together). Also say how you judge mixes: if I’m reading the gear list right, the db Technologies B-Hype 10 is a PA-style speaker rather than a studio nearfield, so gear-aware visitors may ask. An honest line about your method (reference tracks, headphones, checks on several systems) beats the phrase “critical listening”.
+3. **Drum mic map.** A draft built from your gear list; correct it and add positions:
+
+| Source | Mic | Notes |
+| --- | --- | --- |
+| Kick | Shure Beta 52A | \[in / out, position\] |
+| Snare top | Shure SM57 | \[position\] |
+| Snare bottom or hi-hat | Shure Beta 56A | \[confirm\] |
+| Toms (10 / 12 / 16) | Sennheiser e604 ×3 | clip-on |
+| Overheads | Rode M5 ×2 | \[technique: spaced pair, XY, ORTF\] |
+| Room | t.bone RM 700 (ribbon), Behringer 19A | \[confirm\] |
+
+That’s ten microphones. If both interfaces run together, say “10 simultaneous inputs”. 4. **Sound palette.** Add a line to each item saying what it sounds like and when you reach for it. Three snares (14×6 Gretsch maple, 14×5.5 Pearl steel, 14×3.5 Mapex maple piccolo), Evans Genera dry on snare and G2 on toms, six cymbals plus hats. A producer or bandleader wants to know which snare you use for doom and which for indie. 5. **Audio.** One groove, three snares, four stages (close mics only, plus overheads, plus room, final mix). It proves the room and the mic choices in thirty seconds. 6. **Deliverables:** link to the Session page. 7. **Full gear list** stays, collapsed at the bottom. Either list the outboard or remove the claim.
+
+### Projects
+
+- **Two groups:** *Bands I’m in* (Balera, Sand Monolith, Effigy, ZEMIC) and *Past and guest projects* (Alibi, Afterdark, Reagents, EMT, Rotation Stage, VGDM, Rockin’ 1000 and others). Mark each as *member*, *session* or *guest*.
+- **Each card:** genre tag, your role, an embedded player, and “Opened for” labels generated from `shows.yml` (Balera would automatically show Messa, Void of Sleep, Skulld, Elli de Mon, Murena and Herba Mate).
+- **Studio credits** stay as a second section, split into *Drums on* and *Mixed or mastered by*, with embedded players.
+
+### About
+
+1. A paragraph with names. Draft: “I’m Alberto Caroli, a drummer from \[town\], Italy, with two decades of live and studio work. I play with Balera (doom/sludge), Effigy (grunge/stoner), Sand Monolith (doom) and ZEMIC (indie rock), and take on live and session work for other artists. I’ve opened for Messa, Savana Funk, Elli de Mon and Herba Mate, played the Dino Manuzzi stadium with Rockin’ 1000, and the San Marino Eurovision 2025 selection with Reagents. I record, mix and master in my own studio, so I can hand you drum tracks ready to drop into your session, or a finished mix.”
+2. Three facts about working with you (turnaround, how fast you learn a set, availability), each backed by a number.
+3. Town, travel radius, languages.
+4. Replace the portrait with a photo at the kit and cut the closing quote.
+
+### Contact
+
+- Keep the form. Let the buttons preselect the project type, and ask for the three things that speed up a quote: date and city, links to the music, budget.
+- Show an email address, a WhatsApp number or link, and your Instagram DM, with a stated reply time.
+- Add a one-page **press kit PDF** (bio, photo, credits, tech rider and stage plan, gear list). Promoters and bandleaders ask for it constantly.
+
+### Across the site
+
+- **Social proof:** ask three to five artists you’ve played or recorded with for a sentence each.
+- **Italian version** of at least Home, Session and Contact.
+- **Per-page titles and descriptions,** for example “Live & session drummer — Alberto Caroli” and “Session drumming: remote recording from my studio”; a 1200×630 sharing image of you at the kit; alt text on images.
+- **Load third-party embeds on click** (the YouTube grid below does this). It’s faster and avoids loading Google or Meta scripts before a visitor has asked for them. Worth a check against your cookie notice; this isn’t legal advice.
+
+## 4. Content to collect
+
+- A photo at the kit, a photo of the live room with the kit in place, and a photo of the mic’d-up kit
+- Three audio demos of 60–90 seconds
+- Three to five testimonials
+- A room measurement plot, if you can make one
+- A tech rider and stage plan
+- Answers to: town and travel radius; rates policy; click, tracks and in-ears; own kit; turnaround and file formats; mic positions; outboard; what the “20 years” refers to; where the site is hosted
+
+## 5. Letting YouTube and Instagram update the site by themselves
+
+Your site is built with Jekyll, so its pages are static. “Automatic” means either the visitor’s browser fetches the feed on every visit, or a scheduled job refreshes the data and rebuilds the site. I recommend the scheduled job for both: pages load fast, no third-party scripts run on arrival, and a traffic spike can’t exhaust anyone’s quota.
+
+### 5.1 YouTube: playlists as your content manager
+
+Create playlists such as **Live**, **Session drumming** and **Studio**. Upload a video, add it to the right playlist, and it appears in the right place on the site. Every channel and playlist has a public feed:
+
+- Channel: `https://www.youtube.com/feeds/videos.xml?channel_id=UC…`
+- Playlist: `https://www.youtube.com/feeds/videos.xml?playlist_id=PL…`
+- Feeds return about the latest 15 videos. The channel feed includes Shorts; replacing `UC` with `UULF` and using the result as a `playlist_id` gives long-form only (community-discovered, not officially documented).
+- Find your channel ID in YouTube Studio → Settings → Channel → Advanced settings. A playlist ID is the text after `list=` in the playlist URL.
+- YouTube’s feed endpoint has had stretches of intermittent 404 errors since December 2025, so the script below keeps the previous data if a fetch fails.
+
+**Five-minute version, no code:** embed your whole uploads list as one player, using your channel ID with `UC` swapped for `UU`:
+
+`<iframe src='https://www.youtube.com/embed/videoseries?list=UU…' width='560' height='315' allowfullscreen></iframe>`
+
+It works as a playlist player, not a grid, and I’d test it before relying on it.
+
+**Better version:** a scheduled script writes the feeds into `_data`, and Jekyll renders a thumbnail grid that loads the real player only on click.
+
+`scripts/fetch_media.py`
+
+```python
+import json, os, sys, urllib.request
+import xml.etree.ElementTree as ET
+
+YOUTUBE = {  # name -> feed URL (put your real IDs in)
+    'latest':  'https://www.youtube.com/feeds/videos.xml?channel_id=UC_YOUR_CHANNEL_ID',
+    'live':    'https://www.youtube.com/feeds/videos.xml?playlist_id=PL_YOUR_LIVE_PLAYLIST',
+    'session': 'https://www.youtube.com/feeds/videos.xml?playlist_id=PL_YOUR_SESSION_PLAYLIST',
+}
+INSTAGRAM = 'https://feeds.behold.so/YOUR_FEED_ID'  # see 5.2; leave empty to skip
+NS = {'a': 'http://www.w3.org/2005/Atom', 'yt': 'http://www.youtube.com/xml/schemas/2015'}
+
+def get(url):
+    req = urllib.request.Request(url, headers={'User-Agent': 'Mozilla/5.0'})
+    with urllib.request.urlopen(req, timeout=20) as r:
+        return r.read()
+
+def save(path, data):
+    with open(path, 'w', encoding='utf-8') as f:
+        json.dump(data, f, indent=1, ensure_ascii=False)
+
+os.makedirs('_data', exist_ok=True)
+
+for name, url in YOUTUBE.items():
+    try:
+        root = ET.fromstring(get(url))
+        videos = [{'id': e.find('yt:videoId', NS).text,
+                   'title': e.find('a:title', NS).text,
+                   'published': e.find('a:published', NS).text[:10]}
+                  for e in root.findall('a:entry', NS)]
+        if videos:
+            save('_data/yt_' + name + '.json', videos)
+    except Exception as err:
+        print(name, 'failed:', err, '- keeping previous data', file=sys.stderr)
+
+if INSTAGRAM:
+    try:
+        feed = json.loads(get(INSTAGRAM))
+        if feed.get('posts'):
+            save('_data/instagram.json', feed)
+    except Exception as err:
+        print('instagram failed:', err, '- keeping previous data', file=sys.stderr)
+```
+
+`.github/workflows/update-media.yml`
+
+```yaml
+name: Update media
+on:
+  schedule:
+    - cron: '17 5 * * *'   # daily; use '17 */6 * * *' for YouTube only
+  workflow_dispatch:        # lets you run it by hand from the Actions tab
+permissions:
+  contents: write
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: python3 scripts/fetch_media.py
+      - name: Commit if anything changed
+        run: |
+          git config user.name 'media-bot'
+          git config user.email 'media-bot@users.noreply.github.com'
+          git add _data
+          git diff --cached --quiet || (git commit -m 'Update media feeds' && git push)
+```
+
+Run it once by hand so the data files exist. If your host doesn’t rebuild when the bot commits, tell me where the site is hosted (GitHub Pages, Netlify, Cloudflare Pages) and I’ll adapt the workflow.
+
+`_includes/yt-grid.html`, used as `{% include yt-grid.html feed='yt_live' limit=6 %}`
+
+```liquid
+{% assign limit = include.limit | default: 6 %}
+<div class='yt-grid'>
+{% for v in site.data[include.feed] limit: limit %}
+  <button class='yt-card' data-id='{{ v.id }}' aria-label='Play: {{ v.title | escape }}'>
+    <img loading='lazy' src='https://i.ytimg.com/vi/{{ v.id }}/hqdefault.jpg' alt=''>
+    <span>{{ v.title | escape }}</span>
+  </button>
+{% endfor %}
+</div>
+```
+
+Add the following once to your site CSS and JS:
+
+```css
+.yt-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 1rem; }
+.yt-card { all: unset; cursor: pointer; display: block; }
+.yt-card img, .yt-grid iframe { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; border: 0; }
+```
+
+```js
+document.addEventListener('click', function (e) {
+  var b = e.target.closest('.yt-card');
+  if (!b) return;
+  var f = document.createElement('iframe');
+  f.src = 'https://www.youtube-nocookie.com/embed/' + b.dataset.id + '?autoplay=1';
+  f.allow = 'autoplay; encrypted-media; picture-in-picture';
+  f.allowFullscreen = true;
+  f.title = b.getAttribute('aria-label');
+  b.replaceWith(f);
+});
+```
+
+For the Live cards, a thumbnail needs no feed at all: take the video ID from each show’s link and use `https://i.ytimg.com/vi/<id>/hqdefault.jpg`.
+
+### 5.2 Instagram: choose a route
+
+Instagram’s old Basic Display API was shut down on 4 December 2024. Today, reading your own posts through any official route needs a **Business or Creator account**. Switching is free, in the Instagram app’s settings under Account type and tools.
+
+| Route | Effort | Updates itself? | Cost | Notes |
+| --- | --- | --- | --- | --- |
+| **A. Feed service (Behold) JSON feed, fetched by the script above** | about 20 min | Yes | Free: 6 posts, daily refresh. $10/mo: 50 posts, hourly refresh, no Behold logo | Behold handles tokens and serves resized copies of the images from its own CDN. Recommended. |
+| B. Drop-in widget (Behold, Elfsight and similar) | 5 min | Yes | Free tiers with monthly view limits | A third-party script loads on every visit; less control over the look. |
+| C. Your own Meta app and Instagram API | hours, plus upkeep | Yes | Free | Tokens expire every 60 days and need refreshing; Instagram image links expire, so you must download copies. |
+| D. Instagram’s own embed code (post menu → Embed) | 1 min per post | No | Free | Best for single reels you mention on the Live page, such as the Balera Punking Festival post. |
+
+**Recommendation: A for the grid, D for specific reels.**
+
+1. Switch the account to Creator.
+2. Create a free Behold account, add your Instagram account as a source, then create a **JSON feed** (allow images, videos and reels). Copy its URL (`https://feeds.behold.so/…`) into `INSTAGRAM` in the script.
+3. Because the script fetches the feed, your visitors never call Behold, so Behold’s free-plan view limit (1,200 a month) isn’t tied to your traffic.
+4. Render the tiles. The field names below come from Behold’s documented feed format; check them against your own feed’s preview.
+
+`_includes/ig-grid.html`
+
+```liquid
+<div class='ig-grid'>
+{% for p in site.data.instagram.posts limit: 6 %}
+  <a href='{{ p.permalink }}' target='_blank' rel='noopener'>
+    <img loading='lazy' src='{{ p.sizes.medium.mediaUrl }}' alt='{{ p.prunedCaption | default: p.caption | truncate: 120 | escape }}'>
+    {% if p.isReel %}<span class='ig-badge'>Reel</span>{% endif %}
+  </a>
+{% endfor %}
+</div>
+```
+
+```css
+.ig-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: .5rem; }
+.ig-grid a { position: relative; display: block; }
+.ig-grid img { width: 100%; aspect-ratio: 1; object-fit: cover; }
+.ig-badge { position: absolute; top: .4rem; right: .4rem; background: rgba(0,0,0,.7); color: #fff; padding: 0 .4rem; font-size: .75rem; }
+```
+
+These tiles link out to Instagram rather than playing the reel on your page. In-page playback needs Instagram’s own embed script (route D) or video links that expire.
+
+### 5.3 Make the Live list update itself
+
+Once shows live in `_data/shows.yml`, one date comparison splits them into next and past dates on every build. With the daily workflow above, a show moves from “Next” to “Past” by itself. Entry shape:
+
+```yaml
+- date: 2026-10-24
+  venue: Fossolo Club
+  city: Russi, Italy
+  project: Effigy
+  role: drums
+  with: []
+  video: ''
+```
+
+## 6. Suggested order of work
+
+1. **Week 1:** housekeeping fixes, homepage hero and proof strip, rewritten About.
+2. **Week 2:** `shows.yml` and the new Live page; the YouTube script and grid.
+3. **Week 3:** Session page and the Studio rewrite (needs your photos and audio).
+4. **Week 4:** Instagram feed, testimonials, press kit PDF, Italian version.
+
+## Sources checked
+
+- Behold pricing and plans: behold.so/pricing; JSON feed format: behold.so/docs/json-feeds; account requirement: behold.so/docs/getting-started
+- Instagram Basic Display API shutdown (4 Dec 2024) and current API options: getphyllo.com/post/instagram-api-guide
+- YouTube feed formats, the UULF prefix and the Dec 2025 feed outages: finder.wprssaggregator.com/rss-feeds/platform/youtube and rapidtoolset.com/en/tool/youtube-rss-link-generator
+
 ## Appendix: prompt checklist for your coding assistant
 
 Work through these in order, one prompt at a time. After each one, preview the site locally, read the diff, commit, then tick the box here (change ☐ to ✅). The prompts point to this plan, so export it as Markdown first and save it in your repo as `docs/rework-plan.md`. Steps that only you can do are marked **You** and sit just before the prompt that needs them.

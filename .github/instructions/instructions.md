@@ -5,7 +5,7 @@ description: Describe when these instructions should be loaded by the agent base
 
 <!-- Tip: Use /create-instructions in chat to generate content with agent assistance -->
 
-This is my personal website (Jekyll; check which theme and how it is built). Standing rules for all work in this repo:
+This is my personal website (Jekyll; minimal-mistakes theme, check how it is built). Standing rules for all work in this repo:
 - Work on a branch named rework/<topic>. Small commits, one per task.
 - Preview locally and tell me the command you used. Fix any build warnings you introduce.
 - Never invent facts about me (dates, venues, prices, mic positions, testimonials, numbers). Where a fact is missing, leave a marker in the source, <!-- TODO(alberto): question -->, and list all markers at the end of the task.
