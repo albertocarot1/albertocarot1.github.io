@@ -3,8 +3,6 @@ main:
     url: /about/
   - title: "Projects"
     url: /projects/
-  - title: "Gallery"
-    url: /gallery/
   - title: "Live"
     url: /live/
   - title: "The Studio"

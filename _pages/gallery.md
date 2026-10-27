@@ -67,5 +67,3 @@ toc_sticky: true
     </figure>
   {% endfor %}
 </div>
-
-> Add or replace images in the file <code>_data/gallery.yml</code> and store the files in <code>assets/images/gallery/</code>.

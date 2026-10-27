@@ -32,7 +32,8 @@ author:
   links:
     - label: "YouTube"
       icon: "fab fa-fw fa-youtube"
-      url: "https://www.youtube.com/@carotanza"
+      # TODO(alberto): provide the correct YouTube channel URL.
+      url: ""
     - label: "Facebook"
       icon: "fab fa-fw fa-facebook"
       url: "https://www.facebook.com/albertocaroli"
@@ -44,7 +45,8 @@ footer:
   links:
     - label: "YouTube"
       icon: "fab fa-fw fa-youtube"
-      url: "https://www.youtube.com/@carotanza"
+      # TODO(alberto): provide the correct YouTube channel URL.
+      url: ""
     - label: "Facebook"
       icon: "fab fa-fw fa-facebook"
       url: "https://facebook.com/albertocaroli"

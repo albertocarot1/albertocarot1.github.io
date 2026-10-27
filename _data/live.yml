@@ -211,7 +211,8 @@ past:
     country: "Italy"
     project: "P(a)fanner's Flying Donkeys"
     notes: "Gocce di musica contest"
-    youtube_url: "https://www.youtube.com/watch?v=LLfB7xglOGUQ"
+    # TODO(alberto): provide the correct YouTube video URL for this show.
+    youtube_url: ""
 
   - date: "2024-05-10"
     venue: "Big Barrè"
