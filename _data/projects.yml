@@ -7,18 +7,18 @@
 #   roles: list from: drummer_live, drummer_studio, drummer_both, producer, mixing_engineer, mastering_engineer, vocals, recording_engineer, lights_technician, composer, lyricist
 #
 portfolio:
-  - title: "Sand Monolith"
-    artist: "Sand Monolith"
-    link: "https://soundcloud.com/sand-monolith/sets/sand-monolith/s-uEygiF2EO3J?si=adc179aae5d34995b5af4addb9f859c3&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing"
-    art: "/assets/images/portfolio/sand-monolith.jpg"
-    roles:
-      - mixing_engineer
-      - mastering_engineer
-      - composer
-      - lyricist
-      - producer
-      - drummer_studio
-      - vocals
+  # - title: "Sand Monolith"
+  #   artist: "Sand Monolith"
+  #   link: "https://soundcloud.com/sand-monolith/sets/sand-monolith/s-uEygiF2EO3J?si=adc179aae5d34995b5af4addb9f859c3&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing"
+  #   art: "/assets/images/portfolio/sand-monolith.jpg"
+  #   roles:
+  #     - mixing_engineer
+  #     - mastering_engineer
+  #     - composer
+  #     - lyricist
+  #     - producer
+  #     - drummer_studio
+  #     - vocals
 
   - title: "Propheteering"
     artist: "Gremlin Special"
@@ -26,6 +26,7 @@ portfolio:
     art: "/assets/images/portfolio/propheteering.avif"
     roles:
       - drummer_studio
+      - recording_engineer
   
   - title: "Diluvio Universale"
     artist: "Effigy"
@@ -81,7 +82,7 @@ current_projects:
         url: "https://www.youtube.com/watch?v=ycRdNK_0c1s"
 
   - name: "Sand Monolith"
-    description: "Doom metal, english lyrics."
+    description: "Doom/stoner metal, with lyrics in English."
     link: ""
     roles: 
       - vocals

@@ -9,6 +9,10 @@
 #   youtube_url: (optional URL to YouTube video)
 
 upcoming:
+
+
+
+past:
   - date: "2026-10-24"
     venue: "Fossolo Club"
     city: "Russi"
@@ -16,9 +20,7 @@ upcoming:
     project: "Effigy"
     notes: ""
     youtube_url: ""
-
-
-past:
+    
   - date: "2026-09-19"
     venue: "Camping Alto Savio"
     city: "San Piero in Bagno"
