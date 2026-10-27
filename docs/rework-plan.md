@@ -232,6 +232,7 @@ jobs:
 
 Run it once by hand so the data files exist. If your host doesn’t rebuild when the bot commits, tell me where the site is hosted (GitHub Pages, Netlify, Cloudflare Pages) and I’ll adapt the workflow.
 
+{% raw %}
 `_includes/yt-grid.html`, used as `{% include yt-grid.html feed='yt_live' limit=6 %}`
 
 ```liquid
@@ -245,6 +246,7 @@ Run it once by hand so the data files exist. If your host doesn’t rebuild when
 {% endfor %}
 </div>
 ```
+{% endraw %}
 
 Add the following once to your site CSS and JS:
 
@@ -289,6 +291,7 @@ Instagram’s old Basic Display API was shut down on 4 December 2024. Today, rea
 
 `_includes/ig-grid.html`
 
+{% raw %}
 ```liquid
 <div class='ig-grid'>
 {% for p in site.data.instagram.posts limit: 6 %}
@@ -299,6 +302,7 @@ Instagram’s old Basic Display API was shut down on 4 December 2024. Today, rea
 {% endfor %}
 </div>
 ```
+{% endraw %}
 
 ```css
 .ig-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: .5rem; }
