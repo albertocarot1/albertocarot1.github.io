@@ -81,9 +81,9 @@ toc_sticky: true
 }
 </style>
 
+{% if site.data.live.upcoming and site.data.live.upcoming.size > 0 %}
 ## Next Dates
 
-{% if site.data.live.upcoming and site.data.live.upcoming.size > 0 %}
 <table class="concert-table">
   <thead>
     <tr>
@@ -121,8 +121,6 @@ toc_sticky: true
     {% endfor %}
   </tbody>
 </table>
-{% else %}
-<p><em>No upcoming dates at the moment. Stay tuned!</em></p>
 {% endif %}
 
 ---
