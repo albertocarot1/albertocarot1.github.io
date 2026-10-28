@@ -47,12 +47,7 @@ Replace the “Drummer · Producer · Sound Engineer” tag with **“Live & ses
 **Homepage, top to bottom**
 
 1. **Hero.** A photo of you at the kit (not a portrait), the positioning line, two buttons: *Book me live* and *Hire me for a session* (each opening the contact form with the right project type preselected), plus a small “Hear the drums” link.
-2. **Proof strip,** written from your own Live data:
-   - *Opened for:* Messa · Savana Funk · Elli de Mon · Herba Mate · Void of Sleep · Texas Toast Chainsaw Massacre · Brod
-   - *Stages:* Stadio Dino Manuzzi with Rockin’ 1000 · San Marino Eurovision 2025 national selection (semifinal) · Comunità San Patrignano (1,000+)
-   - *Drum Battle Palazzuolo:* original piece played in front of Kollias, Borlai, Lanser, Riso and Bessone
-   - *Counter:* “27 shows since 2023”, generated from your shows data so it never goes stale
-   - Keep the Eurovision wording exact (“national selection, semifinal, drummer of the backing band”) so nobody reads it as Eurovision itself.
+2. **Selected live highlights,** concise summaries of the most persuasive artist credits and experiences, based only on `project` and `notes` in `_data/live.yml`'s `past` entries. Refresh `_data/home_highlights.yml` with Copilot whenever past-show data changes; do not claim an artist is famous or popular without evidence, and do not add facts not present in the source entries. Link to the Live page with a **See all** button instead of listing shows or hard-coding a show counter in the strip. Keep Eurovision wording exact (“national selection, semifinal, drummer of the backing band”) so nobody reads it as Eurovision itself.
 3. **Watch.** The three latest videos, filled automatically from your YouTube Live playlist.
 4. **Hear.** Three short audio players, each tagged with a genre (doom/sludge, stoner/grunge, indie).
 5. **How I work with you.** Three cards: Live · Session · Recording and mixing.
@@ -386,10 +381,10 @@ Using the Housekeeping list in section 1 of docs/rework-plan.md: (a) on the Live
 Give every page its own title and meta description (plain and specific, under 155 characters, in the style of the examples in section 3 'Across the site' of the plan). Fix the empty author name in _config.yml (use Alberto Caroli). Add a default Open Graph and Twitter image in the theme config pointing to assets/images/og-default.jpg (TODO: I will supply a 1200x630 photo of me at the kit). Make sure every image has meaningful alt text and list any you couldn't write one for.
 ```
 
-☐ **1.3 Homepage hero, proof strip and navigation**
+☐ **1.3 Homepage hero, live highlights and navigation**
 
 ```
-Rebuild the homepage following section 2 of docs/rework-plan.md: the new positioning line and tag (keep [town] as a TODO marker), a hero with two buttons (Book me live -> /contact/?type=live, Hire me for a session -> /contact/?type=session) and a 'Hear the drums' anchor, and the proof strip with the Opened for, Stages and Drum Battle lines exactly as written in the plan. Hard-code '27 shows since 2023' for now. Add clearly marked empty placeholders for Watch, Hear and Instagram. Change the navigation to Home, Live, Session drumming, Studio, Projects, About, Contact (Session drumming can point to a stub page). Keep the theme's styling, mobile first.
+Rebuild the homepage following section 2 of docs/rework-plan.md: the new positioning line and tag (keep [town] as a TODO marker), a hero with two buttons (Book me live -> /contact/?type=live, Hire me for a session -> /contact/?type=session) and a 'Hear the drums' anchor. Render concise highlights from `_data/home_highlights.yml`, refreshed manually with Copilot from `_data/live.yml` past entries' project and notes; do not invent facts or popularity claims. Include a 'See all' button to /live/ instead of a list of shows or a hard-coded show counter. Add clearly marked empty placeholders for Watch, Hear and Instagram. Change the navigation to Home, Live, Session drumming, Studio, Projects, About, Contact (Session drumming can point to a stub page). Keep the theme's styling, mobile first.
 ```
 
 ☐ **1.4 About**
@@ -421,7 +416,7 @@ Rebuild the Live page from _data/shows.yml. Split upcoming and past dates using 
 ☐ **2.3 Derive the counter and the 'opened for' lists**
 
 ```
-Make these come from _data/shows.yml instead of being hard-coded: (1) the homepage counter ('N shows since YEAR', past shows only); (2) the 'Opened for' list on the Live page and in the homepage proof strip (unique names from opened_for, most recent first, first 7 on the homepage); (3) an include _includes/opened-for.html that takes a project name and lists the artists that project opened for, which we will reuse on project cards. Show me the output for Balera; I expect Messa, Void of Sleep, Skulld, Elli de Mon, Murena and Herba Mate.
+Make the 'Opened for' list on the Live page come from _data/shows.yml (unique names from opened_for, most recent first), and create an include _includes/opened-for.html that takes a project name and lists the artists that project opened for, for reuse on project cards. The homepage highlights are maintained separately in _data/home_highlights.yml from the past entries' project and notes. Show me the output for Balera; I expect Messa, Void of Sleep, Skulld, Elli de Mon, Murena and Herba Mate.
 ```
 
 ☐ **2.4 Booker-facing copy on the Live page**

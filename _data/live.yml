@@ -7,6 +7,9 @@
 #   project: (string) – which band/project
 #   notes: (optional string)
 #   youtube_url: (optional URL to YouTube video)
+#
+# When adding or changing past shows, use Copilot Chat to refresh
+# _data/home_highlights.yml from the past entries' project and notes.
 
 upcoming:
 

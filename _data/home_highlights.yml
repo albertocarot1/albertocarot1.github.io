@@ -1,0 +1,28 @@
+# Manually refreshed with Copilot from the referenced past-show project and notes.
+# When _data/live.yml past entries change, reassess these highlights and keep
+# every claim grounded in the source entries.
+items:
+  - title: "Reagents at San Marino's Eurovision 2025 national selection"
+    summary: "Played drums for the backing band in the semifinal of San Marino's national selection."
+    source_dates:
+      - "2025-02-14"
+
+  - title: "Rockin' 1000 Romagna at Dino Manuzzi"
+    summary: "Performed with 1,000 musicians at the stadium in a fundraiser for Emilia-Romagna flood victims."
+    source_dates:
+      - "2023-07-29"
+
+  - title: "Palazzuolo Drum Battle"
+    summary: "Played an original piece before a jury including George Kollias, Gergo Borlai, Sebastian Lanser, Mario Riso and Andrea Bessone."
+    source_dates:
+      - "2025-07-19"
+
+  - title: "Selected supporting acts"
+    summary: "With Balera and Effigy, supported Messa, Void of Sleep, Skulld, Elli de Mon, Murena, Herba Mate, Savana Funk, Brod and Texas Toast Chainsaw Massacre."
+    source_dates:
+      - "2026-02-21"
+      - "2026-04-12"
+      - "2026-05-08"
+      - "2025-03-14"
+      - "2025-10-24"
+      - "2025-09-09"

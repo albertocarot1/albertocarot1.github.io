@@ -274,9 +274,30 @@ html { scroll-padding-top: calc(var(--masthead-height) + 1rem); }
   border-bottom: 1px solid rgba(255,255,255,0.12);
 }
 
-.home-proof p { margin: 0; }
-.home-proof strong { color: #f0a500; }
-.home-proof__counter { font-weight: 700; }
+.home-proof h2 {
+  margin: 0;
+  font-family: 'Bricolage Grotesque', sans-serif;
+}
+
+.home-proof__items {
+  display: grid;
+  gap: 1rem;
+}
+
+.home-proof__item {
+  padding: 1rem;
+  border-left: 3px solid #f0a500;
+  background: rgba(255,255,255,0.03);
+}
+
+.home-proof__item h3 {
+  margin: 0 0 0.5rem;
+  color: #f0a500;
+  font-size: 1rem;
+}
+
+.home-proof__item p { margin: 0; }
+.home-proof > .landing-hero__contact { justify-self: start; }
 
 .home-section,
 .home-contact {
@@ -336,4 +357,5 @@ html { scroll-padding-top: calc(var(--masthead-height) + 1rem); }
   .landing-hero__content { order: 1; }
   .landing-hero__portrait img { width: min(100%, 520px); }
   .home-card-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .home-proof__items { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }

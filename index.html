@@ -28,11 +28,17 @@ classes: landing-page
 		</div>
 	</section>
 
-	<section class="home-proof" aria-label="Performance highlights">
-		<p><strong>Opened for:</strong> Messa · Savana Funk · Elli de Mon · Herba Mate · Void of Sleep · Texas Toast Chainsaw Massacre · Brod</p>
-		<p><strong>Stages:</strong> Stadio Dino Manuzzi with Rockin’ 1000 · San Marino Eurovision 2025 national selection (semifinal) · Comunità San Patrignano (1,000+)</p>
-		<p><strong>Drum Battle Palazzuolo:</strong> original piece played in front of Kollias, Borlai, Lanser, Riso and Bessone</p>
-		<p class="home-proof__counter">27 shows since 2023</p>
+	<section class="home-proof" aria-labelledby="home-proof-title">
+		<h2 id="home-proof-title">Selected live highlights</h2>
+		<div class="home-proof__items">
+			{% for highlight in site.data.home_highlights.items %}
+			<article class="home-proof__item">
+				<h3>{{ highlight.title | escape }}</h3>
+				<p>{{ highlight.summary | escape }}</p>
+			</article>
+			{% endfor %}
+		</div>
+		<a class="landing-hero__contact" href="{{ '/live/' | relative_url }}">See all</a>
 	</section>
 
 	<section class="home-section" id="watch">
