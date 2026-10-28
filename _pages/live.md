@@ -1,6 +1,7 @@
 ---
 permalink: /live/
-title: "Live"
+title: "Live drumming — Alberto Caroli"
+description: "Live drumming across heavy, alternative and indie rock. Browse Alberto Caroli’s past shows and performance credits."
 layout: single
 author_profile: true
 toc: true
@@ -167,4 +168,3 @@ toc_sticky: true
 {% else %}
 <p><em>No past concerts listed yet.</em></p>
 {% endif %}
-

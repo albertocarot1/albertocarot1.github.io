@@ -1,9 +1,13 @@
 # Alberto Caroli – Musician, Producer, Sound Engineer
 title: "Alberto Caroli"
+url: "https://www.albertocaroli.com"
 email:
 description: >-
   Musician, Producer and Sound Engineer based in Italy.
   Drummer, producer, mixing and mastering engineer.
+og_image: "/assets/images/og-default.jpg"
+og_image_alt: "Alberto Caroli playing drums"
+# TODO(alberto): supply a 1200x630 photo of Alberto at the kit for this social sharing image.
 
 minimal_mistakes_skin: "dark"
 search: false
@@ -26,7 +30,7 @@ plugins:
   - jekyll-include-cache
 
 author:
-  name: ""
+  name: "Alberto Caroli"
   avatar: "/assets/images/bio-photo.jpg"
   bio: "Drummer · Producer · Sound Engineer"
   links:

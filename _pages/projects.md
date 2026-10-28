@@ -1,6 +1,7 @@
 ---
 permalink: /projects/
-title: "Projects"
+title: "Projects — Alberto Caroli"
+description: "Selected live and studio projects featuring Alberto Caroli as drummer, producer and recording engineer."
 layout: single
 author_profile: true
 toc: true
@@ -109,10 +110,10 @@ toc_sticky: true
     {% if item.art and item.art != "" %}
       {% if item.link and item.link != "" %}
         <a href="{{ item.link }}" target="_blank" rel="noopener">
-          <img src="{{ item.art }}" alt="{{ item.title }} – {{ item.artist }}" loading="lazy">
+          <img src="{{ item.art }}" alt="Cover artwork for {{ item.title }} by {{ item.artist }}" loading="lazy">
         </a>
       {% else %}
-        <img src="{{ item.art }}" alt="{{ item.title }} – {{ item.artist }}" loading="lazy">
+        <img src="{{ item.art }}" alt="Cover artwork for {{ item.title }} by {{ item.artist }}" loading="lazy">
       {% endif %}
     {% endif %}
     <div class="card-body">
@@ -182,4 +183,3 @@ toc_sticky: true
 {% endfor %}
 
 ---
-

@@ -1,6 +1,7 @@
 ---
 permalink: /studio/
-title: "The Studio"
+title: "Recording studio — Alberto Caroli"
+description: "Explore Alberto Caroli’s recording room, drum setup, microphones and studio equipment."
 layout: single
 author_profile: true
 toc: true
@@ -68,7 +69,7 @@ The studio is a purpose-built recording and mixing space, acoustically treated f
 
 The acoustic design prioritises a flat, neutral frequency response — essential for making mixing and mastering decisions that translate faithfully across any playback system. Broadband absorption, corner bass traps, and strategic diffusion work together to create a space that is both accurate and inspiring to work in.
 
-{% include figure image_path="/assets/images/studio-room.jpg" alt="The studio room" caption="Control room — Alberto Caroli Studio" %}
+{% include figure image_path="/assets/images/studio-room.jpg" alt="Recording and mixing control room" caption="Control room — Alberto Caroli Studio" %}
 
 The room is comfortable and productive for long sessions, with a deliberate separation between the technical environment and the creative atmosphere.
 

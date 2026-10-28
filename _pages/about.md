@@ -1,12 +1,13 @@
 ---
 permalink: /about/
-title: "About"
+title: "About Alberto Caroli"
+description: "Meet Alberto Caroli, an Italian drummer, composer, producer, mixing engineer and live sound technician."
 layout: single
 author_profile: true
 toc: false
 ---
 
-{% include figure image_path="/assets/images/alberto-caroli.jpg" alt="Alberto Caroli" caption="" %}
+{% include figure image_path="/assets/images/alberto-caroli.jpg" alt="Portrait of Alberto Caroli" caption="" %}
 
 ## Alberto Caroli
 

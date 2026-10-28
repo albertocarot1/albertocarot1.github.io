@@ -1,6 +1,7 @@
 ---
 permalink: /gallery/
-title: "Gallery"
+title: "Gallery — Alberto Caroli"
+description: "A photo gallery for Alberto Caroli’s live performances, studio sessions and music projects."
 layout: single
 author_profile: true
 toc: true
@@ -57,7 +58,7 @@ toc_sticky: true
 <div class="gallery-grid">
   {% for image in site.data.gallery.gallery %}
     <figure class="gallery-item">
-      <img src="{{ image.image | relative_url }}" alt="{{ image.title }}" loading="lazy">
+      <img src="{{ image.image | relative_url }}" alt="{{ image.alt | default: image.title | escape }}" loading="lazy">
       <figcaption class="caption">
         <h3>{{ image.title }}</h3>
         {% if image.caption and image.caption != "" %}

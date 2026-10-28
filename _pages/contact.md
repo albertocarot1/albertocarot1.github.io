@@ -1,6 +1,7 @@
 ---
 permalink: /contact/
-title: "Contact"
+title: "Contact — Alberto Caroli"
+description: "Contact Alberto Caroli about live bookings, session drumming, recording, production or sound and lighting work."
 layout: single
 author_profile: false
 toc: false
