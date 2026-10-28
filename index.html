@@ -6,19 +6,86 @@ author_profile: false
 classes: landing-page
 ---
 
-<main class="landing-hero" id="main-content">
-	<div class="landing-hero__portrait">
-		<img src="{{ '/assets/images/bio-photo.jpg' | relative_url }}" alt="Alberto Caroli playing drums">
-	</div>
-
-	<div class="landing-hero__content">
-		<blockquote>
-			<p>Drummer, producer, and engineer shaping sound from the first idea to the final master.</p>
-		</blockquote>
-		<p class="landing-hero__intro"></p>
-		<div class="landing-hero__actions">
-			<a class="landing-hero__link" href="{{ '/projects/' | relative_url }}">Discover the work <span aria-hidden="true">&rarr;</span></a>
-			<a class="landing-hero__contact" href="{{ '/contact/' | relative_url }}">Let's work together</a>
+<main class="home-content" id="main-content">
+	<section class="landing-hero" aria-labelledby="home-title">
+		<div class="landing-hero__portrait">
+			<img src="{{ '/assets/images/bio-photo.jpg' | relative_url }}" alt="Alberto Caroli playing drums">
 		</div>
-	</div>
+
+		<div class="landing-hero__content">
+			<p class="landing-hero__eyebrow">Live &amp; session drummer · Drums recorded in my own studio</p>
+			<h1 id="home-title">Alberto Caroli</h1>
+			<p class="landing-hero__positioning">
+				Live and session drummer based in [town], Italy: heavy, alternative and indie rock.
+				I record my own drums, so what you get back is ready to mix.
+				<!-- TODO(alberto): confirm the town to use in the positioning line. -->
+			</p>
+			<div class="landing-hero__actions">
+				<a class="landing-hero__contact" href="{{ '/contact/?type=live' | relative_url }}">Book me live</a>
+				<a class="landing-hero__contact landing-hero__contact--secondary" href="{{ '/contact/?type=session' | relative_url }}">Hire me for a session</a>
+			</div>
+			<a class="landing-hero__listen" href="#hear-the-drums">Hear the drums <span aria-hidden="true">&darr;</span></a>
+		</div>
+	</section>
+
+	<section class="home-proof" aria-label="Performance highlights">
+		<p><strong>Opened for:</strong> Messa · Savana Funk · Elli de Mon · Herba Mate · Void of Sleep · Texas Toast Chainsaw Massacre · Brod</p>
+		<p><strong>Stages:</strong> Stadio Dino Manuzzi with Rockin’ 1000 · San Marino Eurovision 2025 national selection (semifinal) · Comunità San Patrignano (1,000+)</p>
+		<p><strong>Drum Battle Palazzuolo:</strong> original piece played in front of Kollias, Borlai, Lanser, Riso and Bessone</p>
+		<p class="home-proof__counter">27 shows since 2023</p>
+	</section>
+
+	<section class="home-section" id="watch">
+		<h2>Watch</h2>
+		<p class="home-placeholder">Video highlights will appear here.</p>
+		<!-- TODO(alberto): choose videos for the homepage Watch section. -->
+	</section>
+
+	<section class="home-section" id="hear-the-drums">
+		<h2>Hear the drums</h2>
+		<p class="home-placeholder">Audio examples will appear here.</p>
+		<!-- TODO(alberto): provide audio demos for doom/sludge, stoner/grunge and indie. -->
+	</section>
+
+	<section class="home-section">
+		<h2>How I work with you</h2>
+		<div class="home-card-grid">
+			<a class="home-card" href="{{ '/live/' | relative_url }}">
+				<h3>Live</h3>
+				<p>Live drumming across heavy, alternative and indie rock.</p>
+			</a>
+			<a class="home-card" href="{{ '/session/' | relative_url }}">
+				<h3>Session</h3>
+				<p>Drums recorded in my studio for your music.</p>
+			</a>
+			<a class="home-card" href="{{ '/studio/' | relative_url }}">
+				<h3>Recording and mixing</h3>
+				<p>Recording, production, mixing and mastering.</p>
+			</a>
+		</div>
+	</section>
+
+	<section class="home-section">
+		<h2>Currently playing with</h2>
+		<div class="home-card-grid">
+			{% for project in site.data.projects.current_projects %}
+			<div class="home-card">
+				<h3>{{ project.name | escape }}</h3>
+				<p>{{ project.description | escape }}</p>
+			</div>
+			{% endfor %}
+		</div>
+	</section>
+
+	<section class="home-section home-instagram">
+		<h2>Latest on Instagram</h2>
+		<p class="home-placeholder">Instagram posts will appear here.</p>
+		<!-- TODO(alberto): add the Instagram feed after choosing a feed source. -->
+	</section>
+
+	<section class="home-contact">
+		<h2>Let’s work together</h2>
+		<p>Tell me about your project.</p>
+		<a class="landing-hero__contact" href="{{ '/contact/' | relative_url }}">Get in touch</a>
+	</section>
 </main>

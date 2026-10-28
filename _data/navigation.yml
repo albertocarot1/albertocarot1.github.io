@@ -1,11 +1,15 @@
 main:
-  - title: "About"
-    url: /about/
-  - title: "Projects"
-    url: /projects/
+  - title: "Home"
+    url: /
   - title: "Live"
     url: /live/
-  - title: "The Studio"
+  - title: "Session drumming"
+    url: /session/
+  - title: "Studio"
     url: /studio/
+  - title: "Projects"
+    url: /projects/
+  - title: "About"
+    url: /about/
   - title: "Contact"
     url: /contact/
