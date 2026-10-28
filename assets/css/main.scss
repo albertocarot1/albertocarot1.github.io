@@ -344,6 +344,45 @@ html { scroll-padding-top: calc(var(--masthead-height) + 1rem); }
   border-top: 1px solid rgba(255,255,255,0.12);
 }
 
+.yt-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 260px), 1fr));
+  gap: 1rem;
+}
+
+.yt-card {
+  display: block;
+  padding: 0;
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 6px;
+  overflow: hidden;
+  background: rgba(255,255,255,0.03);
+  color: inherit;
+  cursor: pointer;
+  text-align: left;
+}
+
+.yt-card:hover { border-color: #f0a500; }
+
+.yt-card:focus-visible {
+  outline: 3px solid #f0a500;
+  outline-offset: 3px;
+}
+
+.yt-card img,
+.yt-grid iframe {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: 0;
+  object-fit: cover;
+}
+
+.yt-card span {
+  display: block;
+  padding: 0.75rem;
+}
+
 @media (min-width: 701px) {
   .landing-hero {
     grid-template-columns: minmax(280px, 46%) minmax(0, 1fr);

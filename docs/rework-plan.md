@@ -227,6 +227,8 @@ jobs:
 
 Run it once by hand so the data files exist. If your host doesn’t rebuild when the bot commits, tell me where the site is hosted (GitHub Pages, Netlify, Cloudflare Pages) and I’ll adapt the workflow.
 
+The repository implementation is in `scripts/fetch_media.py`. Set `CHANNEL_ID`, `LIVE_PLAYLIST_ID`, `SESSION_PLAYLIST_ID`, and `STUDIO_PLAYLIST_ID` at the top; IDs not yet supplied remain clearly named placeholders and are skipped. The script uses only Python's standard library, writes non-empty feeds atomically to `_data/yt_<name>.json`, and preserves an existing file if a fetch, parse, or write fails. The workflow commits successful feed updates and then reports any failed feed as a failed run. Instagram remains disabled while `INSTAGRAM_FEED_URL` is empty.
+
 {% raw %}
 `_includes/yt-grid.html`, used as `{% include yt-grid.html feed='yt_live' limit=6 %}`
 
@@ -433,6 +435,7 @@ Add the content from section 3 (Live) of the plan: the five-line intro; a short 
 
 ```
 Implement the YouTube automation from section 5.1 of docs/rework-plan.md: scripts/fetch_media.py (YouTube only for now; keep the Instagram block but disabled), .github/workflows/update-media.yml, _includes/yt-grid.html, and the CSS and JS for click-to-load playback via youtube-nocookie. Adapt the code to this theme's structure and asset pipeline. Before writing anything, list the values you need from me (channel ID, playlist IDs) and use clearly named placeholders until I give them. The script must keep existing data when a fetch fails, and missing or empty data files must make the grid render nothing instead of breaking the build.
+For this repository, the channel ID and Live playlist ID have been supplied. Session and Studio playlist IDs remain clearly named placeholders until supplied. Keep Instagram disabled, use no API keys, and make the workflow preserve successful feed updates while clearly reporting any failed feed.
 ```
 
 ☐ **3.3 Place the grids**
@@ -444,7 +447,7 @@ Place the grids: the three latest videos from the Live playlist data in the home
 ☐ **3.4 Test with the real IDs**
 
 ```
-Here are my channel ID and playlist IDs: [paste them]. Put them in scripts/fetch_media.py, run the script locally, show me the generated _data files, preview the grids, and check what happens when a feed URL is wrong (old data kept, build still passes). Then tell me exactly how to run the workflow by hand from GitHub's Actions tab and which repository setting could stop the bot from committing.
+The channel and Live playlist IDs are configured. Here are any remaining playlist IDs: [paste Session and Studio IDs, if available]. Put them in scripts/fetch_media.py, run the script locally, show me the generated _data files, preview the grids, and check what happens when a feed URL is wrong (old data kept, build still passes). Then tell me exactly how to run the workflow by hand from GitHub's Actions tab and which repository setting could stop the bot from committing.
 ```
 
 ### Phase 4: Session page and Studio (week 3)

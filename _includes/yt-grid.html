@@ -1,0 +1,15 @@
+{% assign feed_key = include.feed | default: "yt_live" %}
+{% assign videos = site.data[feed_key] %}
+{% assign limit = include.limit | default: videos.size %}
+{% if videos and videos.size > 0 %}
+<div class="yt-grid">
+  {% for video in videos limit: limit %}
+    {% if video.id and video.title %}
+    <button class="yt-card" type="button" data-video-id="{{ video.id | escape }}" data-video-title="{{ video.title | escape }}" aria-label="Play video: {{ video.title | escape }}">
+      <img loading="lazy" src="https://i.ytimg.com/vi/{{ video.id | escape }}/hqdefault.jpg" alt="">
+      <span>{{ video.title | escape }}</span>
+    </button>
+    {% endif %}
+  {% endfor %}
+</div>
+{% endif %}
