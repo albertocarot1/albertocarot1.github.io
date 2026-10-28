@@ -43,6 +43,24 @@ For live bookings, recording sessions, music production, or if you need a sound/
   <button class="btn btn--primary" type="submit">Send message</button>
 </form>
 
+<script>
+  var projectTypes = { live: "Live project", session: "Session drummer", production: "Music production/recording" };
+  var requestedType = projectTypes[new URLSearchParams(window.location.search).get("type")];
+  if (requestedType) {
+    var projectTypeInput = document.querySelector('input[name="project_type"][value="' + requestedType + '"]');
+    if (projectTypeInput) projectTypeInput.checked = true;
+  }
+</script>
+
+## Direct contact
+
+- **Email:** [TODO: email address]
+  <!-- TODO(alberto): provide the email address to show here. -->
+- **WhatsApp:** [TODO: WhatsApp number or link]
+  <!-- TODO(alberto): provide the WhatsApp number or contact link. -->
+- **Instagram DM:** [TODO: Instagram profile or DM link]
+  <!-- TODO(alberto): confirm the Instagram DM link to use for direct contact. -->
+
 ## Book a call
 
 Pick directly a convenient time for a chat about your goals.
