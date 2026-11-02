@@ -1,22 +1,48 @@
 ---
-layout: splash
-author_profile: false
-classes: landing-page
+layout: default
+title: Home
+is_home: true
+permalink: /
 ---
+<section class="home-hero" id="home" aria-labelledby="home-heading">
+  <div class="hero-inner">
+    <div class="hero-photo">
+      <img src="{{ '/assets/images/bio-photo.jpg' | relative_url }}" alt="Portrait of Alberto Caroli" fetchpriority="high">
+    </div>
+    <div class="hero-copy">
+      <p class="eyebrow">Drummer · Producer · Sound Engineer</p>
+      <h1 id="home-heading">Alberto<br>Caroli</h1>
+      <blockquote>Drummer, producer, and engineer shaping sound from the first idea to the final master.</blockquote>
+      <div class="hero-actions">
+        <a class="primary-action" href="#projects">Discover the work <span aria-hidden="true">→</span></a>
+        <a class="secondary-action" href="#contact">Get in touch</a>
+      </div>
+    </div>
+  </div>
+</section>
 
-<main class="landing-hero" id="main-content">
-	<div class="landing-hero__portrait">
-		<img src="{{ '/assets/images/bio-photo.jpg' | relative_url }}" alt="Alberto Caroli">
-	</div>
-
-	<div class="landing-hero__content">
-		<blockquote>
-			<p>Drummer, producer, and engineer shaping sound from the first idea to the final master.</p>
-		</blockquote>
-		<p class="landing-hero__intro"></p>
-		<div class="landing-hero__actions">
-			<a class="landing-hero__link" href="{{ '/projects/' | relative_url }}">Discover the work <span aria-hidden="true">&rarr;</span></a>
-			<a class="landing-hero__contact" href="{{ '/contact/' | relative_url }}">Let's work together</a>
-		</div>
-	</div>
-</main>
+{% for item in site.data.navigation.main %}
+  {% unless item.slug == 'home' %}
+    {% assign section_page = site.pages | where: 'permalink', item.url | first %}
+    {% if section_page %}
+      {% assign pieces = section_page.content | split: '<!-- home-cut -->' %}
+      <section class="home-section home-section--{{ item.slug }}" id="{{ item.slug }}" aria-labelledby="heading-{{ item.slug }}">
+        <div class="section-inner">
+          <div class="section-heading">
+            <span class="section-number">0{{ forloop.index0 }}</span>
+            <h2 id="heading-{{ item.slug }}">{{ item.title }}</h2>
+          </div>
+          <div class="section-summary">
+            {{ pieces | first | markdownify }}
+          </div>
+          {% include home-highlights.html section=item.slug %}
+          {% if item.has_detail %}
+            <div class="see-all-wrap">
+              <a class="see-all" href="{{ item.url | relative_url }}" aria-label="See all {{ item.title }}">See all <span aria-hidden="true">↗</span></a>
+            </div>
+          {% endif %}
+        </div>
+      </section>
+    {% endif %}
+  {% endunless %}
+{% endfor %}

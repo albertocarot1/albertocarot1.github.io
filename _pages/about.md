@@ -1,10 +1,14 @@
 ---
 permalink: /about/
 title: "About"
-layout: single
-author_profile: true
-toc: false
+layout: section
+section_slug: about
+has_detail: true
 ---
+
+Alberto Caroli is a drummer, composer, producer and sound engineer working across live music, studio sessions and production. His work starts with careful listening and a commitment to the artist's vision.
+
+<!-- home-cut -->
 
 {% include figure image_path="/assets/images/alberto-caroli.jpg" alt="Alberto Caroli" caption="" %}
 

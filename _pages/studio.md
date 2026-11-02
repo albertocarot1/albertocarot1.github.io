@@ -1,12 +1,14 @@
 ---
 permalink: /studio/
 title: "The Studio"
-layout: single
-author_profile: true
-toc: true
-toc_label: "The Studio"
-toc_sticky: true
+layout: section
+section_slug: studio
+has_detail: true
 ---
+
+A recording and mixing environment designed for honest, detailed sound. Discover the room, production philosophy and a complete list of studio and drum equipment.
+
+<!-- home-cut -->
 
 <style>
 .studio-section { margin-bottom: 3rem; }

@@ -1,12 +1,14 @@
 ---
 permalink: /gallery/
 title: "Gallery"
-layout: single
-author_profile: true
-toc: true
-toc_label: "Gallery"
-toc_sticky: true
+layout: section
+section_slug: gallery
+has_detail: true
 ---
+
+Images from performances, recording sessions and life around music. A selection is shown here, with the full gallery available on its own page.
+
+<!-- home-cut -->
 
 <style>
 .gallery-grid {

@@ -1,0 +1,15 @@
+---
+layout: default
+---
+<article class="detail-page">
+  <header class="detail-header">
+    <p class="eyebrow">Alberto Caroli / {{ page.title | escape }}</p>
+    <h1>{{ page.title | escape }}</h1>
+  </header>
+  <div class="detail-content">
+    {{ content }}
+  </div>
+  <nav class="detail-bottom-nav" aria-label="Section navigation">
+    <a href="{{ '/' | relative_url }}#{{ page.section_slug }}">← Return to the homepage</a>
+  </nav>
+</article>

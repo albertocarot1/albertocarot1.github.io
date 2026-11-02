@@ -1,12 +1,14 @@
 ---
 permalink: /projects/
 title: "Projects"
-layout: single
-author_profile: true
-toc: true
-toc_label: "Projects"
-toc_sticky: true
+layout: section
+section_slug: projects
+has_detail: true
 ---
+
+Records, collaborations and ongoing bands. Explore selected releases and the roles behind each production, from drumming and composing to recording, mixing and mastering.
+
+<!-- home-cut -->
 
 <style>
 /* ── Role badge colours ── */

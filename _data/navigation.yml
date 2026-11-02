@@ -1,13 +1,32 @@
+# Navigation order and homepage behaviour.
+# has_detail: false always goes to a homepage anchor, including from other pages.
+# A section's permalink must match its _pages/<section>.md front matter.
 main:
+  - title: "Home"
+    slug: home
+    url: /
+    has_detail: false
   - title: "About"
+    slug: about
     url: /about/
+    has_detail: true
   - title: "Projects"
+    slug: projects
     url: /projects/
+    has_detail: true
   - title: "Gallery"
+    slug: gallery
     url: /gallery/
+    has_detail: true
   - title: "Live"
+    slug: live
     url: /live/
+    has_detail: true
   - title: "The Studio"
+    slug: studio
     url: /studio/
+    has_detail: true
   - title: "Contact"
+    slug: contact
     url: /contact/
+    has_detail: false

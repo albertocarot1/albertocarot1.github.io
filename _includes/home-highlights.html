@@ -1,0 +1,46 @@
+{% case include.section %}
+  {% when 'projects' %}
+    <div class="preview-grid">
+      {% for release in site.data.projects.portfolio limit: 3 %}
+        <a class="preview-card" href="{{ release.link | default: '/projects/' | relative_url }}" {% if release.link and release.link != '' %}target="_blank" rel="noopener noreferrer"{% endif %}>
+          {% if release.art and release.art != '' %}<img src="{{ release.art | relative_url }}" alt="{{ release.title | escape }} artwork" loading="lazy">{% endif %}
+          <span class="preview-card-body"><strong>{{ release.title }}</strong><small>{{ release.artist }}</small></span>
+        </a>
+      {% endfor %}
+    </div>
+  {% when 'gallery' %}
+    <div class="preview-grid">
+      {% for photo in site.data.gallery.gallery limit: 3 %}
+        <figure class="preview-card preview-photo">
+          <img src="{{ photo.image | relative_url }}" alt="{{ photo.title | escape }}" loading="lazy">
+          <figcaption class="preview-card-body">{{ photo.title }}</figcaption>
+        </figure>
+      {% endfor %}
+    </div>
+  {% when 'live' %}
+    {% assign upcoming = site.data.live.upcoming | sort: 'date' %}
+    {% assign recent = site.data.live.past | sort: 'date' | reverse %}
+    <div class="live-preview">
+      {% if upcoming and upcoming.size > 0 %}
+        <h3>Next performances</h3>
+        {% for show in upcoming limit: 3 %}
+          <div class="live-preview-row">
+            <time>{{ show.date | date: '%d %b %Y' }}</time>
+            <span><strong>{{ show.venue }}</strong><small>{{ show.city }} · {{ show.project }}</small></span>
+          </div>
+        {% endfor %}
+      {% else %}
+        <h3>Recent performances</h3>
+        {% for show in recent limit: 3 %}
+          <div class="live-preview-row">
+            <time>{{ show.date | date: '%d %b %Y' }}</time>
+            <span><strong>{{ show.venue }}</strong><small>{{ show.city }} · {{ show.project }}</small></span>
+          </div>
+        {% endfor %}
+      {% endif %}
+    </div>
+  {% when 'studio' %}
+    <figure class="preview-wide-image">
+      <img src="{{ '/assets/images/studio-room.jpg' | relative_url }}" alt="Recording studio control room" loading="lazy">
+    </figure>
+{% endcase %}

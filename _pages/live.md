@@ -1,12 +1,14 @@
 ---
 permalink: /live/
 title: "Live"
-layout: single
-author_profile: true
-toc: true
-toc_label: "Live"
-toc_sticky: true
+layout: section
+section_slug: live
+has_detail: true
 ---
+
+On stage with different artists and projects, from intimate club shows to larger events. Here are the latest dates from the concert archive.
+
+<!-- home-cut -->
 
 <style>
 .concert-table {
