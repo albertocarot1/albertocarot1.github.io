@@ -10,7 +10,7 @@ Alberto Caroli is a drummer, composer, producer and sound engineer working acros
 
 <!-- home-cut -->
 
-{% include figure image_path="/assets/images/alberto-caroli.jpg" alt="Alberto Caroli" caption="" %}
+{% include figure.html image_path="/assets/images/alberto-caroli.jpg" alt="Alberto Caroli" caption="" %}
 
 ## Alberto Caroli
 
