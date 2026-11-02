@@ -164,7 +164,7 @@ alberto-caroli-site/
 │   └── studio.md
 ├── assets/
 │   ├── images/          # Put your photos here
-│   └── css/main.scss    # Custom style overrides
+│   └── css/style.scss   # Custom style overrides
 ├── index.html
 └── Gemfile
 ```
