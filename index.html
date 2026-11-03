@@ -21,6 +21,15 @@ permalink: /
   </div>
 </section>
 
+<section class="home-section home-youtube" aria-labelledby="youtube-heading">
+  <div class="section-inner">
+    <div class="section-heading">
+      <h2 id="youtube-heading">Featured video</h2>
+    </div>
+    {% include youtube.html id=site.youtube_featured_video_id title="Alberto Caroli - Pirates of the Caribbean Theme - Drum cover" %}
+  </div>
+</section>
+
 {% for item in site.data.navigation.main %}
   {% unless item.slug == 'home' %}
     {% assign section_page = site.pages | where: 'permalink', item.url | first %}

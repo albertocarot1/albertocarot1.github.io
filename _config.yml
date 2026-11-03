@@ -6,6 +6,7 @@ timezone: Europe/Rome
 markdown: kramdown
 theme: jekyll-theme-cayman
 image_bottom_fade: 50%
+youtube_featured_video_id: "VpE6XaLsLyE"
 
 # Keep the existing section documents and permalinks.
 include:
