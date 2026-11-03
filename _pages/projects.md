@@ -4,6 +4,8 @@ title: "Projects"
 layout: section
 section_slug: projects
 has_detail: true
+hero_image: /assets/images/portfolio/diluvio-universale.jpg
+image_darkness: 0.55
 ---
 
 Records, collaborations and ongoing bands. Explore selected releases and the roles behind each production, from drumming and composing to recording, mixing and mastering.
@@ -184,4 +186,3 @@ Records, collaborations and ongoing bands. Explore selected releases and the rol
 {% endfor %}
 
 ---
-

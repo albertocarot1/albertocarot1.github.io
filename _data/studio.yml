@@ -1,5 +1,5 @@
 # Studio gear data
-# Used by _pages/studio.md
+# Used by _pages/session.md
 
 gear:
   - category: "DAW & Software"
@@ -57,4 +57,3 @@ drum_gear:
     items:
       - "Pearl Eliminator Bass Drum Pedal (double)"
       - "Gibraltar, Millenium, Tama Drum Hardware"
-

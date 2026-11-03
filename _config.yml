@@ -5,6 +5,7 @@ description: >-
 timezone: Europe/Rome
 markdown: kramdown
 theme: jekyll-theme-cayman
+image_bottom_fade: 50%
 
 # Keep the existing section documents and permalinks.
 include:

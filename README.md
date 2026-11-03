@@ -98,7 +98,7 @@ Past concerts are sorted descending (most recent first).
 
 ---
 
-### 🎚️ The Studio (`_data/studio.yml`)
+### 🎚️ Session gear (`_data/studio.yml`)
 
 Edit gear lists under `gear:` (studio gear) and `drum_gear:` (live rig).
 
@@ -143,7 +143,7 @@ The same links are mirrored in `footer:` — update both.
 Place images in `assets/images/`:
 - `bio-photo.jpg` — sidebar portrait (square, min 200×200px)
 - `alberto-caroli.jpg` — large about-page photo
-- `studio-room.jpg` — studio room photo (appears in The Studio page)
+- `studio-room.jpg` — studio room photo (appears in the Session page)
 
 ---
 
@@ -161,7 +161,7 @@ alberto-caroli-site/
 │   ├── about.md
 │   ├── projects.md
 │   ├── live.md
-│   └── studio.md
+│   └── session.md
 ├── assets/
 │   ├── images/          # Put your photos here
 │   └── css/style.scss   # Custom style overrides

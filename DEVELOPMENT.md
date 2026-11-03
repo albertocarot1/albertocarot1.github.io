@@ -34,8 +34,9 @@ Do **not** merge this branch until the local preview is correct.
 - For long sections, put `<!-- home-cut -->` on its own line inside the Markdown body. Everything before the marker is used as the homepage text preview. The **entire** Markdown body is used on the detail page.
 - Set `has_detail: true` in navigation for sections with a detail page. Set `has_detail: false` for short sections such as Contact; the navigation always points to `/#contact` for these.
 - Keep Markdown text *above the marker* free of Liquid tags and dynamic includes: Jekyll's `site.pages` content is read as raw content when the homepage renders its previews. The full detail pages can use Liquid normally.
-- The homepage's featured release cards, photos, recent performances, and Studio image are rendered via `_includes/home-highlights.html` from the existing YAML data. Adjust the `limit: 3` values there to change how many appear.
+- The homepage's featured release cards, photos, recent performances, and Session image are rendered via `_includes/home-highlights.html` from the existing YAML data. Adjust the `limit: 3` values there to change how many appear.
 - Keep the YAML data in `_data/` and reuse its existing schema.
+- Set `image_bottom_fade` in `_config.yml` to adjust how much of the homepage hero, homepage section backgrounds, and detail-page hero backgrounds fades into the page background (for example, `20%`).
 
 ## Embeds in detail pages
 
@@ -55,6 +56,6 @@ Videos and audio players are loaded lazily. Use the same includes in standalone 
 2. Verify detail-page menu items open the other full pages, while Home and Contact return to the homepage anchors.
 3. Verify See all opens each full page.
 4. Test the contact form and Book a call link.
-5. Verify Live, Projects, Studio and Gallery still render YAML-driven content.
+5. Verify Live, Projects, and Session still render YAML-driven content.
 6. Test narrow browser widths and keyboard navigation.
 7. When satisfied, open a PR from `feature/scrolling-homepage` to `master` and merge to publish.

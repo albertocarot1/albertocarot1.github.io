@@ -14,17 +14,13 @@ main:
     slug: projects
     url: /projects/
     has_detail: true
-  - title: "Gallery"
-    slug: gallery
-    url: /gallery/
-    has_detail: true
   - title: "Live"
     slug: live
     url: /live/
     has_detail: true
-  - title: "The Studio"
-    slug: studio
-    url: /studio/
+  - title: "Session"
+    slug: session
+    url: /session/
     has_detail: true
   - title: "Contact"
     slug: contact

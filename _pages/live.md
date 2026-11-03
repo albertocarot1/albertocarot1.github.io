@@ -4,6 +4,8 @@ title: "Live"
 layout: section
 section_slug: live
 has_detail: true
+hero_image: /assets/images/session-recording-studio.jpg
+image_darkness: 0.55
 ---
 
 On stage with different artists and projects, from intimate club shows to larger events. Here are the latest dates from the concert archive.
@@ -169,4 +171,3 @@ On stage with different artists and projects, from intimate club shows to larger
 {% else %}
 <p><em>No past concerts listed yet.</em></p>
 {% endif %}
-

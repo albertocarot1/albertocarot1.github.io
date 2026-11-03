@@ -4,6 +4,8 @@ title: "Contact"
 layout: section
 section_slug: contact
 has_detail: false
+hero_image: /assets/images/bio-photo.jpg
+image_darkness: 0.55
 ---
 
 ## Get in touch
