@@ -1,22 +1,56 @@
 ---
-layout: splash
-author_profile: false
-classes: landing-page
+layout: default
+title: Home
+is_home: true
+permalink: /
 ---
+<section class="home-hero" id="home" aria-labelledby="home-heading" style="--image-darkness: 0.55;">
+  <div class="hero-inner">
+    <div class="hero-photo">
+      <img src="{{ '/assets/images/bio-photo.jpg' | relative_url }}" alt="Portrait of Alberto Caroli" fetchpriority="high">
+    </div>
+    <div class="hero-copy">
+      <p class="eyebrow">Drummer</p>
+      <h1 id="home-heading">Alberto<br>Caroli</h1>
+      <blockquote>Touring and session drummer, playing rock, metal and pop from small to large stages.</blockquote>
+      <div class="hero-actions">
+        <a class="primary-action" href="#projects">Discover the work <span aria-hidden="true">→</span></a>
+        <a class="secondary-action" href="#contact">Get in touch</a>
+      </div>
+    </div>
+  </div>
+</section>
 
-<main class="landing-hero" id="main-content">
-	<div class="landing-hero__portrait">
-		<img src="{{ '/assets/images/bio-photo.jpg' | relative_url }}" alt="Alberto Caroli">
-	</div>
+<section class="home-section home-youtube" aria-labelledby="youtube-heading">
+  <div class="section-inner">
+    <div class="section-heading">
+      <h2 id="youtube-heading">Featured video</h2>
+    </div>
+    {% include youtube.html id=site.youtube_featured_video_id title="Alberto Caroli - Pirates of the Caribbean Theme - Drum cover" %}
+  </div>
+</section>
 
-	<div class="landing-hero__content">
-		<blockquote>
-			<p>Drummer, producer, and engineer shaping sound from the first idea to the final master.</p>
-		</blockquote>
-		<p class="landing-hero__intro"></p>
-		<div class="landing-hero__actions">
-			<a class="landing-hero__link" href="{{ '/projects/' | relative_url }}">Discover the work <span aria-hidden="true">&rarr;</span></a>
-			<a class="landing-hero__contact" href="{{ '/contact/' | relative_url }}">Let's work together</a>
-		</div>
-	</div>
-</main>
+{% for item in site.data.navigation.main %}
+  {% unless item.slug == 'home' %}
+    {% assign section_page = site.pages | where: 'permalink', item.url | first %}
+    {% if section_page %}
+      {% assign pieces = section_page.content | split: '<!-- home-cut -->' %}
+      <section class="home-section home-section--{{ item.slug }}" id="{{ item.slug }}" aria-labelledby="heading-{{ item.slug }}">
+        <div class="section-inner">
+          <div class="section-intro" style="--section-image: url('{{ section_page.hero_image | default: '/assets/images/alberto-caroli.jpg' | relative_url }}'); --image-darkness: {{ section_page.image_darkness | default: 0.55 }};">
+            <div class="section-heading">
+              <h2 id="heading-{{ item.slug }}">{% if item.has_detail %}<a href="{{ item.url | relative_url }}">{{ item.title }}</a>{% else %}{{ item.title }}{% endif %}</h2>
+              {% if item.has_detail %}
+                <a class="see-more" href="{{ item.url | relative_url }}">See more... <span aria-hidden="true">↗</span></a>
+              {% endif %}
+            </div>
+            <div class="section-summary">
+              {{ pieces | first | markdownify }}
+            </div>
+          </div>
+          {% include home-highlights.html section=item.slug %}
+        </div>
+      </section>
+    {% endif %}
+  {% endunless %}
+{% endfor %}

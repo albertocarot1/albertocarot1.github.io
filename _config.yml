@@ -1,65 +1,20 @@
-# Alberto Caroli – Musician, Producer, Sound Engineer
 title: "Alberto Caroli"
-email:
 description: >-
   Musician, Producer and Sound Engineer based in Italy.
   Drummer, producer, mixing and mastering engineer.
-
-minimal_mistakes_skin: "dark"
-search: false
-
-# Build settings
-markdown: kramdown
-remote_theme: mmistakes/minimal-mistakes
-
-# Outputting
-permalink: /:categories/:title/
 timezone: Europe/Rome
+markdown: kramdown
+theme: jekyll-theme-cayman
+image_bottom_fade: 50%
+youtube_featured_video_id: "VpE6XaLsLyE"
 
+# Keep the existing section documents and permalinks.
 include:
   - _pages
 
 plugins:
   - jekyll-sitemap
-  - jekyll-gist
-  - jekyll-feed
-  - jekyll-include-cache
 
-author:
-  name: ""
-  avatar: "/assets/images/bio-photo.jpg"
-  bio: "Drummer · Producer · Sound Engineer"
-  links:
-    - label: "YouTube"
-      icon: "fab fa-fw fa-youtube"
-      url: "https://www.youtube.com/@carotanza"
-    - label: "Facebook"
-      icon: "fab fa-fw fa-facebook"
-      url: "https://www.facebook.com/albertocaroli"
-    - label: "Instagram"
-      icon: "fab fa-fw fa-instagram"
-      url: "https://www.instagram.com/albe.caroli"
-
-footer:
-  links:
-    - label: "YouTube"
-      icon: "fab fa-fw fa-youtube"
-      url: "https://www.youtube.com/@carotanza"
-    - label: "Facebook"
-      icon: "fab fa-fw fa-facebook"
-      url: "https://facebook.com/albertocaroli"
-    - label: "Instagram"
-      icon: "fab fa-fw fa-instagram"
-      url: "https://www.instagram.com/albe.caroli"
-
-atom_feed:
-  hide: true
-
-defaults:
-  # _pages
-  - scope:
-      path: "_pages"
-      type: pages
-    values:
-      layout: splash
-      author_profile: true
+# Absolute URLs for the live site. Jekyll serves locally at localhost.
+url: "https://www.albertocaroli.com"
+baseurl: ""

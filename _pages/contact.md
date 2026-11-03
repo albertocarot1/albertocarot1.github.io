@@ -1,9 +1,11 @@
 ---
 permalink: /contact/
 title: "Contact"
-layout: single
-author_profile: false
-toc: false
+layout: section
+section_slug: contact
+has_detail: false
+hero_image: /assets/images/bio-photo.jpg
+image_darkness: 0.55
 ---
 
 ## Get in touch
@@ -44,8 +46,4 @@ For live bookings, recording sessions, music production, or if you need a sound/
 
 ## Book a call
 
-Pick directly a convenient time for a chat about your goals.
-
-<link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
-<div class="calendly-inline-widget" data-url="https://calendly.com/acaroli1990/30min" style="min-width:320px;height:700px;"></div>
-<script src="https://assets.calendly.com/assets/external/widget.js" async></script>
+Prefer a conversation first? [Book a 30-minute call](https://calendly.com/acaroli1990/30min) through Calendly.

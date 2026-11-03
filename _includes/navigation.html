@@ -1,0 +1,15 @@
+{% assign root_url = '/' | relative_url %}
+<header class="site-header">
+  <a class="site-brand" href="{{ root_url }}#home" aria-label="Alberto Caroli — Home">Alberto Caroli</a>
+  <nav class="site-nav" aria-label="Main navigation">
+    {% for item in site.data.navigation.main %}
+      {% if page.is_home %}
+        <a href="#{{ item.slug }}" data-target="{{ item.slug }}"{% if item.slug == 'home' %} aria-current="location"{% endif %}>{{ item.title }}</a>
+      {% elsif item.slug == 'home' or item.has_detail == false %}
+        <a href="{{ root_url }}#{{ item.slug }}" data-target="{{ item.slug }}">{{ item.title }}</a>
+      {% else %}
+        <a href="{{ item.url | relative_url }}" data-target="{{ item.slug }}"{% if page.permalink == item.url %} aria-current="page"{% endif %}>{{ item.title }}</a>
+      {% endif %}
+    {% endfor %}
+  </nav>
+</header>

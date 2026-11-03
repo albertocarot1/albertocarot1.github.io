@@ -1,0 +1,15 @@
+---
+layout: default
+---
+<article class="detail-page">
+  <header class="detail-header detail-hero" style="--section-image: url('{{ page.hero_image | default: '/assets/images/alberto-caroli.jpg' | relative_url }}'); --image-darkness: {{ page.image_darkness | default: 0.55 }};">
+    <p class="eyebrow">Alberto Caroli / {{ page.title | escape }}</p>
+    <h1>{{ page.title | escape }}</h1>
+  </header>
+  <div class="detail-content">
+    {{ content }}
+  </div>
+  <nav class="detail-bottom-nav" aria-label="Section navigation">
+    <a href="{{ '/' | relative_url }}#{{ page.section_slug }}">← Return to the homepage</a>
+  </nav>
+</article>

@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% if page.is_home %}{{ site.title | escape }}{% else %}{{ page.title | escape }} · {{ site.title | escape }}{% endif %}</title>
+  <meta name="description" content="{{ page.description | default: site.description | strip_html | normalize_whitespace | escape }}">
+  <link rel="canonical" href="{{ page.url | absolute_url }}">
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+  {% if jekyll.environment == 'production' %}{% seo title=false %}{% endif %}
+</head>
+<body class="{% if page.is_home %}is-home{% else %}is-detail{% endif %}">
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  {% include navigation.html %}
+  <main class="site-main" id="main-content">
+    {{ content }}
+  </main>
+  <footer class="site-footer-custom">
+    <span>© {{ 'now' | date: '%Y' }} {{ site.title }}</span>
+    <div class="footer-links">
+      <a href="https://www.youtube.com/@albecarolimusic" target="_blank" rel="noopener noreferrer">YouTube</a>
+      <a href="https://www.instagram.com/albe.caroli" target="_blank" rel="noopener noreferrer">Instagram</a>
+      <a href="{{ '/' | relative_url }}#contact">Contact</a>
+    </div>
+  </footer>
+  {% if page.is_home %}
+    <script>
+      (function () {
+        if (!('IntersectionObserver' in window)) return;
+        const links = Array.from(document.querySelectorAll('.site-nav a[data-target]'));
+        const sections = Array.from(document.querySelectorAll('section[id]'));
+        const setCurrent = (id) => links.forEach(link => {
+          if (link.dataset.target === id) {
+            link.setAttribute('aria-current', 'location');
+          } else {
+            link.removeAttribute('aria-current');
+          }
+        });
+        const observer = new IntersectionObserver(entries => {
+          const visible = entries.filter(entry => entry.isIntersecting);
+          if (visible.length) setCurrent(visible[0].target.id);
+        }, { rootMargin: '-20% 0px -65% 0px' });
+        sections.forEach(section => observer.observe(section));
+      }());
+    </script>
+  {% endif %}
+</body>
+</html>
