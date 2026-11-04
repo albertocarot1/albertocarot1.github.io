@@ -12,6 +12,17 @@ a:hover { color:#ffca58; }
 img { max-width:100%; }
 h1,h2,h3,h4 { color:var(--ink); }
 p,ul,ol { margin-top:0; }
+blockquote.philosophy {
+  margin: 2rem 0;
+  padding: 0 0 0 1.25rem;
+  border-left: 3px solid var(--accent);
+  color: #f2f2f2;
+  font-family: 'Bricolage Grotesque',sans-serif;
+  font-size: clamp(1.5rem, 2.4vw, 2.2rem);
+  font-style: italic;
+  line-height: 1.25;
+}
+blockquote.philosophy p { margin:0; }
 .site-main { width:100%; }
 .skip-link { position:fixed; top:-100px; left:12px; z-index:2000; padding:12px; color:#101010; background:#fff; }
 .skip-link:focus { top:12px; }
@@ -23,7 +34,7 @@ p,ul,ol { margin-top:0; }
 .site-nav a:hover,.site-nav a[aria-current] { color:var(--accent); border-bottom-color:var(--accent); }
 .site-nav a:focus-visible,.site-brand:focus-visible,.see-more:focus-visible,.section-heading h2 a:focus-visible { outline:3px solid #fff; outline-offset:3px; }
 .home-hero,.home-section { scroll-margin-top:calc(var(--nav-height) + 14px); }
-.home-hero { position:relative; isolation:isolate; overflow:hidden; min-height:calc(100vh - var(--nav-height)); display:flex; align-items:stretch; border-bottom:1px solid rgba(255,255,255,.12); }
+.home-hero { position:relative; isolation:isolate; overflow:hidden; min-height:calc(100vh - var(--nav-height)); display:flex; align-items:stretch; }
 .hero-photo { position:absolute; z-index:0; inset:0; }
 .hero-photo::after,.section-intro::after,.detail-hero::after {
   position:absolute;
@@ -38,7 +49,7 @@ p,ul,ol { margin-top:0; }
 .hero-copy { position:relative; z-index:1; max-width:820px; }
 .eyebrow { color:var(--accent); text-transform:uppercase; letter-spacing:.13em; font-size:.77rem; font-weight:700; }
 .hero-copy h1 { font-family:'Bricolage Grotesque',sans-serif; font-size:clamp(4rem,8.3vw,8rem); font-weight:800; line-height:.86; letter-spacing:-.055em; margin:.3em 0; text-shadow:0 2px 12px rgba(0,0,0,.8); }
-.hero-copy blockquote { border-left:3px solid var(--accent); margin:0 0 28px; padding:0 0 0 20px; font-family:'Bricolage Grotesque',sans-serif; font-style:normal; font-size:clamp(1.3rem,2.2vw,2rem); line-height:1.25; text-shadow:0 1px 6px rgba(0,0,0,.9); }
+.hero-intro { border-left:3px solid var(--accent); margin:0 0 28px; padding:0 0 0 20px; font-family:'Bricolage Grotesque',sans-serif; font-size:clamp(1.3rem,2.2vw,2rem); line-height:1.25; text-shadow:0 1px 6px rgba(0,0,0,.9); }
 .hero-actions { display:flex; flex-wrap:wrap; gap:14px; align-items:center; }
 .primary-action,.secondary-action { display:inline-flex; align-items:center; gap:12px; border-radius:4px; padding:12px 18px; text-decoration:none; font-weight:700; }
 .primary-action { background:var(--accent); color:#121212; }
@@ -84,7 +95,7 @@ p,ul,ol { margin-top:0; }
 .preview-card-body small { color:var(--muted); }
 .preview-photo { margin:0; }
 .preview-photo figcaption { font-weight:600; }
-.live-preview { max-width:850px; margin:24px 0; }
+.live-preview { max-width:850px; margin:24px clamp(22px,5vw,56px); }
 .live-preview h3 { font-size:1rem; text-transform:uppercase; letter-spacing:.11em; }
 .live-preview-row { display:grid; grid-template-columns:130px 1fr; gap:20px; align-items:baseline; border-bottom:1px solid #444; padding:12px 0; }
 .live-preview-row time { color:var(--accent); font-weight:700; white-space:nowrap; }
@@ -164,6 +175,9 @@ p,ul,ol { margin-top:0; }
 .audio-embed { border:0; border-radius:12px; display:block; max-width:100%; }
 .site-footer-custom { display:flex; gap:24px; flex-wrap:wrap; justify-content:space-between; padding:32px clamp(24px,6vw,85px); border-top:1px solid #333; color:var(--muted); font-size:.9rem; }
 .footer-links { display:flex; flex-wrap:wrap; gap:20px; }
+.footer-social-link { display:inline-flex; align-items:center; color:var(--muted); }
+.footer-social-link:hover { color:var(--ink); }
+.footer-social-link svg { display:block; width:20px; height:20px; }
 .form { max-width:720px; }
 .form-group { margin:20px 0; }
 .form-group label { display:block; margin-bottom:7px; }
@@ -175,7 +189,6 @@ p,ul,ol { margin-top:0; }
 @media (max-width:690px) {
   :root { --nav-height:64px; }
   .site-header { padding:0 14px; }
-  .site-brand { display:none; }
   .site-nav a { font-size:.86rem; }
   .hero-inner { width:min(100% - 40px,520px); padding:4rem 0 5rem; }
   .hero-copy h1 { font-size:clamp(3.4rem,13vw,6rem); }
