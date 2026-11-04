@@ -16,12 +16,12 @@ Acoustic drum parts for rock, pop, punk and metal songs, to complement and enhan
 
 ## How I Work
 
-I write and record drum parts for rock, pop, punk and metal songs on a real acoustic kit. I've been drumming since 2006, but that was only the beginning: wanting to release my own songs pushed me to learn guitar, bass and singing too.
+I write and record drum parts for **rock**, **pop**, **punk** and **metal** songs on a real acoustic kit. I've been drumming since 2006, but that was only the beginning: wanting to release my own songs pushed me to learn guitar, bass and singing too.
 
 It shows in my drum parts, which leave space for each instrument but step forward when the song calls for it. Fast and heavy, slow and soft, or slow and heavy? Your song gets the drum part it needs to sound even more authentic.
 
 <blockquote class="philosophy">
-  “Nobody ever left a gig saying, ‘That song really needed more fills.’”
+  <p>“Nobody ever left a gig saying, ‘That song really needed more fills.’”</p>
 </blockquote>
 
 My approach to writing, recording, and mixing drums is built on a few core principles:
@@ -29,8 +29,8 @@ My approach to writing, recording, and mixing drums is built on a few core princ
 <ul class="core-principles">
   <li><strong>Serve the music.</strong> Every decision — from the part I write to the way it is recorded — must serve the song and the artist's intention. Technique is never an end in itself.</li>
   <li><strong>Trust the ears.</strong> Drum tuning frequencies, drum shell materials, mic frequency responses, loudness meters, EQ or compressor presets: they are all useful starting points. But the reference that matters most is what you actually hear — and what the listener will feel.</li>
-  <li><strong>Less is more, until it isn’t.</strong> The goal is always clarity and impact. Sometimes that means minimal drum parts; sometimes it means pushing a section to the edge. Knowing the difference is the craft, and it’s what I love most about playing. You don’t need to write every bar out for me: tell me what you hear, and I’ll find where your song wants to breathe and where it wants to hit.</li>
-  <li><strong>Acoustic rawness, digital precision.</strong> I avoid samples and triggers: what you hear is a real kit played in a real room. I give your song its groove, with a metronome or without one, so the feel comes from the performance. If you want it tighter, DAW-assisted grid alignment is a no-brainer for me.</li>
+  <li><strong>Less is more, until it isn’t.</strong> The goal is always clarity and impact. Sometimes that means minimal drum parts; sometimes it means pushing a section to the edge. Learning the difference has been a process for me, and it’s what I love most about composing. You can also just tell me what you hear, and I’ll find where your song wants to breathe and where it wants to hit.</li>
+  <li><strong>Acoustic rawness, digital precision.</strong> I avoid samples and triggers: what you hear is a real kit played in a real room. I give your song its groove, with a metronome or without one, so the feel comes from the performance. If you want it tighter, I do DAW-assisted grid alignment, never losing the groove.</li>
 </ul>
 
 <section class="session-feature session-feature--image-right">
@@ -52,9 +52,9 @@ MIDI guitar/bass or Guitar Pro and other tablature programs are more than welcom
 
 ### What you get
 
-Raw, transparent, high-quality drum tracks, recorded at 48 kHz and delivered as WAV files, as a multitrack of 8 phase-aligned channels.
+Raw, transparent, high-quality drum tracks, recorded at **48 kHz/24bit** and delivered as WAV files, as a multitrack of 8 phase-aligned channels.
 
-If you want it, I can also grid-align the performance and/or deliver pre-mixed stems, so you start from the sound we agreed the song needs.
+If you want it, I can also **grid-align** the performance and/or deliver **pre-mixed stems**, so you start from the sound we agreed the song needs.
 
 Turnaround is typically 3 days, with 2 revisions included. If you're on a tighter deadline, just ask.
 
@@ -94,9 +94,9 @@ The complete list of what I play, live and in the studio:
 
 I can join you for a session in your studio, or I can record in my own studio, which I've been using since 2022.
 
-I make sure that the sound of the drums is good from the get-go, tuning the snare and shells according to the song, and taking care of any resonances or noises **before** they are captured by the microphones.
+I make sure that the sound of the drums is good from the get-go, tuning the snare and shells according to the song (I use the TuneBOT for specific tunings), and taking care of any resonances or noises **before** they are captured by the microphones.
 
-The mics go through an 8-channel audio interface and its transparent preamps. I record and mix in Reaper, but can export the audio tracks for compatibility with any DAW.
+The mics go through an **8-channel** audio interface and its transparent preamps. I record and mix in Reaper, but can export the audio tracks for compatibility with any DAW.
 
 ## Studio Gear
 
@@ -120,7 +120,7 @@ The complete list of the recording gear:
   <div class="session-feature__content" markdown="1">
 ## The Room
 
-My studio is a dedicated drum recording space, acoustically treated with the natural sound of the instrument in mind.
+My studio is a dedicated drum recording space, **acoustically treated** with the natural sound of the instrument in mind.
 
 The treatment controls unwanted low-frequency buildup without making the room excessively dry or dull. This preserves the depth and punch of the shells, along with the openness and detail of the cymbals.
 

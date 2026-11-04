@@ -8,26 +8,44 @@ hero_image: /assets/images/alberto-caroli.jpg
 image_darkness: 0.55
 ---
 
-Alberto Caroli is a drummer, composer, producer and sound engineer working across live music, studio sessions and production. His work starts with careful listening and a commitment to the artist's vision.
+I'm Alberto Caroli, a drummer who still gets a thrill when a song finally locks in, from the first take in the studio to the last encore of the concert. If you're about to record or need a live drummer, and want someone who shows up prepared and plays for your song, I'd love to hear your music.
 
 <!-- home-cut -->
 
 {% include figure.html image_path="/assets/images/alberto-caroli.jpg" alt="Alberto Caroli" caption="" %}
 
-## Alberto Caroli
+## Hi, I'm Alberto
 
-Alberto Caroli is an Italian musician, composer, producer, and sound & lights engineer with 20 years experience spanning studio recordings, live performances, and audio production across a wide range of genres.
+I'm an Italian session and touring drummer; but also a composer, producer and sound/lights engineer. After 20 years in studios and on stages, the moment I love most hasn't changed: the drop falling exactly how you expect it, the chorus opening up, the crowd feeling it at once. Rock, pop and metal are where I feel most at home, and I love working with people who care about music as much as I do.
 
-He works as a **drummer** (both live and in the studio), **music producer**, **mixing engineer**, and **mastering engineer**, bringing a holistic perspective to every project — from the song idea, to the final master. He also works as lights technician, and can act as a single **show technician** for FOH and monitor. 
+I'm a musician like you. I know how much of yourself goes into a song, and how strange it feels to hand it to someone else to play. That's why your vision always comes first, and why I treat your songs with the same care as my own.
 
-Alberto's approach to music is rooted in deep listening and an obsession with sound quality, supported by the theory and physics that compose any sound. Whether behind the kit, behind the console, or in front of the speakers, his goal is always the same: to serve the music and the artist's vision with integrity and craft.
+## Behind the kit and behind the console
 
-His studio — a carefully designed space combining acoustic treatment, industry-standard gear, and a curated collection of instruments — reflects his philosophy: convey the emotions behind the song to the listener as faithfully as possible. 
+I play for the song, not for my ego. I'm glad to take direction, and just as glad to bring ideas if you want them. I'm also a little obsessed with sound, right down to the physics of why a snare cracks and a room rings the way it does.
 
-Over the years, Alberto has collaborated with artists across Italy and Europe, building a reputation for reliability, creative solutions, an extraordinary ability to hear and to listen. 
+Because I produce, mix and master too, I listen to the whole record while I play: where the kick sits against the bass, which fill gets in the way of the vocal, when the best thing to fill a gap is the tail of the last hit's reverb.
 
-He is also an active member of several ongoing projects, both as a performer and as a creative partner.
+## On the road
+
+Concerts are a world of its own: early load-ins, long drives, questionable meals, and then one fan's comment that makes it all worth it. I've played small and large stages, long and short sets, and two things matter most to me: being reliable, and finding a creative way through when the plan falls apart (I don't fool myself it won't). I learn the set, I respect people's time, and I do my best not to make anyone's day harder.
+
+I've also sat behind the desk. I work as a FOH and monitor engineer and as a lights technician, so I know what the sound and lights crew need from a drummer. You can see my [gear here](/session/). If your tour could use me to fill one of those roles instead, we can talk about it. That's a separate job, with its own line on the quote.
+
+## How I like to work
+
+I do my best work with people who take their music seriously, and I try to be that person too.
+
+- **I show up prepared.** Send me demos, charts or reference tracks and I'll know the songs before day one.
+- **I keep things clear.** Dates, scope and fee are agreed up front and put in writing (an email is fine), so nobody gets a surprise later.
+- **I'm honest.** If I'm not the right fit for your project, I'll say so, and if I can, I'll point you to someone who is.
+
+I'm easy to work with, and I'd like to keep it that way. Tight budget? Say so up front and we'll find what works for both of us. Free work, or "we'll pay you when the single takes off"? Then I'm probably not your drummer. Exposure doesn't fill the van's tank. I'll always respect your craft, and I'd ask the same for mine.
+
+## Got a record or a tour/gigs coming up?
+
+Write to me about it: the songs (a rough demo is perfect), the dates, and the sound you're chasing. The more you share, the faster I can tell you whether I'm the right drummer for it. If I am, I'll be every bit as excited about it as you are.
 
 ---
 
-*"Music is not just what you hear — it's what you feel."*
+*"Dajeee!!!"*
