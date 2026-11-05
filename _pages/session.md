@@ -21,7 +21,7 @@ I write and record drum parts for **rock**, **pop**, **punk** and **metal** song
 It shows in my drum parts, which leave space for each instrument but step forward when the song calls for it. Fast and heavy, slow and soft, or slow and heavy? Your song gets the drum part it needs to sound even more authentic.
 
 <blockquote class="philosophy">
-  <p>“Nobody ever left a gig saying, ‘That song really needed more fills.’”</p>
+  <p>Nobody ever left a gig saying, “That song really needed more fills!”</p>
 </blockquote>
 
 My approach to writing, recording, and mixing drums is built on a few core principles:
