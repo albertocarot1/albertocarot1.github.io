@@ -62,6 +62,16 @@ blockquote.philosophy p { margin:0; }
 .section-inner { margin:0 auto; }
 .home-youtube { padding:clamp(24px,4vw,48px) 24px clamp(30px,4.5vw,60px); }
 .home-youtube .section-inner { max-width:1100px; }
+.home-testimonials { padding:0 24px clamp(18px,3vw,36px); }
+.home-testimonials .section-inner { max-width:1100px; }
+.home-testimonials .credits--home-strip { overflow:hidden; margin:0; }
+.home-testimonials .credits-track { --testimonial-gap:clamp(10px,1.5vw,18px); display:flex; align-items:stretch; gap:var(--testimonial-gap); }
+.home-testimonials .credits-track--moving { animation:testimonial-drift ease-in-out alternate infinite; }
+.home-testimonials .credits--home-strip .credit-quote { display:flex; flex-direction:column; justify-content:center; min-height:clamp(70px,8.5vw,100px); margin:0; padding:clamp(8px,1.25vw,15px); border:1px solid rgba(240,165,0,.4); border-left:4px solid var(--accent); border-radius:4px; background:#202020; }
+.home-testimonials .credits--home-strip .credit-quote blockquote { margin:0; padding:0; border:0; font-size:clamp(1.04rem,1.76vw,1.6rem); font-style:italic; line-height:1.4; }
+.home-testimonials .credits--home-strip .credit-quote blockquote p { margin:0; }
+.home-testimonials .credits--home-strip .credit-quote figcaption { margin-top:14px; color:var(--muted); font-size:1rem; }
+@keyframes testimonial-drift { to { transform:translateX(var(--testimonial-offset)); } }
 .section-intro {
   position:relative;
   isolation:isolate;
@@ -198,6 +208,8 @@ blockquote.philosophy p { margin:0; }
   .hero-copy h1 { font-size:clamp(3.4rem,13vw,6rem); }
   .home-section { padding:0 0 31px; }
   .home-youtube { padding:24px 20px 31px; }
+  .home-testimonials { padding:0 20px 20px; }
+  .home-testimonials .credits--home-strip .credit-quote { min-height:80px; padding:9px; }
   .section-intro { padding:28px 22px; }
   .preview-grid { grid-template-columns:repeat(2,minmax(0,1fr)); gap:12px; }
   .preview-grid .preview-card:nth-child(n+3) { display:none; }
@@ -213,3 +225,4 @@ blockquote.philosophy p { margin:0; }
 }
 @media (max-width:430px) { .preview-grid { grid-template-columns:1fr; } .preview-grid .preview-card:nth-child(n+3) { display:block; } }
 @media (prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } }
+@media (prefers-reduced-motion:reduce) { .home-testimonials .credits-track--moving { animation:none; } }

@@ -117,15 +117,24 @@ Use separate calls for highlights and for testimonials.
 </div>
 {%- endif -%}
 {%- if include.testimonials and cr.testimonials.size > 0 -%}
-<div class="credits">
+{%- assign cr_quote_width = 100.0 | divided_by: cr.testimonials.size -%}
+{%- assign cr_visible_width = 200.0 | divided_by: cr.testimonials.size -%}
+{%- assign cr_quote_travel = 100.0 | minus: cr_visible_width -%}
+<div class="credits{% if include.home_strip %} credits--home-strip{% endif %}">
 {%- if include.heading -%}
 <h{{ cr_level }} class="credits-heading">{{ include.heading }}</h{{ cr_level }}>
 {%- endif -%}
+{%- if include.home_strip -%}
+<div class="credits-track{% if cr.testimonials.size > 2 %} credits-track--moving{% endif %}" style="--testimonial-offset:-{{ cr_quote_travel }}%; width:{{ cr.testimonials.size | times: 50 }}%; animation-duration:{{ cr.testimonials.size | times: 5 }}s">
+{%- endif -%}
 {%- for t in cr.testimonials -%}
-<figure class="credit-quote">
+<figure class="credit-quote"{% if include.home_strip %} style="flex-basis:calc({{ cr_quote_width }}% - var(--testimonial-gap))"{% endif %}>
 <blockquote><p>{{ t.quote }}</p></blockquote>
 <figcaption>{{ t.name }}{% if t.role %}, {{ t.role }}{% endif %}</figcaption>
 </figure>
 {%- endfor -%}
+{%- if include.home_strip -%}
+</div>
+{%- endif -%}
 </div>
 {%- endif -%}

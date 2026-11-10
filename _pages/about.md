@@ -8,7 +8,7 @@ hero_image: /assets/images/alberto-caroli.jpg
 image_darkness: 0.55
 ---
 
-I'm Alberto Caroli, a drummer who likes to find the right part for the song, whether in the studio or on stage. If you're recording or need a live drummer, and you want someone who turns up prepared and plays for the song, I'd love to hear your music.
+I'm Alberto Caroli, a touring and live drummer based in Cesena, Italy. I'm available for in-person studio sessions and remote drum tracks recorded in my own studio and delivered online. I love to find the right part to serve the song, whether on stage or in the studio. Let's talk music!
 
 I've played in front of the San Patrignano community, for 1,000+ people, and for the final show of Michele Luppi's VGDM project after a year of monthly sessions as its drummer.
 
@@ -18,7 +18,7 @@ I've played in front of the San Patrignano community, for 1,000+ people, and for
 
 ## Hi, I'm Alberto
 
-I'm an Italian session and touring drummer, but also a composer, producer, and sound and lights engineer. From the multiple experiences in studios and on stages, I found what I really love: the drop falling at the right moment, the chorus opening up, and the room feeling it together. Rock, pop, and metal are where I feel most at home, and I love working with people who care about the music as much as I do.
+I'm an Italian (based in Cesena) session and touring drummer, but also a composer, producer, and sound and lights engineer. From the multiple experiences in studios and on stages, I found what I really love: the drop falling at the right moment, the chorus opening up, and the room feeling it together. Rock, pop, and metal are where I feel most at home, and I love working with people who care about the music as much as I do.
 
 I know how much goes into a song, and how strange it can feel to hand it to someone else to play. That's why I like to start from your idea and work from there.
 
@@ -55,5 +55,6 @@ Write to me about it: the songs, a rough demo if you have one, the dates, and th
 [Send me a message](/contact/) or [book a 30-minute call](https://calendly.com/acaroli1990/30min).
 
 ---
-
-*"Dajeee!!!"*
+<blockquote class="philosophy">
+  <p>Dajeee!!!</p>
+</blockquote>

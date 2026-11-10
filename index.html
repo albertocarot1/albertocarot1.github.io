@@ -10,9 +10,14 @@ permalink: /
       <img src="{{ '/assets/images/bio-photo.jpg' | relative_url }}" alt="Portrait of Alberto Caroli" fetchpriority="high">
     </div>
     <div class="hero-copy">
-      <p class="eyebrow">TOURING &amp; SESSION DRUMMER</p>
+      <p class="eyebrow">TOURING &amp; LIVE / STUDIO DRUMMER</p>
       <h1 id="home-heading">Drums that hit hard. Music that comes first.</h1>
-      <p class="hero-intro">Powerful, groove-driven drumming that brings your music to life, on record and on the road.</p>
+      <p class="hero-intro">Available for touring and live shows, in-person studio sessions, and remote drum tracks recorded in my own studio and delivered online.</p>
+      <nav class="hero-actions" aria-label="Drumming services">
+        <a class="primary-action" href="{{ '/live/' | relative_url }}">Touring &amp; live</a>
+        <a class="secondary-action" href="{{ '/session/' | relative_url }}#in-person-studio-sessions">In-person studio sessions</a>
+        <a class="secondary-action" href="{{ '/session/' | relative_url }}#remote-drum-tracks">Remote studio drum tracks</a>
+      </nav>
     </div>
   </div>
 </section>
@@ -22,6 +27,14 @@ permalink: /
     {% include youtube.html id=site.youtube_featured_video_id title="Alberto Caroli - Pirates of the Caribbean Theme - Drum cover" %}
   </div>
 </section>
+
+{% if site.data.credits.testimonials.size > 0 %}
+<section class="home-section home-testimonials" aria-label="Testimonials">
+  <div class="section-inner">
+    {% include credits.html testimonials=true home_strip=true css=false %}
+  </div>
+</section>
+{% endif %}
 
 {% assign homepage_section_order = "about,live,session,projects,contact" | split: "," %}
 {% for section_slug in homepage_section_order %}
