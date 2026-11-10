@@ -10,6 +10,8 @@ image_darkness: 0.55
 
 Records, collaborations and ongoing bands. Explore selected releases and the roles behind each production, from drumming and composing to recording, mixing and mastering.
 
+Live, Effigy won the Piazza Bertoldi contest in San Marino in 2024, and the prize was recording a song in a professional studio.
+
 <!-- home-cut -->
 
 <style>
@@ -159,6 +161,7 @@ Records, collaborations and ongoing bands. Explore selected releases and the rol
     {% endif %}
   </h3>
   <p class="desc">{{ project.description }}</p>
+  {% include credits.html bills=true project=project.name css=false %}
   {% if project.roles and project.roles.size > 0 %}
   <div class="roles">
     {% for role in project.roles %}
@@ -184,5 +187,7 @@ Records, collaborations and ongoing bands. Explore selected releases and the rol
   {% endif %}
 </div>
 {% endfor %}
+
+{% include credits.html show="projects" heading="On stage" level=2 intro="Highlights from the concert archive. Where there is a recording, it is linked." %}
 
 ---

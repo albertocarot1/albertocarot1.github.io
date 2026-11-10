@@ -9,25 +9,5 @@
       {% endfor %}
     </div>
   {% when 'live' %}
-    {% assign upcoming = site.data.live.upcoming | sort: 'date' %}
-    {% assign recent = site.data.live.past | sort: 'date' | reverse %}
-    <div class="live-preview">
-      {% if upcoming and upcoming.size > 0 %}
-        <h3>Next performances</h3>
-        {% for show in upcoming limit: 3 %}
-          <div class="live-preview-row">
-            <time>{{ show.date | date: '%d %b %Y' }}</time>
-            <span><strong>{{ show.venue }}</strong><small>{{ show.city }} · {{ show.project }}</small></span>
-          </div>
-        {% endfor %}
-      {% else %}
-        <h3>Recent performances</h3>
-        {% for show in recent limit: 3 %}
-          <div class="live-preview-row">
-            <time>{{ show.date | date: '%d %b %Y' }}</time>
-            <span><strong>{{ show.venue }}</strong><small>{{ show.city }} · {{ show.project }}</small></span>
-          </div>
-        {% endfor %}
-      {% endif %}
-    </div>
+    {% include credits.html show="home" layout="grid" heading="Selected credits" level=3 home_preview=true %}
 {% endcase %}

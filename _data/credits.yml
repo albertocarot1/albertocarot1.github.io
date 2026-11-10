@@ -1,0 +1,15 @@
+# Named quotes from bandmates, bandleaders, organisers and clients (a Fiverr review works too).
+# Nothing is shown on the site until you add at least one. Template:
+#  - quote: "Alberto learned the whole set in a week and never missed a cue."
+#    name: Name Surname
+#    role: Bandleader, Effigy
+testimonials:
+  - quote: "...il tuo rullante ha un suono della madonna..."
+    name: Michele Luppi
+    role: Singer @ Vision Divine, Whitesnake, VGDM
+  - quote: "Alberto delivered great drum track in a short time. He's great at arranging the drum parts and communicating."
+    name: Gremlin special from Fiverr
+    role: Client
+  - quote: "Si sente che hai la musica dentro!"
+    name: Enrico Evangelisti
+    role: Singer @ Alibi, Piano and Vocal Teacher

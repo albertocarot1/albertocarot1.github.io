@@ -46,4 +46,4 @@ For live bookings, recording sessions, music production, or if you need a sound/
 
 ## Book a call
 
-Prefer a conversation first? [Book a 30-minute call](https://calendly.com/acaroli1990/30min) through Calendly.
+Prefer a conversation first? [Book a call](https://calendly.com/acaroli1990/30min) through Calendly.

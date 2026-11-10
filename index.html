@@ -12,7 +12,7 @@ permalink: /
     <div class="hero-copy">
       <p class="eyebrow">TOURING &amp; SESSION DRUMMER</p>
       <h1 id="home-heading">Drums that hit hard. Music that comes first.</h1>
-      <p class="hero-intro">Powerful, groove-driven drumming that brings music to life, on record and on the road.</p>
+      <p class="hero-intro">Powerful, groove-driven drumming that brings your music to life, on record and on the road.</p>
     </div>
   </div>
 </section>
@@ -23,27 +23,27 @@ permalink: /
   </div>
 </section>
 
-{% for item in site.data.navigation.main %}
-  {% unless item.slug == 'home' %}
-    {% assign section_page = site.pages | where: 'permalink', item.url | first %}
-    {% if section_page %}
-      {% assign pieces = section_page.content | split: '<!-- home-cut -->' %}
-      <section class="home-section home-section--{{ item.slug }}" id="{{ item.slug }}" aria-labelledby="heading-{{ item.slug }}">
-        <div class="section-inner">
-          <div class="section-intro" style="--section-image: url('{{ section_page.hero_image | default: '/assets/images/alberto-caroli.jpg' | relative_url }}'); --image-darkness: {{ section_page.image_darkness | default: 0.55 }};">
-            <div class="section-heading">
-              <h2 id="heading-{{ item.slug }}">{% if item.has_detail %}<a href="{{ item.url | relative_url }}">{{ item.title }}</a>{% else %}{{ item.title }}{% endif %}</h2>
-              {% if item.has_detail %}
-                <a class="see-more" href="{{ item.url | relative_url }}">See more... <span aria-hidden="true">↗</span></a>
-              {% endif %}
-            </div>
-            <div class="section-summary">
-              {{ pieces | first | markdownify }}
-            </div>
+{% assign homepage_section_order = "about,live,session,projects,contact" | split: "," %}
+{% for section_slug in homepage_section_order %}
+  {% assign item = site.data.navigation.main | where: 'slug', section_slug | first %}
+  {% assign section_page = site.pages | where: 'permalink', item.url | first %}
+  {% if section_page %}
+    {% assign pieces = section_page.content | split: '<!-- home-cut -->' %}
+    <section class="home-section home-section--{{ item.slug }}" id="{{ item.slug }}" aria-labelledby="heading-{{ item.slug }}">
+      <div class="section-inner">
+        <div class="section-intro" style="--section-image: url('{{ section_page.hero_image | default: '/assets/images/alberto-caroli.jpg' | relative_url }}'); --image-darkness: {{ section_page.image_darkness | default: 0.55 }};">
+          <div class="section-heading">
+            <h2 id="heading-{{ item.slug }}">{% if item.has_detail %}<a href="{{ item.url | relative_url }}">{{ item.title }}</a>{% else %}{{ item.title }}{% endif %}</h2>
+            {% if item.has_detail %}
+              <a class="see-more" href="{{ item.url | relative_url }}">See more... <span aria-hidden="true">↗</span></a>
+            {% endif %}
           </div>
-          {% include home-highlights.html section=item.slug %}
+          <div class="section-summary">
+            {{ pieces | first | markdownify }}
+          </div>
         </div>
-      </section>
-    {% endif %}
-  {% endunless %}
+        {% include home-highlights.html section=item.slug %}
+      </div>
+    </section>
+  {% endif %}
 {% endfor %}

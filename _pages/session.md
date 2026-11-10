@@ -12,6 +12,8 @@ image_darkness: 0.55
 Acoustic drum parts for rock, pop, punk and metal songs, to complement and enhance your composition. Discover how I work, the styles I play, the drums behind the sound, the setup that I use to capture them in my studio.
 </div>
 
+My drums are on releases by Gremlin Special, Effigy and P(a)fanner's Flying Donkeys.
+
 <!-- home-cut -->
 
 ## How I Work
@@ -57,6 +59,24 @@ Raw, transparent, high-quality drum tracks, recorded at **48 kHz/24bit** and del
 If you want it, I can also **grid-align** the performance and/or deliver **pre-mixed stems**, so you start from the sound we agreed the song needs.
 
 Turnaround is typically 3 days, with 2 revisions included. If you're on a tighter deadline, just ask.
+
+## Track record
+
+### On record
+
+{% assign released = '' | split: '' %}
+{% for i in site.data.projects.portfolio %}
+  {% if i.roles contains 'drummer_studio' or i.roles contains 'drummer_both' %}
+    {% assign released = released | push: i %}
+  {% endif %}
+{% endfor %}
+{% if released.size > 0 %}
+My drums are on {% for i in released %}{% if forloop.first %}{% elsif forloop.last %} and {% else %}, {% endif %}{% if i.link and i.link != "" %}<a href="{{ i.link }}" target="_blank" rel="noopener"><em>{{ i.title }}</em></a>{% else %}<em>{{ i.title }}</em>{% endif %} by {{ i.artist }}{% endfor %}.
+{% endif %}
+
+{% include credits.html show="session" heading="On stage" level=3 intro="Each one links to a recording, so you can hear how I play with a band." bills=true %}
+
+{% include credits.html testimonials=true heading="What clients and bandmates say" level=3 css=false %}
 
 ---
 
@@ -130,6 +150,6 @@ The result is a balanced, natural drum sound, with controlled resonances and jus
 
 ## Ready to start?
 
-Send me your drumless track and BPM chart through the [Contact page](/contact/). You can also find me on [Fiverr](https://www.fiverr.com/albertocaroli/write-and-record-drum-parts-for-your-rock-song).
+Send me your drumless track and BPM chart through the [Contact page](/contact/). You can also find me on [Fiverr](https://www.fiverr.com/albertocaroli/write-and-record-drum-parts-for-your-rock-song). Not sure yet? [Book a call](https://calendly.com/acaroli1990/30min) and tell me about your song.
 
 *Gear lists updated periodically.*
