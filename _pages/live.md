@@ -8,7 +8,7 @@ hero_image: /assets/images/session-recording-studio.jpg
 image_darkness: 0.55
 ---
 
-On stage with different artists and projects, from intimate club shows to larger events. Here are the latest dates from the concert archive.
+Available for touring and live drumming, from intimate club shows to larger events. I come prepared, learn the set, and play for the song. Browse recent dates below, then [get in touch about your tour or show](/contact/).
 
 <!-- home-cut -->
 
@@ -18,6 +18,10 @@ On stage with different artists and projects, from intimate club shows to larger
   border-collapse: collapse;
   margin: 1rem 0 2rem;
   font-size: 0.93em;
+}
+.concert-table th:nth-child(2),
+.concert-table td:nth-child(2) {
+  width: 25%;
 }
 .concert-table th {
   text-align: left;
@@ -84,9 +88,9 @@ On stage with different artists and projects, from intimate club shows to larger
 }
 </style>
 
+{% if site.data.live.upcoming and site.data.live.upcoming.size > 0 %}
 ## Next Dates
 
-{% if site.data.live.upcoming and site.data.live.upcoming.size > 0 %}
 <table class="concert-table">
   <thead>
     <tr>
@@ -124,8 +128,6 @@ On stage with different artists and projects, from intimate club shows to larger
     {% endfor %}
   </tbody>
 </table>
-{% else %}
-<p><em>No upcoming dates at the moment. Stay tuned!</em></p>
 {% endif %}
 
 ---

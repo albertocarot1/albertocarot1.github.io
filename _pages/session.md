@@ -9,8 +9,10 @@ image_darkness: 0.55
 ---
 
 <div class="session-overview" markdown="1">
-Acoustic drum parts for rock, pop, punk and metal songs, to complement and enhance your composition. Discover how I work, the styles I play, the drums behind the sound, the setup that I use to capture them in my studio.
+Need a drummer for a recording? I’m available for **in-person studio sessions** at your studio or mine, and for **remote drum tracks** recorded in my own studio and delivered online. I record acoustic drum parts for rock, pop, punk and metal songs, tailored to your music.
 </div>
+
+My drums are on releases by Gremlin Special, Effigy and P(a)fanner's Flying Donkeys.
 
 <!-- home-cut -->
 
@@ -21,7 +23,7 @@ I write and record drum parts for **rock**, **pop**, **punk** and **metal** song
 It shows in my drum parts, which leave space for each instrument but step forward when the song calls for it. Fast and heavy, slow and soft, or slow and heavy? Your song gets the drum part it needs to sound even more authentic.
 
 <blockquote class="philosophy">
-  <p>“Nobody ever left a gig saying, ‘That song really needed more fills.’”</p>
+  <p>Nobody ever left a gig saying, “That song really needed more fills!”</p>
 </blockquote>
 
 My approach to writing, recording, and mixing drums is built on a few core principles:
@@ -50,13 +52,31 @@ MIDI guitar/bass or Guitar Pro and other tablature programs are more than welcom
   </div>
 </section>
 
-### What you get
+## Remote drum tracks
 
-Raw, transparent, high-quality drum tracks, recorded at **48 kHz/24bit** and delivered as WAV files, as a multitrack of 8 phase-aligned channels.
+Raw, transparent, high-quality drum tracks, recorded at **48 kHz/24bit** and delivered online as WAV files, as a multitrack of 8 phase-aligned channels.
 
 If you want it, I can also **grid-align** the performance and/or deliver **pre-mixed stems**, so you start from the sound we agreed the song needs.
 
 Turnaround is typically 3 days, with 2 revisions included. If you're on a tighter deadline, just ask.
+
+## Track record
+
+### On record
+
+{% assign released = '' | split: '' %}
+{% for i in site.data.projects.portfolio %}
+  {% if i.roles contains 'drummer_studio' or i.roles contains 'drummer_both' %}
+    {% assign released = released | push: i %}
+  {% endif %}
+{% endfor %}
+{% if released.size > 0 %}
+My drums are on {% for i in released %}{% if forloop.first %}{% elsif forloop.last %} and {% else %}, {% endif %}{% if i.link and i.link != "" %}<a href="{{ i.link }}" target="_blank" rel="noopener"><em>{{ i.title }}</em></a>{% else %}<em>{{ i.title }}</em>{% endif %} by {{ i.artist }}{% endfor %}.
+{% endif %}
+
+{% include credits.html show="session" heading="On stage" level=3 intro="Each one links to a recording, so you can hear how I play with a band." bills=true %}
+
+{% include credits.html testimonials=true heading="What clients and bandmates say" level=3 css=false %}
 
 ---
 
@@ -90,9 +110,13 @@ The complete list of what I play, live and in the studio:
   </div>
 </section>
 
+## In-person studio sessions
+
+Need a drummer in the room? I can join you at your studio or host the session in my own. Get in touch with the location, dates and project details to arrange an in-person recording.
+
 ## Recording Setup
 
-I can join you for a session in your studio, or I can record in my own studio, which I've been using since 2022.
+For remote sessions, I record in my own studio, which I've been using since 2022, then deliver the tracks online. For in-person sessions, we can record at your studio or mine.
 
 I make sure that the sound of the drums is good from the get-go, tuning the snare and shells according to the song (I use the TuneBOT for specific tunings), and taking care of any resonances or noises **before** they are captured by the microphones.
 
@@ -130,6 +154,6 @@ The result is a balanced, natural drum sound, with controlled resonances and jus
 
 ## Ready to start?
 
-Send me your drumless track and BPM chart through the [Contact page](/contact/). You can also find me on [Fiverr](https://www.fiverr.com/albertocaroli/write-and-record-drum-parts-for-your-rock-song).
+Send me your drumless track and BPM chart through the [Contact page](/contact/). You can also find me on [Fiverr](https://www.fiverr.com/albertocaroli/write-and-record-drum-parts-for-your-rock-song). Not sure yet? [Book a call](https://calendly.com/acaroli1990/30min) and tell me about your song.
 
 *Gear lists updated periodically.*

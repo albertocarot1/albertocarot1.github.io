@@ -10,7 +10,7 @@ image_darkness: 0.55
 
 ## Get in touch
 
-For live bookings, recording sessions, music production, or if you need a sound/light technician, send a message below. The more details about the project (deadline, reference tracks, budget), the smoother our conversation!
+I’m available for touring and live shows, in-person studio recording, and remote drum tracks recorded in my own studio and delivered online. Choose the closest project type below and share the dates, location, deadline, reference tracks and budget.
 
 <form class="form" action="https://formspree.io/f/xgaeeryk" method="post">
   <div class="form-group">
@@ -30,8 +30,9 @@ For live bookings, recording sessions, music production, or if you need a sound/
 
   <fieldset class="form-group">
     <legend>Project type <span aria-hidden="true">*</span></legend>
-    <label><input type="radio" name="project_type" value="Live project" required> Live project</label>
-    <label><input type="radio" name="project_type" value="Session drummer"> Session drummer</label>
+    <label><input type="radio" name="project_type" value="Touring/live drumming" required> Touring / live drumming</label>
+    <label><input type="radio" name="project_type" value="In-person studio session"> In-person studio session</label>
+    <label><input type="radio" name="project_type" value="Remote drum tracks"> Remote drum tracks recorded in my studio</label>
     <label><input type="radio" name="project_type" value="Music production/recording"> Music production/recording</label>
     <label><input type="radio" name="project_type" value="Other"> Other</label>
   </fieldset>
@@ -46,4 +47,4 @@ For live bookings, recording sessions, music production, or if you need a sound/
 
 ## Book a call
 
-Prefer a conversation first? [Book a 30-minute call](https://calendly.com/acaroli1990/30min) through Calendly.
+Prefer a conversation first? [Book a call](https://calendly.com/acaroli1990/30min) through Calendly.

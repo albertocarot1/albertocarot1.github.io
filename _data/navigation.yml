@@ -10,10 +10,6 @@ main:
     slug: about
     url: /about/
     has_detail: true
-  - title: "Projects"
-    slug: projects
-    url: /projects/
-    has_detail: true
   - title: "Live"
     slug: live
     url: /live/
@@ -21,6 +17,10 @@ main:
   - title: "Session"
     slug: session
     url: /session/
+    has_detail: true
+  - title: "Projects"
+    slug: projects
+    url: /projects/
     has_detail: true
   - title: "Contact"
     slug: contact

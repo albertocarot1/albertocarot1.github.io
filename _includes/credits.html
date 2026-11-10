@@ -1,0 +1,140 @@
+{%- comment -%}
+Highlights and testimonials block for Home, About, Projects and Session.
+Highlights and bills come from _data/live.yml; testimonials come from _data/credits.yml.
+
+Options (all optional):
+  show          list the highlights tagged for this page: home, about, projects or session
+  layout        "rows" (default, newest first) or "grid" (three across, curated order, for the home page)
+  heading       heading above the list (or above the quotes when testimonials=true)
+  level         heading level, default 2
+  intro         one sentence under the heading
+  bills         true adds a "Shared stages with" line
+  project       with bills: only the shows played with this band
+  more          false hides the link to the full concert archive
+  testimonials  true shows the quotes (nothing is rendered while the list in credits.yml is empty)
+  css           false skips the <style> block (use it on the second include of the same page)
+
+Use separate calls for highlights and for testimonials.
+{%- endcomment -%}
+{%- assign cr = site.data.credits -%}
+{%- assign live = site.data.live -%}
+{%- assign cr_level = include.level | default: 2 -%}
+{%- unless include.css == false -%}
+<style>
+.credits{--credits-line:rgba(255,255,255,.16);--credits-accent:#f0a500;margin:1.75rem 0}
+.credits--bare{margin:0 0 .75rem}
+.credits--home-preview{margin:24px clamp(22px,5vw,56px)}
+.credits .credits-heading{margin:0 0 .5rem}
+.credits .credits-intro{margin:0 0 1rem;opacity:.8}
+.credits .credits-list{list-style:none;margin:0;padding:0}
+.credits .credit{margin:0;padding:0}
+.credits .credit p{margin:0}
+.credits .credit-when{font-size:.85em;opacity:.75;font-variant-numeric:tabular-nums}
+.credits .credit .credit-title{font-size:1.05em;font-weight:700;line-height:1.3}
+.credits .credit .credit-where{margin-top:.15rem;font-size:.9em;opacity:.75}
+.credits .credit .credit-detail{margin-top:.4rem}
+.credits .credit .credit-link{margin-top:.4rem;font-size:.9em}
+.credits .credits-list--rows{border-bottom:1px solid var(--credits-line)}
+.credits .credits-list--rows .credit{display:grid;grid-template-columns:6rem minmax(0,1fr);gap:.25rem 1.5rem;padding:1rem 0;border-top:1px solid var(--credits-line)}
+.credits .credits-list--grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr));gap:1.75rem}
+.credits .credits-list--grid .credit{padding-top:.9rem;border-top:3px solid var(--credits-accent)}
+.credits .credits-list--grid .credit-when{margin-bottom:.35rem}
+.credits .credits-bills{margin:1.25rem 0 0}
+.credits--bare .credits-bills{margin:0}
+.credits .credits-more{margin:.6rem 0 0;font-size:.9em}
+.credits a{color:inherit;text-decoration:underline;text-decoration-color:var(--credits-accent);text-underline-offset:.2em}
+.credits a:focus-visible{outline:2px solid var(--credits-accent);outline-offset:3px}
+.credits .credit-quote{margin:0 0 1.25rem;padding-left:1.1rem;border-left:3px solid var(--credits-accent)}
+.credits .credit-quote blockquote{margin:0;padding:0;border:0}
+.credits .credit-quote figcaption{margin-top:.4rem;font-size:.9em;opacity:.75}
+@media (max-width:40rem){.credits .credits-list--rows .credit{grid-template-columns:minmax(0,1fr)}}
+</style>
+{% endunless -%}
+{%- if include.show -%}
+{%- assign cr_picks = '' | split: '' -%}
+{%- for h in live.past -%}
+  {%- if h.show_highlight and h.show_highlight contains include.show -%}
+    {%- assign cr_picks = cr_picks | push: h -%}
+  {%- endif -%}
+{%- endfor -%}
+{%- if include.layout == "grid" -%}
+{%- assign cr_picks = cr_picks | sort: "highlight_order" -%}
+{%- else -%}
+{%- assign cr_picks = cr_picks | sort: "date" | reverse -%}
+{%- endif -%}
+{%- else -%}
+{%- assign cr_picks = nil -%}
+{%- endif -%}
+{%- capture cr_bills -%}
+{%- if include.bills -%}
+{%- assign cr_sep = "" -%}
+{%- assign cr_bill_shows = '' | split: '' -%}
+{%- for b in live.past -%}
+{%- if include.project and b.project != include.project -%}{%- continue -%}{%- endif -%}
+{%- if b.bill_with and b.bill_with.size > 0 -%}
+{%- assign cr_bill_shows = cr_bill_shows | push: b -%}
+{%- endif -%}
+{%- endfor -%}
+{%- assign cr_bill_shows = cr_bill_shows | sort: "bill_relevance" -%}
+{%- for b in cr_bill_shows -%}
+{%- for a in b.bill_with -%}
+{{- cr_sep -}}
+{%- if b.youtube_url and b.youtube_url != "" -%}<a href="{{ b.youtube_url }}" target="_blank" rel="noopener">{{ a }}</a>{%- else -%}{{ a }}{%- endif -%}
+{%- assign cr_sep = ", " -%}
+{%- endfor -%}
+{%- endfor -%}
+{%- endif -%}
+{%- endcapture -%}
+{%- if cr_picks.size > 0 or cr_bills != blank -%}
+<div class="credits{% unless include.show %} credits--bare{% endunless %}{% if include.home_preview %} credits--home-preview{% endif %}">
+{%- if cr_picks.size > 0 -%}
+{%- if include.heading -%}
+<h{{ cr_level }} class="credits-heading">{{ include.heading }}</h{{ cr_level }}>
+{%- endif -%}
+{%- if include.intro -%}
+<p class="credits-intro">{{ include.intro }}</p>
+{%- endif -%}
+<ul class="credits-list credits-list--{% if include.layout == 'grid' %}grid{% else %}rows{% endif %}">
+{%- for h in cr_picks -%}
+<li class="credit">
+<p class="credit-when"><time datetime="{{ h.date | date: '%Y-%m-%d' }}">{{ h.date | date: "%b %Y" }}</time></p>
+<div class="credit-body">
+<p class="credit-title">{{ h.highlight_title | default: h.project }}</p>
+<p class="credit-where">{% if h.highlight_where %}{{ h.highlight_where }}{% else %}{{ h.venue }}, {{ h.city }}{% endif %}</p>
+<p class="credit-detail">{{ h.notes }}</p>
+{%- if h.youtube_url and h.youtube_url != "" -%}<p class="credit-link"><a href="{{ h.youtube_url }}" target="_blank" rel="noopener">Watch the recording</a></p>{%- endif -%}
+</div>
+</li>
+{%- endfor -%}
+</ul>
+{%- endif -%}
+{%- if cr_bills != blank -%}
+<p class="credits-bills"><strong>Shared stages with</strong> {{ cr_bills }}.</p>
+{%- endif -%}
+{%- if cr_picks.size > 0 and include.more != false -%}
+<p class="credits-more"><a href="{{ '/live/' | relative_url }}">See every concert in the live archive</a></p>
+{%- endif -%}
+</div>
+{%- endif -%}
+{%- if include.testimonials and cr.testimonials.size > 0 -%}
+{%- assign cr_quote_width = 100.0 | divided_by: cr.testimonials.size -%}
+{%- assign cr_visible_width = 200.0 | divided_by: cr.testimonials.size -%}
+{%- assign cr_quote_travel = 100.0 | minus: cr_visible_width -%}
+<div class="credits{% if include.home_strip %} credits--home-strip{% endif %}">
+{%- if include.heading -%}
+<h{{ cr_level }} class="credits-heading">{{ include.heading }}</h{{ cr_level }}>
+{%- endif -%}
+{%- if include.home_strip -%}
+<div class="credits-track{% if cr.testimonials.size > 2 %} credits-track--moving{% endif %}" style="--testimonial-offset:-{{ cr_quote_travel }}%; width:{{ cr.testimonials.size | times: 50 }}%; animation-duration:{{ cr.testimonials.size | times: 5 }}s">
+{%- endif -%}
+{%- for t in cr.testimonials -%}
+<figure class="credit-quote"{% if include.home_strip %} style="flex-basis:calc({{ cr_quote_width }}% - var(--testimonial-gap))"{% endif %}>
+<blockquote><p>{{ t.quote }}</p></blockquote>
+<figcaption>{{ t.name }}{% if t.role %}, {{ t.role }}{% endif %}</figcaption>
+</figure>
+{%- endfor -%}
+{%- if include.home_strip -%}
+</div>
+{%- endif -%}
+</div>
+{%- endif -%}

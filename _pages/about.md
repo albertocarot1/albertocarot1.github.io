@@ -8,7 +8,9 @@ hero_image: /assets/images/alberto-caroli.jpg
 image_darkness: 0.55
 ---
 
-I'm Alberto Caroli, a drummer who still gets a thrill when a song finally locks in, from the first take in the studio to the last encore of the concert. If you're about to record or need a live drummer, and want someone who shows up prepared and plays for your song, I'd love to hear your music.
+I'm Alberto Caroli, a touring and live drummer based in Cesena, Italy. I'm available for in-person studio sessions and remote drum tracks recorded in my own studio and delivered online. I love to find the right part to serve the song, whether on stage or in the studio. Let's talk music!
+
+I've played in front of the San Patrignano community, for 1,000+ people, and for the final show of Michele Luppi's VGDM project after a year of monthly sessions as its drummer.
 
 <!-- home-cut -->
 
@@ -16,36 +18,43 @@ I'm Alberto Caroli, a drummer who still gets a thrill when a song finally locks 
 
 ## Hi, I'm Alberto
 
-I'm an Italian session and touring drummer; but also a composer, producer and sound/lights engineer. After 20 years in studios and on stages, the moment I love most hasn't changed: the drop falling exactly how you expect it, the chorus opening up, the crowd feeling it at once. Rock, pop and metal are where I feel most at home, and I love working with people who care about music as much as I do.
+I'm an Italian (based in Cesena) session and touring drummer, but also a composer, producer, and sound and lights engineer. From the multiple experiences in studios and on stages, I found what I really love: the drop falling at the right moment, the chorus opening up, and the room feeling it together. Rock, pop, and metal are where I feel most at home, and I love working with people who care about the music as much as I do.
 
-I'm a musician like you. I know how much of yourself goes into a song, and how strange it feels to hand it to someone else to play. That's why your vision always comes first, and why I treat your songs with the same care as my own.
+I know how much goes into a song, and how strange it can feel to hand it to someone else to play. That's why I like to start from your idea and work from there.
 
 ## Behind the kit and behind the console
 
-I play for the song, not for my ego. I'm glad to take direction, and just as glad to bring ideas if you want them. I'm also a little obsessed with sound, right down to the physics of why a snare cracks and a room rings the way it does.
+I play for the song, not for my ego. I'm happy to take direction, and I'm happy to bring ideas if you want them. I also pay attention to the details in the sound: why a snare cracks the way it does, why a room responds a certain way, and how all of that affects the feel of a take.
 
-Because I produce, mix and master too, I listen to the whole record while I play: where the kick sits against the bass, which fill gets in the way of the vocal, when the best thing to fill a gap is the tail of the last hit's reverb.
+Because I produce, mix, and master too, I listen to the whole record while I play: where the kick sits against the bass, which fill gets in the way of the vocal, and when the best thing to do is leave space and let the reverb do its thing.
 
 ## On the road
 
-Concerts are a world of its own: early load-ins, long drives, questionable meals, and then one fan's comment that makes it all worth it. I've played small and large stages, long and short sets, and two things matter most to me: being reliable, and finding a creative way through when the plan falls apart (I don't fool myself it won't). I learn the set, I respect people's time, and I do my best not to make anyone's day harder.
+Live work has its own rhythm: early load-ins, long drives, questionable meals, and then these magic moments that make it all worth it. I've played small stages and big ones, short sets and long ones, from house parties to the Dino Manuzzi stadium in Cesena. The two things that matter most to me are being reliable and staying creative when the plan changes. I learn the set, I respect people's time, and I have backup solutions to get the show done.
 
-I've also sat behind the desk. I work as a FOH and monitor engineer and as a lights technician, so I know what the sound and lights crew need from a drummer. You can see my [gear here](/session/). If your tour could use me to fill one of those roles instead, we can talk about it. That's a separate job, with its own line on the quote.
+{% include credits.html show="about" heading="Selected credits" level=3 intro="Where there is a recording, it is linked, so you can check it yourself." bills=true %}
+
+I've also spent time behind the desk. I work as a FOH and monitor engineer and as a lights technician, so I know what sound and lights crews need from a drummer. At a house party in Cesena in 2023 I played with P(a)fanner's Flying Donkeys and also set up the full stage and sound for the event. You can see my [gear here](/session/). If your tour could use me in one of those roles too, we can talk about it.
 
 ## How I like to work
 
 I do my best work with people who take their music seriously, and I try to be that person too.
 
-- **I show up prepared.** Send me demos, charts or reference tracks and I'll know the songs before day one.
-- **I keep things clear.** Dates, scope and fee are agreed up front and put in writing (an email is fine), so nobody gets a surprise later.
-- **I'm honest.** If I'm not the right fit for your project, I'll say so, and if I can, I'll point you to someone who is.
+- **I show up prepared.** Send me demos, charts, or reference tracks and I'll know the songs before day one.
+- **I keep things clear.** Dates, scope, and fee are agreed up front and put in writing, so nobody gets a surprise later.
+- **I'm honest.** If I'm not the right fit for your project, I'll say so, and if I can, I'll point you in the right direction.
 
-I'm easy to work with, and I'd like to keep it that way. Tight budget? Say so up front and we'll find what works for both of us. Free work, or "we'll pay you when the single takes off"? Then I'm probably not your drummer. Exposure doesn't fill the van's tank. I'll always respect your craft, and I'd ask the same for mine.
+I'm easy to work with, and I like to keep it that way. Tight budget? Tell me early and we'll find a way that works for both of us. Free work, or "we'll pay you when the single takes off"? That's not really my thing. Exposure doesn't fill the van's tank. I'll respect your craft, and I'd expect the same in return.
+
+{% include credits.html testimonials=true heading="What people say" level=2 css=false %}
 
 ## Got a record or a tour/gigs coming up?
 
-Write to me about it: the songs (a rough demo is perfect), the dates, and the sound you're chasing. The more you share, the faster I can tell you whether I'm the right drummer for it. If I am, I'll be every bit as excited about it as you are.
+Write to me about it: the songs, a rough demo if you have one, the dates, and the sound you're chasing. The more you share, the faster I can tell you whether I'm the right drummer for it.
+
+[Send me a message](/contact/) or [book a 30-minute call](https://calendly.com/acaroli1990/30min).
 
 ---
-
-*"Dajeee!!!"*
+<blockquote class="philosophy">
+  <p>Dajeee!!!</p>
+</blockquote>
