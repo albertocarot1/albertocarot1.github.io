@@ -32,7 +32,7 @@ Because I produce, mix, and master too, I listen to the whole record while I pla
 
 Live work has its own rhythm: early load-ins, long drives, questionable meals, and then these magic moments that make it all worth it. I've played small stages and big ones, short sets and long ones, from house parties to the Dino Manuzzi stadium in Cesena. The two things that matter most to me are being reliable and staying creative when the plan changes. I learn the set, I respect people's time, and I have backup solutions to get the show done.
 
-{% include credits.html show="about" heading="Selected credits" level=3 intro="Where there is a recording, it is linked, so you can check it yourself." bills=true %}
+{% include credits.html bills=true %}
 
 I've also spent time behind the desk. I work as a FOH and monitor engineer and as a lights technician, so I know what sound and lights crews need from a drummer. At a house party in Cesena in 2023 I played with P(a)fanner's Flying Donkeys and also set up the full stage and sound for the event. You can see my [gear here](/session/). If your tour could use me in one of those roles too, we can talk about it.
 
@@ -46,13 +46,13 @@ I do my best work with people who take their music seriously, and I try to be th
 
 I'm easy to work with, and I like to keep it that way. Tight budget? Tell me early and we'll find a way that works for both of us. Free work, or "we'll pay you when the single takes off"? That's not really my thing. Exposure doesn't fill the van's tank. I'll respect your craft, and I'd expect the same in return.
 
-{% include credits.html testimonials=true heading="What people say" level=2 css=false %}
+{% include credits.html testimonials=true home_strip=true heading="What people say" level=2 css=false %}
 
 ## Got a record or a tour/gigs coming up?
 
 Write to me about it: the songs, a rough demo if you have one, the dates, and the sound you're chasing. The more you share, the faster I can tell you whether I'm the right drummer for it.
 
-[Send me a message](/contact/) or [book a 30-minute call](https://calendly.com/acaroli1990/30min).
+[Send me a message](/contact/) or [let's have a call](https://calendly.com/acaroli1990/30min).
 
 ---
 <blockquote class="philosophy">

@@ -60,6 +60,8 @@ If you want it, I can also **grid-align** the performance and/or deliver **pre-m
 
 Turnaround is typically 3 days, with 2 revisions included. If you're on a tighter deadline, just ask.
 
+{% include session-audio-samples.html id="session-page" heading="Listen to drum examples" %}
+
 ## Track record
 
 ### On record
@@ -74,9 +76,7 @@ Turnaround is typically 3 days, with 2 revisions included. If you're on a tighte
 My drums are on {% for i in released %}{% if forloop.first %}{% elsif forloop.last %} and {% else %}, {% endif %}{% if i.link and i.link != "" %}<a href="{{ i.link }}" target="_blank" rel="noopener"><em>{{ i.title }}</em></a>{% else %}<em>{{ i.title }}</em>{% endif %} by {{ i.artist }}{% endfor %}.
 {% endif %}
 
-{% include credits.html show="session" heading="On stage" level=3 intro="Each one links to a recording, so you can hear how I play with a band." bills=true %}
-
-{% include credits.html testimonials=true heading="What clients and bandmates say" level=3 css=false %}
+{% include credits.html testimonials=true home_strip=true heading="What clients and bandmates say" level=3 %}
 
 ---
 

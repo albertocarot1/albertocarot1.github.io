@@ -1,0 +1,43 @@
+<section class="session-samples" aria-labelledby="{{ include.id }}-heading">
+  <h3 class="session-samples__heading" id="{{ include.id }}-heading">{{ include.heading | default: "Listen to drum examples" | escape }}</h3>
+  <div class="session-samples__list">
+    {% assign sample_titles = site.data.session_samples | map: "title" | uniq %}
+    {% for sample_title in sample_titles %}
+      {% assign sample_variants = site.data.session_samples | where: "title", sample_title %}
+      {% assign sample = sample_variants | first %}
+      <article class="session-player" data-audio-player>
+        <audio preload="none" src="{{ sample.file | relative_url }}"></audio>
+        <div class="session-player__top">
+          <button class="session-player__play" type="button" data-play aria-label="Play sample {{ sample.title | escape }}">
+            <span data-play-icon aria-hidden="true">▶</span>
+          </button>
+          <span class="session-player__title">{{ sample.title | escape }}</span>
+          <div class="session-player__tags" aria-label="Recording details">
+            <button class="session-player__tag" type="button" data-variant-control="mix">{{ sample.mix | escape }}</button>
+            <button class="session-player__tag" type="button" data-variant-control="grid">{% if sample.grid %}grid{% else %}no grid{% endif %}</button>
+          </div>
+          <div class="session-player__volume" data-volume>
+            <button class="session-player__volume-toggle" type="button" data-volume-toggle aria-label="Show volume control" aria-expanded="false">
+              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <path d="M3 9v6h4l5 4V5L7 9H3Z" fill="currentColor"/>
+                <path d="M16 9a5 5 0 0 1 0 6m3-9a9 9 0 0 1 0 12" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.8"/>
+              </svg>
+            </button>
+            <input class="session-player__volume-range" type="range" min="0" max="1" step="0.01" value="1" data-volume-range aria-label="Volume for sample {{ sample.title | escape }}">
+          </div>
+        </div>
+        <div class="session-player__timeline">
+          <span class="session-player__time" data-current-time>0:00</span>
+          <input class="session-player__seek" type="range" min="0" max="0" step="0.1" value="0" data-seek aria-label="Seek sample {{ sample.title | escape }}" disabled>
+          <span class="session-player__time" data-duration>0:00</span>
+        </div>
+        <span class="session-player__status" data-player-status role="status" aria-live="polite"></span>
+        <div data-variants hidden>
+          {% for variant in sample_variants %}
+            <span data-variant data-file="{{ variant.file | relative_url | escape }}" data-mix="{{ variant.mix | escape }}" data-grid="{% if variant.grid %}true{% else %}false{% endif %}"></span>
+          {% endfor %}
+        </div>
+      </article>
+    {% endfor %}
+  </div>
+</section>

@@ -4,7 +4,12 @@
 #   artist: (string)
 #   link: (URL to release/Spotify/etc.)
 #   art: (local path to cover art image under assets/images/portfolio)
-#   roles: list from: drummer_live, drummer_studio, drummer_both, producer, mixing_engineer, mastering_engineer, vocals, recording_engineer, lights_technician, composer, lyricist
+#   roles: list from: drummer_live, drummer_studio, drummer_both, producer, mixing_engineer, mastering_engineer, vocals, recording_engineer, lights_technician, composer, lyricist, backing_vocals, guitar, bass
+#
+# Current and past project entries can also use:
+#   years: display-ready date span(s), e.g. "2020-present" or "2009-2013, 2020-present"
+#   genre: project genre
+#   description: optional additional detail
 #
 portfolio:
   # - title: "Sand Monolith"
@@ -67,12 +72,35 @@ portfolio:
 
 # Current active projects (Alberto is a member)
 current_projects:
-  - name: "Balera"
-    description: "Doom/sludge metal, with lyrics in Romagnolo dialect."
+  - name: "Alibi"
+    years: "2024-present"
+    genre: "Pop rock in Italian"
     link: ""
-    roles: 
-      - drummer_both                        # optional; uses the available roles above
+    roles:
+      - drummer_live
+    socials: []
+
+  - name: "P(a)fanner's Flying Donkeys"
+    years: "2009-2013, 2020-present"
+    genre: "Punk/hard rock"
+    link: ""
+    roles:
+      - drummer_both
       - composer
+      - lyricist
+      - backing_vocals
+      - producer
+    socials: []
+
+  - name: "Balera"
+    years: "2025-present"
+    genre: "Doom/sludge metal"
+    description: "Lyrics in Romagnolo dialect."
+    link: ""
+    roles:
+      - drummer_both
+      - composer
+      - lyricist
     socials:
       - platform: "instagram"
         icon: "fab fa-instagram"
@@ -82,36 +110,33 @@ current_projects:
         url: "https://www.youtube.com/watch?v=ycRdNK_0c1s"
 
   - name: "Sand Monolith"
-    description: "Doom/stoner metal, with lyrics in English."
+    years: "2020-present"
+    genre: "Doom/stoner metal"
+    description: "Lyrics in English."
     link: ""
-    roles: 
+    roles:
       - vocals
-      - drummer_both                        # optional; uses the available roles above
+      - drummer_both
       - composer
       - lyricist
       - producer
       - mixing_engineer
-    socials:
+    socials: []
 
-  - name: "Effigy"
-    description: "Grunge/stoner rock, with lyrics in Italian."
+  - name: "Rotation Stage San Marino"
+    years: "2024-present"
+    genre: "Rock classics"
     link: ""
-    roles: 
-      - drummer_both                        # optional; uses the available roles above
-      - composer
-    socials:
-      - platform: "instagram"
-        icon: "fab fa-instagram"
-        url: "https://www.instagram.com/effigy666/"
-      - platform: "facebook"
-        icon: "fab fa-facebook"
-        url: "https://www.facebook.com/Effigy666/"
-      - platform: "youtube"
-        icon: "fab fa-youtube"
-        url: "https://www.youtube.com/@effigy666"
+    roles:
+      - drummer_both
+      - bass
+      - vocals
+    socials: []
 
   - name: "ZEMIC"
-    description: "Alternative/Indie rock, with lyrics in Italian."
+    years: "2026-present"
+    genre: "Alternative/Indie rock"
+    description: "Lyrics in Italian."
     link: ""
     roles:
       - drummer_live
@@ -125,3 +150,69 @@ current_projects:
       - platform: "youtube"
         icon: "fab fa-youtube"
         url: "https://www.youtube.com/channel/UC3A6E7ZD6_Lg-1prd3cwSLg"
+
+past_projects:
+  - name: "Michele Luppi's VGDM Cattolica"
+    years: "2024-2025"
+    genre: "Rock classics"
+    roles:
+      - drummer_live
+
+  - name: "Afterdark"
+    years: "2025"
+    genre: "Speed/power metal"
+    roles:
+      - drummer_both
+      - backing_vocals
+      - lyricist
+      - producer
+
+  - name: "Crystal Black Golem"
+    years: "2018-2020"
+    genre: "Stoner/psychedelic metal"
+    roles:
+      - drummer_both
+      - composer
+
+  - name: "SuperSuperStore"
+    years: "2024"
+    genre: "Country/pop classics"
+    roles:
+      - vocals
+      - guitar
+
+  - name: "Atom Smasher"
+    years: "2006-2009"
+    genre: "Thrash metal"
+    roles:
+      - drummer_both
+      - backing_vocals
+      - composer
+      - lyricist
+
+  - name: "Sonic Temple"
+    years: "2008-2010"
+    genre: "The Cult tribute"
+    roles:
+      - drummer_both
+
+  - name: "Effigy"
+    years: "2024-2026"
+    genre: "Grunge/stoner rock"
+    description: "Lyrics in Italian."
+    roles:
+      - drummer_both
+      - composer
+      - lyricist
+      - backing_vocals
+      - producer
+    socials:
+      - platform: "instagram"
+        icon: "fab fa-instagram"
+        url: "https://www.instagram.com/effigy666/"
+      - platform: "facebook"
+        icon: "fab fa-facebook"
+        url: "https://www.facebook.com/Effigy666/"
+      - platform: "youtube"
+        icon: "fab fa-youtube"
+        url: "https://www.youtube.com/@effigy666"

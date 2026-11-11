@@ -55,6 +55,9 @@ permalink: /
             {{ pieces | first | markdownify }}
           </div>
         </div>
+        {% if item.slug == 'session' %}
+          {% include session-audio-samples.html id="session-home" heading="Listen to drum examples" %}
+        {% endif %}
         {% include home-highlights.html section=item.slug %}
       </div>
     </section>
