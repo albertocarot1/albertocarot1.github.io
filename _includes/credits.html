@@ -110,8 +110,8 @@ Use separate calls for highlights and for testimonials.
 {%- endif -%}
 {%- if cr_bills != blank -%}
 <p class="credits-bills"><strong>Shared stages with</strong> {{ cr_bills }}.</p>
-{%- endif -%}
-{%- if cr_picks.size > 0 and include.more != false -%}
+{% if include.more != false %}<p class="credits-more"><a href="{{ '/live/' | relative_url }}">See all lives</a></p>{% endif %}
+{%- elsif cr_picks.size > 0 and include.more != false -%}
 <p class="credits-more"><a href="{{ '/live/' | relative_url }}">See every concert in the live archive</a></p>
 {%- endif -%}
 </div>
@@ -120,12 +120,17 @@ Use separate calls for highlights and for testimonials.
 {%- assign cr_quote_width = 100.0 | divided_by: cr.testimonials.size -%}
 {%- assign cr_visible_width = 200.0 | divided_by: cr.testimonials.size -%}
 {%- assign cr_quote_travel = 100.0 | minus: cr_visible_width -%}
-<div class="credits{% if include.home_strip %} credits--home-strip{% endif %}">
+<div class="credits{% if include.home_strip %} credits--home-strip{% endif %}"{% if include.home_strip %} data-testimonial-carousel{% endif %}>
 {%- if include.heading -%}
 <h{{ cr_level }} class="credits-heading">{{ include.heading }}</h{{ cr_level }}>
 {%- endif -%}
 {%- if include.home_strip -%}
-<div class="credits-track{% if cr.testimonials.size > 2 %} credits-track--moving{% endif %}" style="--testimonial-offset:-{{ cr_quote_travel }}%; width:{{ cr.testimonials.size | times: 50 }}%; animation-duration:{{ cr.testimonials.size | times: 5 }}s">
+<div class="testimonial-carousel{% if cr.testimonials.size > 2 %} testimonial-carousel--controls{% endif %}"{% if cr.testimonials.size > 2 %} data-testimonial-controls hidden{% endif %}>
+{%- if cr.testimonials.size > 2 -%}
+<button class="testimonial-control" type="button" data-testimonial-direction="-1" aria-label="Previous testimonials"><span aria-hidden="true">←</span></button>
+{%- endif -%}
+<div class="testimonial-window">
+<div class="credits-track{% if cr.testimonials.size > 2 %} credits-track--moving{% endif %}" data-testimonial-track style="--testimonial-offset:-{{ cr_quote_travel }}%; width:{{ cr.testimonials.size | times: 50 }}%; animation-duration:{{ cr.testimonials.size | times: 5 }}s">
 {%- endif -%}
 {%- for t in cr.testimonials -%}
 <figure class="credit-quote"{% if include.home_strip %} style="flex-basis:calc({{ cr_quote_width }}% - var(--testimonial-gap))"{% endif %}>
@@ -135,6 +140,11 @@ Use separate calls for highlights and for testimonials.
 {%- endfor -%}
 {%- if include.home_strip -%}
 </div>
+</div>
+{%- if cr.testimonials.size > 2 -%}
+<button class="testimonial-control" type="button" data-testimonial-direction="1" aria-label="Next testimonials"><span aria-hidden="true">→</span></button>
 {%- endif -%}
 </div>
+</div>
+{%- endif -%}
 {%- endif -%}

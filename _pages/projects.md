@@ -38,6 +38,9 @@ Live, Effigy won the Piazza Bertoldi contest in San Marino in 2024, and the priz
 .role-lights_technician { background:#2d3d2d; color:#b7f1b0; }
 .role-composer          { background:#123f4a; color:#7fe7d4; }
 .role-lyricist          { background:#4a2438; color:#f4a6c8; }
+.role-backing_vocals    { background:#43324a; color:#e0b3ff; }
+.role-guitar            { background:#3b3422; color:#f3d37a; }
+.role-bass              { background:#173b3e; color:#8ce2dd; }
 
 /* ── Portfolio grid ── */
 .portfolio-grid {
@@ -85,8 +88,16 @@ Live, Effigy won the Piazza Bertoldi contest in San Marino in 2024, and the priz
   border-radius: 0 6px 6px 0;
   margin-bottom: 1.2rem;
 }
-.current-project h3 { margin: 0 0 0.3rem; }
-.current-project .desc { opacity: 0.75; font-size: 0.92em; margin-bottom: 0.5rem; }
+.past-project {
+  background: rgba(255,255,255,0.03);
+  border-left: 3px solid #777;
+  padding: 1rem 1.2rem;
+  border-radius: 0 6px 6px 0;
+  margin-bottom: 1.2rem;
+}
+.current-project h3, .past-project h3 { margin: 0 0 0.3rem; }
+.current-project .desc, .past-project .desc { opacity: 0.75; font-size: 0.92em; margin-bottom: 0.5rem; }
+.project-years { margin-left: 0.35em; font-size: 0.8em; font-weight: 400; opacity: 0.7; }
 .portfolio-card .social-icons a {
   display: inline-flex;
   align-items: center;
@@ -102,10 +113,10 @@ Live, Effigy won the Piazza Bertoldi contest in San Marino in 2024, and the priz
 .portfolio-card .social-icons a:hover { background: rgba(255,255,255,0.18); }
 
 /* Role label helper */
-{% assign role_labels = "drummer_live:Drummer (Live)|drummer_studio:Drummer (Studio)|drummer_both:Drummer (Live & Studio)|producer:Producer|mixing_engineer:Mixing Engineer|mastering_engineer:Mastering Engineer|vocals:Vocals|recording_engineer:Recording Engineer|lights_technician:Lights Technician|composer:Composer|lyricist:Lyricist" | split: "|" %}
+{% assign role_labels = "drummer_live:Drummer (Live)|drummer_studio:Drummer (Studio)|drummer_both:Drummer (Live & Studio)|producer:Producer|mixing_engineer:Mixing Engineer|mastering_engineer:Mastering Engineer|vocals:Vocals|recording_engineer:Recording Engineer|lights_technician:Lights Technician|composer:Composer|lyricist:Lyricist|backing_vocals:Backing Vocals|guitar:Guitars|bass:Bass" | split: "|" %}
 </style>
 
-{% assign role_labels_str = "drummer_live:Drummer (Live)|drummer_studio:Drummer (Studio)|drummer_both:Drummer (Live & Studio)|producer:Producer|mixing_engineer:Mixing Engineer|mastering_engineer:Mastering Engineer|vocals:Vocals|recording_engineer:Recording Engineer|lights_technician:Lights Technician|composer:Composer|lyricist:Lyricist" %}
+{% assign role_labels_str = "drummer_live:Drummer (Live)|drummer_studio:Drummer (Studio)|drummer_both:Drummer (Live & Studio)|producer:Producer|mixing_engineer:Mixing Engineer|mastering_engineer:Mastering Engineer|vocals:Vocals|recording_engineer:Recording Engineer|lights_technician:Lights Technician|composer:Composer|lyricist:Lyricist|backing_vocals:Backing Vocals|guitar:Guitars|bass:Bass" %}
 
 ## Portfolio
 
@@ -159,8 +170,11 @@ Live, Effigy won the Piazza Bertoldi contest in San Marino in 2024, and the priz
     {% else %}
       {{ project.name }}
     {% endif %}
+    {% if project.years %}<span class="project-years">({{ project.years }})</span>{% endif %}
   </h3>
-  <p class="desc">{{ project.description }}</p>
+  {% if project.genre or project.description %}
+  <p class="desc">{% if project.genre %}<strong>Genre:</strong> {{ project.genre }}{% endif %}{% if project.description %}{% if project.genre %} · {% endif %}{{ project.description }}{% endif %}</p>
+  {% endif %}
   {% include credits.html bills=true project=project.name css=false %}
   {% if project.roles and project.roles.size > 0 %}
   <div class="roles">
@@ -188,6 +202,40 @@ Live, Effigy won the Piazza Bertoldi contest in San Marino in 2024, and the priz
 </div>
 {% endfor %}
 
-{% include credits.html show="projects" heading="On stage" level=2 intro="Highlights from the concert archive. Where there is a recording, it is linked." %}
+---
+
+## Past Projects
+
+{% for project in site.data.projects.past_projects %}
+<div class="past-project">
+  <h3>{{ project.name }}{% if project.years %} <span class="project-years">({{ project.years }})</span>{% endif %}</h3>
+  {% if project.genre or project.description %}
+  <p class="desc">{% if project.genre %}<strong>Genre:</strong> {{ project.genre }}{% endif %}{% if project.description %}{% if project.genre %} · {% endif %}{{ project.description }}{% endif %}</p>
+  {% endif %}
+  {% if project.roles and project.roles.size > 0 %}
+  <div class="roles">
+    {% for role in project.roles %}
+      {% assign role_key = role %}
+      {% assign role_label = role_key %}
+      {% assign pairs = role_labels_str | split: "|" %}
+      {% for pair in pairs %}
+        {% assign kv = pair | split: ":" %}
+        {% if kv[0] == role_key %}{% assign role_label = kv[1] %}{% endif %}
+      {% endfor %}
+      <span class="role-badge role-{{ role_key }}">{{ role_label }}</span>
+    {% endfor %}
+  </div>
+  {% endif %}
+  {% if project.socials and project.socials.size > 0 %}
+  <div class="social-icons">
+    {% for social in project.socials %}
+      <a href="{{ social.url }}" target="_blank" rel="noopener" title="{{ social.platform | capitalize }}">
+        <i class="{{ social.icon }}"></i>
+      </a>
+    {% endfor %}
+  </div>
+  {% endif %}
+</div>
+{% endfor %}
 
 ---

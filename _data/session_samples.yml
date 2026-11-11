@@ -1,7 +1,23 @@
-- title: "blues rock"
-  file: /samples/lars-raw-grid.mp3
+- title: "heavy metal mid tempo"
+  file: /samples/be-with-you-grid-raw.mp3
   mix: raw
   grid: true
+- title: "hard rock"
+  file: /samples/groove-grid-raw.mp3
+  mix: raw
+  grid: true
+- title: "doom metal demo"
+  file: /samples/zobia-demo-raw-grid.mp3
+  mix: raw
+  grid: true
+- title: "doom metal demo"
+  file: /samples/zobia-demo-raw-no-grid.mp3
+  mix: raw
+  grid: false
+- title: "hard rock shuffle"
+  file: /samples/faiar-raw-no-grid.mp3
+  mix: raw
+  grid: false
 - title: "stoner rock"
   file: /samples/hikiko-mixed-grid.mp3
   mix: mixed
@@ -14,3 +30,19 @@
   file: /samples/hikiko-raw-no-grid.mp3
   mix: raw
   grid: false
+- title: "speed metal"
+  file: /samples/reason-grid-raw.mp3
+  mix: raw
+  grid: true
+- title: "punk rock"
+  file: /samples/gotmerock-grid-raw.mp3
+  mix: raw
+  grid: true
+- title: "hard rock cowbell"
+  file: /samples/sweetcold-raw-grid.mp3
+  mix: raw
+  grid: true
+- title: "blues rock"
+  file: /samples/lars-raw-grid.mp3
+  mix: raw
+  grid: true
