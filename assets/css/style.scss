@@ -182,6 +182,127 @@ blockquote.philosophy p { margin:0; }
 .core-principles li { margin:0; }
 .core-principles strong { color:var(--accent); }
 .session-feature--contact { padding-top:24px; border-top:1px solid #444; }
+.session-samples {
+  max-width:1100px;
+  margin:28px clamp(22px,5vw,56px);
+}
+.session-samples__heading {
+  margin:0 0 14px;
+  font-size:1.05rem;
+  letter-spacing:.04em;
+}
+.session-samples__list {
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(min(100%,240px),1fr));
+  gap:9px;
+}
+.session-player {
+  min-width:0;
+  padding:8px 12px;
+  border:1px solid rgba(240,165,0,.4);
+  border-radius:6px;
+  background:rgba(24,24,24,.94);
+  color:var(--ink);
+  text-shadow:none;
+}
+.session-player__top,
+.session-player__timeline {
+  display:flex;
+  align-items:center;
+  gap:12px;
+}
+.session-player__top { min-height:32px; }
+.session-player__play,
+.session-player__volume-toggle {
+  display:inline-flex;
+  flex:0 0 auto;
+  align-items:center;
+  justify-content:center;
+  border:1px solid #777;
+  border-radius:50%;
+  background:transparent;
+  color:var(--ink);
+  cursor:pointer;
+}
+.session-player__play {
+  width:32px;
+  height:32px;
+  padding:0;
+  font-size:.9rem;
+}
+.session-player__play:hover,
+.session-player__volume-toggle:hover { border-color:var(--accent); color:var(--accent); }
+.session-player button:focus-visible,
+.session-player input:focus-visible { outline:2px solid var(--accent); outline-offset:3px; }
+.session-player__title { font-weight:700; font-variant-numeric:tabular-nums; }
+.session-player__tags { display:flex; flex-wrap:wrap; gap:6px; margin-left:auto; }
+.session-player__tag {
+  appearance:none;
+  padding:1px 7px;
+  border:1px solid #555;
+  border-radius:999px;
+  background:transparent;
+  color:var(--muted);
+  font:inherit;
+  font-size:.72rem;
+  line-height:1.5;
+  text-transform:lowercase;
+}
+.session-player__tag:not(:disabled) {
+  border-color:rgba(240,165,0,.7);
+  background:rgba(240,165,0,.1);
+  color:#ffd166;
+  cursor:pointer;
+}
+.session-player__tag:not(:disabled):hover,
+.session-player__tag:not(:disabled):focus-visible {
+  border-color:var(--accent);
+  background:rgba(240,165,0,.2);
+  color:#fff;
+}
+.session-player__tag:disabled {
+  border-color:#444;
+  background:rgba(255,255,255,.025);
+  color:#888;
+  opacity:1;
+  cursor:default;
+}
+.session-player__timeline { gap:9px; margin-top:6px; }
+.session-player__time {
+  min-width:34px;
+  color:var(--muted);
+  font-size:.75rem;
+  font-variant-numeric:tabular-nums;
+}
+.session-player__seek,
+.session-player__volume-range {
+  height:18px;
+  margin:0;
+  accent-color:var(--accent);
+  cursor:pointer;
+}
+.session-player__seek { flex:1 1 auto; min-width:0; }
+.session-player__seek:disabled { cursor:wait; opacity:.5; }
+.session-player__status { display:block; margin-top:4px; color:#ffca58; font-size:.78rem; }
+.session-player__status:empty { display:none; }
+.session-player__volume { display:flex; flex:0 0 auto; align-items:center; gap:7px; }
+.session-player__volume.is-open { flex-direction:row-reverse; }
+.session-player__volume-toggle {
+  width:28px;
+  height:28px;
+  padding:5px;
+  border-radius:4px;
+}
+.session-player__volume-toggle svg { display:block; width:100%; height:100%; }
+.session-player__volume-range {
+  width:0;
+  min-width:0;
+  padding:0;
+  opacity:0;
+  overflow:hidden;
+  transition:width 160ms ease, opacity 160ms ease;
+}
+.session-player__volume.is-open .session-player__volume-range { width:76px; opacity:1; }
 .video-embed { aspect-ratio:16/9; width:100%; }
 .video-embed iframe { display:block; width:100%; height:100%; border:0; }
 .audio-embed { border:0; border-radius:12px; display:block; max-width:100%; }
@@ -224,5 +345,12 @@ blockquote.philosophy p { margin:0; }
   .session-feature--image-right .session-feature__content { grid-column:1; grid-row:2; }
 }
 @media (max-width:430px) { .preview-grid { grid-template-columns:1fr; } .preview-grid .preview-card:nth-child(n+3) { display:block; } }
+@media (max-width:430px) {
+  .session-player { padding:7px 9px; }
+  .session-player__top,
+  .session-player__timeline { gap:8px; }
+  .session-player__tags { gap:4px; }
+}
+@media (max-width:690px) { .session-player { width:100%; } }
 @media (prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } }
 @media (prefers-reduced-motion:reduce) { .home-testimonials .credits-track--moving { animation:none; } }

@@ -34,6 +34,9 @@
       <a href="{{ '/' | relative_url }}#contact">Contact</a>
     </div>
   </footer>
+  {% if page.is_home or page.permalink == '/session/' %}
+    <script src="{{ '/assets/js/session-audio-player.js' | relative_url }}" defer></script>
+  {% endif %}
   {% if page.is_home %}
     <script>
       (function () {

@@ -60,6 +60,8 @@ If you want it, I can also **grid-align** the performance and/or deliver **pre-m
 
 Turnaround is typically 3 days, with 2 revisions included. If you're on a tighter deadline, just ask.
 
+{% include session-audio-samples.html id="session-page" heading="Listen to drum examples" %}
+
 ## Track record
 
 ### On record

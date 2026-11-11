@@ -1,0 +1,16 @@
+- title: "blues rock"
+  file: /samples/lars-raw-grid.mp3
+  mix: raw
+  grid: true
+- title: "stoner rock"
+  file: /samples/hikiko-mixed-grid.mp3
+  mix: mixed
+  grid: true
+- title: "stoner rock"
+  file: /samples/hikiko-raw-grid.mp3
+  mix: raw
+  grid: true
+- title: "stoner rock"
+  file: /samples/hikiko-raw-no-grid.mp3
+  mix: raw
+  grid: false
