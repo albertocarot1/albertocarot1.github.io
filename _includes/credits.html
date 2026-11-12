@@ -65,6 +65,7 @@ Use separate calls for highlights and for testimonials.
 {%- else -%}
 {%- assign cr_picks = nil -%}
 {%- endif -%}
+{%- assign cr_bill_count = 0 -%}
 {%- capture cr_bills -%}
 {%- if include.bills -%}
 {%- assign cr_sep = "" -%}
@@ -78,14 +79,16 @@ Use separate calls for highlights and for testimonials.
 {%- assign cr_bill_shows = cr_bill_shows | sort: "bill_relevance" -%}
 {%- for b in cr_bill_shows -%}
 {%- for a in b.bill_with -%}
+{%- if a == blank or a contains "TODO(alberto)" -%}{%- continue -%}{%- endif -%}
 {{- cr_sep -}}
 {%- if b.youtube_url and b.youtube_url != "" -%}<a href="{{ b.youtube_url }}" target="_blank" rel="noopener">{{ a }}</a>{%- else -%}{{ a }}{%- endif -%}
 {%- assign cr_sep = ", " -%}
+{%- assign cr_bill_count = cr_bill_count | plus: 1 -%}
 {%- endfor -%}
 {%- endfor -%}
 {%- endif -%}
 {%- endcapture -%}
-{%- if cr_picks.size > 0 or cr_bills != blank -%}
+{%- if cr_picks.size > 0 or cr_bill_count > 0 -%}
 <div class="credits{% unless include.show %} credits--bare{% endunless %}{% if include.home_preview %} credits--home-preview{% endif %}">
 {%- if cr_picks.size > 0 -%}
 {%- if include.heading -%}
@@ -108,7 +111,7 @@ Use separate calls for highlights and for testimonials.
 {%- endfor -%}
 </ul>
 {%- endif -%}
-{%- if cr_bills != blank -%}
+{%- if cr_bill_count > 0 -%}
 <p class="credits-bills"><strong>Shared stages with</strong> {{ cr_bills }}.</p>
 {% if include.more != false %}<p class="credits-more"><a href="{{ '/live/' | relative_url }}">See all lives</a></p>{% endif %}
 {%- elsif cr_picks.size > 0 and include.more != false -%}
