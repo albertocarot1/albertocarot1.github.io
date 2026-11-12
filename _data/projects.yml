@@ -40,6 +40,16 @@ portfolio:
     roles:
       - drummer_studio
 
+  - title: "Burning Up the Road"
+    artist: "P(a)fanner's Flying Donkeys"
+    link: "https://www.youtube.com/playlist?list=OLAK5uy_kgQTGWypvgzALFBIWpA0NkdYvICgP5o3Q"
+    art: "/assets/images/portfolio/burning-up-the-road.jpg"
+    roles:
+      - drummer_studio
+      - producer
+      - composer
+      - recording_engineer
+      - lyricist
 
   - title: "Hikikomori"
     artist: "Effigy"
@@ -59,16 +69,7 @@ portfolio:
       - recording_engineer
       - mastering_engineer
 
-  - title: "Burning Up the Road"
-    artist: "P(a)fanner's Flying Donkeys"
-    link: "https://www.youtube.com/playlist?list=OLAK5uy_kgQTGWypvgzALFBIWpA0NkdYvICgP5o3Q"
-    art: "/assets/images/portfolio/burning-up-the-road.jpg"
-    roles:
-      - drummer_studio
-      - producer
-      - composer
-      - recording_engineer
-      - lyricist
+
 
 # Current active projects (Alberto is a member)
 current_projects:
