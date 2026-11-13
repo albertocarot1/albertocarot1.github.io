@@ -3,7 +3,7 @@ Highlights and testimonials block for Home, About, Projects and Session.
 Highlights and bills come from _data/live.yml; testimonials come from _data/credits.yml.
 
 Options (all optional):
-  show          list the highlights tagged for this page: home, about, projects or session
+  home_preview  renders all live entries with a highlight_title on the homepage
   layout        "rows" (default, newest first) or "grid" (three across, curated order, for the home page)
   heading       heading above the list (or above the quotes when testimonials=true)
   level         heading level, default 2
@@ -23,7 +23,6 @@ Use separate calls for highlights and for testimonials.
 <style>
 .credits{--credits-line:rgba(255,255,255,.16);--credits-accent:#f0a500;margin:1.75rem 0}
 .credits--bare{margin:0 0 .75rem}
-.credits--home-preview{margin:24px clamp(22px,5vw,56px)}
 .credits .credits-heading{margin:0 0 .5rem}
 .credits .credits-intro{margin:0 0 1rem;opacity:.8}
 .credits .credits-list{list-style:none;margin:0;padding:0}
@@ -50,11 +49,13 @@ Use separate calls for highlights and for testimonials.
 @media (max-width:40rem){.credits .credits-list--rows .credit{grid-template-columns:minmax(0,1fr)}}
 </style>
 {% endunless -%}
-{%- if include.show -%}
+{%- if include.home_preview -%}
 {%- assign cr_picks = '' | split: '' -%}
 {%- for h in live.past -%}
-  {%- if h.show_highlight and h.show_highlight contains include.show -%}
+  {%- if h.highlight_title and h.highlight_title != "" -%}
+    {%- unless h.highlight_title contains "TODO(alberto)" -%}
     {%- assign cr_picks = cr_picks | push: h -%}
+    {%- endunless -%}
   {%- endif -%}
 {%- endfor -%}
 {%- if include.layout == "grid" -%}
@@ -89,7 +90,7 @@ Use separate calls for highlights and for testimonials.
 {%- endif -%}
 {%- endcapture -%}
 {%- if cr_picks.size > 0 or cr_bill_count > 0 -%}
-<div class="credits{% unless include.show %} credits--bare{% endunless %}{% if include.home_preview %} credits--home-preview{% endif %}">
+<div class="credits{% unless include.home_preview %} credits--bare{% endunless %}{% if include.home_preview %} credits--home-preview credits--home-strip{% endif %}"{% if include.home_preview %} data-testimonial-carousel{% endif %}>
 {%- if cr_picks.size > 0 -%}
 {%- if include.heading -%}
 <h{{ cr_level }} class="credits-heading">{{ include.heading }}</h{{ cr_level }}>
@@ -97,19 +98,38 @@ Use separate calls for highlights and for testimonials.
 {%- if include.intro -%}
 <p class="credits-intro">{{ include.intro }}</p>
 {%- endif -%}
-<ul class="credits-list credits-list--{% if include.layout == 'grid' %}grid{% else %}rows{% endif %}">
+{%- assign cr_card_width = 100.0 | divided_by: cr_picks.size -%}
+{%- assign cr_track_width = 100 -%}
+{%- assign cr_card_travel = 0 -%}
+{%- if cr_picks.size > 2 -%}
+  {%- assign cr_track_width = cr_picks.size | times: 50 -%}
+  {%- assign cr_visible_width = 200.0 | divided_by: cr_picks.size -%}
+  {%- assign cr_card_travel = 100.0 | minus: cr_visible_width -%}
+{%- endif -%}
+<div class="testimonial-carousel{% if cr_picks.size > 2 %} testimonial-carousel--controls{% endif %}"{% if cr_picks.size > 2 %} data-testimonial-controls hidden{% endif %}>
+{%- if cr_picks.size > 2 -%}
+<button class="testimonial-control" type="button" data-testimonial-direction="-1" aria-label="Previous highlights"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" width="20" height="20"><path d="M14.5 5.5 8 12l6.5 6.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+{%- endif -%}
+<div class="testimonial-window">
+<ul class="credits-list credits-track{% if cr_picks.size > 2 %} credits-track--moving{% endif %}" data-testimonial-track data-highlight-track style="--testimonial-offset:-{{ cr_card_travel }}%; width:{{ cr_track_width }}%; animation-duration:{{ cr_picks.size | times: 5 }}s">
 {%- for h in cr_picks -%}
-<li class="credit">
-<p class="credit-when"><time datetime="{{ h.date | date: '%Y-%m-%d' }}">{{ h.date | date: "%b %Y" }}</time></p>
+<li class="credit" style="flex-basis:calc({{ cr_card_width }}% - var(--testimonial-gap))">
+{%- unless h.date contains "TODO(alberto)" -%}<p class="credit-when"><time datetime="{{ h.date | date: '%Y-%m-%d' }}">{{ h.date | date: "%b %Y" }}</time></p>{%- endunless -%}
 <div class="credit-body">
 <p class="credit-title">{{ h.highlight_title | default: h.project }}</p>
-<p class="credit-where">{% if h.highlight_where %}{{ h.highlight_where }}{% else %}{{ h.venue }}, {{ h.city }}{% endif %}</p>
-<p class="credit-detail">{{ h.notes }}</p>
-{%- if h.youtube_url and h.youtube_url != "" -%}<p class="credit-link"><a href="{{ h.youtube_url }}" target="_blank" rel="noopener">Watch the recording</a></p>{%- endif -%}
+{%- if h.highlight_where -%}{%- unless h.highlight_where contains "TODO(alberto)" -%}<p class="credit-where">{{ h.highlight_where }}</p>{%- endunless -%}
+{%- elsif h.venue and h.city -%}{%- unless h.venue contains "TODO(alberto)" or h.city contains "TODO(alberto)" -%}<p class="credit-where">{{ h.venue }}, {{ h.city }}</p>{%- endunless -%}{%- endif -%}
+{%- if h.notes and h.notes != "" -%}{%- unless h.notes contains "TODO(alberto)" -%}<p class="credit-detail">{{ h.notes }}</p>{%- endunless -%}{%- endif -%}
+{%- if h.youtube_url and h.youtube_url != "" -%}{%- unless h.youtube_url contains "TODO(alberto)" -%}<p class="credit-link"><a href="{{ h.youtube_url }}" target="_blank" rel="noopener">Watch the recording</a></p>{%- endunless -%}{%- endif -%}
 </div>
 </li>
 {%- endfor -%}
 </ul>
+</div>
+{%- if cr_picks.size > 2 -%}
+<button class="testimonial-control" type="button" data-testimonial-direction="1" aria-label="Next highlights"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" width="20" height="20"><path d="m9.5 5.5 6.5 6.5-6.5 6.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+{%- endif -%}
+</div>
 {%- endif -%}
 {%- if cr_bill_count > 0 -%}
 <p class="credits-bills"><strong>Shared stages with</strong> {{ cr_bills }}.</p>
@@ -130,7 +150,7 @@ Use separate calls for highlights and for testimonials.
 {%- if include.home_strip -%}
 <div class="testimonial-carousel{% if cr.testimonials.size > 2 %} testimonial-carousel--controls{% endif %}"{% if cr.testimonials.size > 2 %} data-testimonial-controls hidden{% endif %}>
 {%- if cr.testimonials.size > 2 -%}
-<button class="testimonial-control" type="button" data-testimonial-direction="-1" aria-label="Previous testimonials"><span aria-hidden="true">←</span></button>
+<button class="testimonial-control" type="button" data-testimonial-direction="-1" aria-label="Previous testimonials"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" width="20" height="20"><path d="M14.5 5.5 8 12l6.5 6.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
 {%- endif -%}
 <div class="testimonial-window">
 <div class="credits-track{% if cr.testimonials.size > 2 %} credits-track--moving{% endif %}" data-testimonial-track style="--testimonial-offset:-{{ cr_quote_travel }}%; width:{{ cr.testimonials.size | times: 50 }}%; animation-duration:{{ cr.testimonials.size | times: 5 }}s">
@@ -145,7 +165,7 @@ Use separate calls for highlights and for testimonials.
 </div>
 </div>
 {%- if cr.testimonials.size > 2 -%}
-<button class="testimonial-control" type="button" data-testimonial-direction="1" aria-label="Next testimonials"><span aria-hidden="true">→</span></button>
+<button class="testimonial-control" type="button" data-testimonial-direction="1" aria-label="Next testimonials"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" width="20" height="20"><path d="m9.5 5.5 6.5 6.5-6.5 6.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
 {%- endif -%}
 </div>
 </div>

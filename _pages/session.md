@@ -32,10 +32,10 @@ My approach to writing, recording, and mixing drums is built on a few core princ
   <li><strong>Serve the music.</strong> Every decision — from the part I write to the way it is recorded — must serve the song and the artist's intention. Technique is never an end in itself.</li>
   <li><strong>Trust the ears.</strong> Drum tuning frequencies, drum shell materials, mic frequency responses, loudness meters, EQ or compressor presets: they are all useful starting points. But the reference that matters most is what you actually hear — and what the listener will feel.</li>
   <li><strong>Less is more, until it isn’t.</strong> The goal is always clarity and impact. Sometimes that means minimal drum parts; sometimes it means pushing a section to the edge. Learning the difference has been a process for me, and it’s what I love most about composing. You can also just tell me what you hear, and I’ll find where your song wants to breathe and where it wants to hit.</li>
-  <li><strong>Acoustic rawness, digital precision.</strong> I avoid samples and triggers: what you hear is a real kit played in a real room. I give your song its groove, with a metronome or without one, so the feel comes from the performance. If you want it tighter, I do DAW-assisted grid alignment, never losing the groove.</li>
+  <li><strong>Acoustic rawness, digital precision.</strong> get a real kit, played in a real room. I give your song its groove, with a metronome or without one, so the feel comes from the performance. If you want it tighter, I do DAW-assisted grid alignment, never losing the groove.</li>
 </ul>
 
-<section class="session-feature session-feature--image-right">
+<section class="session-feature session-feature--image-right session-feature--flow">
   <div class="session-feature__media">{% include figure.html image_path="/assets/images/session-drum-chart.jpg" alt="Placeholder photo of Alberto writing a drum chart with song sections" caption="Placeholder for Alberto writing a drum chart with song sections" %}</div>
   <div class="session-feature__content" markdown="1">
 ### What I need from you
@@ -49,8 +49,6 @@ Anything else that helps me hear the drums you have in mind is welcome, and gets
 - written indications
 
 MIDI guitar/bass or Guitar Pro and other tablature programs are more than welcome!
-  </div>
-</section>
 
 ## Remote drum tracks
 
@@ -59,6 +57,8 @@ Raw, transparent, high-quality drum tracks, recorded at **48 kHz/24bit** and del
 If you want it, I can also **grid-align** the performance and/or deliver **pre-mixed stems**, so you start from the sound we agreed the song needs.
 
 Turnaround is typically 3 days, with 2 revisions included. If you're on a tighter deadline, just ask.
+  </div>
+</section>
 
 {% include session-audio-samples.html id="session-page" heading="Listen to drum examples" %}
 
@@ -86,12 +86,12 @@ I'm comfortable with all types of rock: soft rock and pop, hard rock, blues, pun
 
 Want a taste of my drumming style? Have a look at [my YouTube channel](https://www.youtube.com/@albecarolimusic).
 
-<section class="session-feature session-feature--image-left">
+<section class="session-feature session-feature--image-left session-feature--flow session-feature--portrait">
   <div class="session-feature__media">{% include figure.html image_path="/assets/images/session-drums.jpg" alt="Placeholder photo of Alberto's drum kit" caption="Placeholder for Alberto's drum kit" %}</div>
   <div class="session-feature__content" markdown="1">
 ## The Drums
 
-My recording kit is a **Gretsch Catalina Maple** (22/10/12/16") with **Evans** heads. For the snare I use either a **Gretsch** 14x6 maple, a **Pearl** 14x5.5 steel or a **Dixon** 14x3.5 maple piccolo when a song needs a more in-your-face sound. I play a wide array of cymbals, including **Paiste**, **UFIP**, **Zildjian** and **Zultan**, and I alternate between a **Pearl Eliminator** double pedal and a **DW7000** single pedal.
+My recording kit is a **Gretsch Catalina Maple** (22/10/12/16") with **Evans** heads. For the snare I use either a **Gretsch** 14x6 maple for a warm sound, a **Pearl** 14x5.5 steel for the extra overtones, or a **Dixon** 14x3.5 maple piccolo when a song needs a more in-your-face sound. I play a wide array of cymbals, including **Paiste**, **UFIP**, **Zildjian** and **Zultan**, and I alternate between a **Pearl Eliminator** double pedal and a **DW7000** single pedal.
 
 The complete list of what I play, live and in the studio:
 
@@ -139,7 +139,7 @@ The complete list of the recording gear:
 {% endfor %}
 </div>
 
-<section class="session-feature session-feature--image-right">
+<section class="session-feature session-feature--image-right session-feature--flow">
   <div class="session-feature__media">{% include figure.html image_path="/assets/images/session-studio-room.jpg" alt="Placeholder photo of Alberto's studio room" caption="Placeholder for Alberto's studio room" %}</div>
   <div class="session-feature__content" markdown="1">
 ## The Room
@@ -149,11 +149,11 @@ My studio is a dedicated drum recording space, **acoustically treated** with the
 The treatment controls unwanted low-frequency buildup without making the room excessively dry or dull. This preserves the depth and punch of the shells, along with the openness and detail of the cymbals.
 
 The result is a balanced, natural drum sound, with controlled resonances and just the right amount of room character — giving you recordings that are easy to work with and sit naturally in the mix.
-  </div>
-</section>
 
 ## Ready to start?
 
-Send me your drumless track and BPM chart through the [Contact page](/contact/). You can also find me on [Fiverr](https://www.fiverr.com/albertocaroli/write-and-record-drum-parts-for-your-rock-song). Not sure yet? [Book a call](https://calendly.com/acaroli1990/30min) and tell me about your song.
+Send me your drumless track and BPM chart through the [Contact page](/#contact). You can also find me on [Fiverr](https://www.fiverr.com/albertocaroli/write-and-record-drum-parts-for-your-rock-song). Not sure yet? [Book a call](https://calendly.com/acaroli1990/30min) and tell me about your song.
+  </div>
+</section>
 
 *Gear lists updated periodically.*
