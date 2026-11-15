@@ -4,7 +4,7 @@ title: "Projects"
 layout: section
 section_slug: projects
 has_detail: true
-hero_image: /assets/images/portfolio/diluvio-universale.jpg
+hero_image: /assets/images/projects-background.jpg
 image_darkness: 0.55
 ---
 
@@ -98,19 +98,35 @@ Live, Effigy won the Piazza Bertoldi contest in San Marino in 2024, and the priz
 .current-project h3, .past-project h3 { margin: 0 0 0.3rem; }
 .current-project .desc, .past-project .desc { opacity: 0.75; font-size: 0.92em; margin-bottom: 0.5rem; }
 .project-years { margin-left: 0.35em; font-size: 0.8em; font-weight: 400; opacity: 0.7; }
-.portfolio-card .social-icons a {
+.current-project h3 {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.15rem 0.4rem;
+}
+.current-project .social-icons {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.2rem;
+  margin-left: 0.1rem;
+}
+.current-project .social-icons a {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 32px; height: 32px;
+  width: 1.75rem;
+  height: 1.75rem;
   border-radius: 50%;
-  background: rgba(255,255,255,0.08);
-  margin-right: 6px;
-  font-size: 1em;
+  color: inherit;
   text-decoration: none;
   transition: background 0.2s;
 }
-.portfolio-card .social-icons a:hover { background: rgba(255,255,255,0.18); }
+.current-project .social-icons a:hover { background: rgba(255,255,255,0.16); }
+.current-project .social-icons svg { width: 1rem; height: 1rem; }
+.current-project .social-icons a:focus-visible {
+  outline: 2px solid #f0a500;
+  outline-offset: 3px;
+}
 
 /* Role label helper */
 {% assign role_labels = "drummer_live:Drummer (Live)|drummer_studio:Drummer (Studio)|drummer_both:Drummer (Live & Studio)|producer:Producer|mixing_engineer:Mixing Engineer|mastering_engineer:Mastering Engineer|vocals:Vocals|recording_engineer:Recording Engineer|lights_technician:Lights Technician|composer:Composer|lyricist:Lyricist|backing_vocals:Backing Vocals|guitar:Guitars|bass:Bass" | split: "|" %}
@@ -160,6 +176,7 @@ Live, Effigy won the Piazza Bertoldi contest in San Marino in 2024, and the priz
 
 ## Current Projects
 
+<div class="image-backed-panel" style="--section-image: url('{{ '/assets/images/projects-current.jpg' | relative_url }}'); --image-darkness: {{ page.image_darkness | default: 0.55 }};">
 <p>Projects where Alberto is an active member.</p>
 
 {% for project in site.data.projects.current_projects %}
@@ -171,6 +188,24 @@ Live, Effigy won the Piazza Bertoldi contest in San Marino in 2024, and the priz
       {{ project.name }}
     {% endif %}
     {% if project.years %}<span class="project-years">({{ project.years }})</span>{% endif %}
+    {% if project.socials and project.socials.size > 0 %}
+    <span class="social-icons">
+      {% for social in project.socials %}
+        <a href="{{ social.url }}" target="_blank" rel="noopener" aria-label="{{ project.name | escape }} on {{ social.platform | capitalize | escape }}">
+          {% case social.platform %}
+            {% when "instagram" %}
+              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="18" cy="6" r="1" fill="currentColor"/></svg>
+            {% when "facebook" %}
+              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M13.5 21v-8h2.8l.4-3h-3.2V8.1c0-.9.3-1.5 1.6-1.5h1.7V3.9c-.3 0-1.3-.1-2.5-.1-2.5 0-4.2 1.5-4.2 4.3V10H7.3v3h2.8v8z"/></svg>
+            {% when "youtube" %}
+              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="2" y="5" width="20" height="14" rx="4" fill="none" stroke="currentColor" stroke-width="2"/><path d="m10 9 5 3-5 3z" fill="currentColor"/></svg>
+            {% else %}
+              <span aria-hidden="true">{{ social.platform | slice: 0 | upcase }}</span>
+          {% endcase %}
+        </a>
+      {% endfor %}
+    </span>
+    {% endif %}
   </h3>
   {% if project.genre or project.description %}
   <p class="desc">{% if project.genre %}<strong>Genre:</strong> {{ project.genre }}{% endif %}{% if project.description %}{% if project.genre %} · {% endif %}{{ project.description }}{% endif %}</p>
@@ -190,17 +225,9 @@ Live, Effigy won the Piazza Bertoldi contest in San Marino in 2024, and the priz
     {% endfor %}
   </div>
   {% endif %}
-  {% if project.socials and project.socials.size > 0 %}
-  <div class="social-icons">
-    {% for social in project.socials %}
-      <a href="{{ social.url }}" target="_blank" rel="noopener" title="{{ social.platform | capitalize }}">
-        <i class="{{ social.icon }}"></i>
-      </a>
-    {% endfor %}
-  </div>
-  {% endif %}
 </div>
 {% endfor %}
+</div>
 
 ---
 

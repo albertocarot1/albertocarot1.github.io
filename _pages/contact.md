@@ -4,7 +4,7 @@ title: "Contact"
 layout: section
 section_slug: contact
 has_detail: false
-hero_image: /assets/images/bio-photo.jpg
+hero_image: /assets/images/contact-background.jpg
 image_darkness: 0.55
 ---
 
@@ -33,7 +33,6 @@ I’m available for touring and live shows, in-person studio recording, and remo
     <label><input type="radio" name="project_type" value="Touring/live drumming" required> Touring / live drumming</label>
     <label><input type="radio" name="project_type" value="In-person studio session"> In-person studio session</label>
     <label><input type="radio" name="project_type" value="Remote drum tracks"> Remote drum tracks recorded in my studio</label>
-    <label><input type="radio" name="project_type" value="Music production/recording"> Music production/recording</label>
     <label><input type="radio" name="project_type" value="Other"> Other</label>
   </fieldset>
 

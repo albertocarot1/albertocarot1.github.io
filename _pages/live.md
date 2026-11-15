@@ -4,11 +4,11 @@ title: "Live"
 layout: section
 section_slug: live
 has_detail: true
-hero_image: /assets/images/session-recording-studio.jpg
+hero_image: /assets/images/live-background.jpg
 image_darkness: 0.55
 ---
 
-Available for touring and live drumming, from intimate club shows to larger events. I come prepared, learn the set, and play for the song. Browse recent dates below, then [get in touch about your tour or show](/contact/).
+Available for touring and live drumming, from intimate club shows to larger events. I come prepared, learn the set, and play for the song. Browse recent dates below, then [get in touch about your tour or show](/#contact).
 
 <!-- home-cut -->
 
@@ -16,7 +16,7 @@ Available for touring and live drumming, from intimate club shows to larger even
 .concert-table {
   width: 100%;
   border-collapse: collapse;
-  margin: 1rem 0 2rem;
+  margin: 0;
   font-size: 0.93em;
 }
 .concert-table th:nth-child(2),
@@ -91,6 +91,7 @@ Available for touring and live drumming, from intimate club shows to larger even
 {% if site.data.live.upcoming and site.data.live.upcoming.size > 0 %}
 ## Next Dates
 
+<div class="image-backed-panel" style="--section-image: url('{{ '/assets/images/live-concerts.jpg' | relative_url }}'); --image-darkness: {{ page.image_darkness | default: 0.55 }};">
 <table class="concert-table">
   <thead>
     <tr>
@@ -128,6 +129,7 @@ Available for touring and live drumming, from intimate club shows to larger even
     {% endfor %}
   </tbody>
 </table>
+</div>
 {% endif %}
 
 ---
@@ -135,6 +137,7 @@ Available for touring and live drumming, from intimate club shows to larger even
 ## Past Concerts
 
 {% if site.data.live.past and site.data.live.past.size > 0 %}
+<div class="image-backed-panel" style="--section-image: url('{{ '/assets/images/live-concerts.jpg' | relative_url }}'); --image-darkness: {{ page.image_darkness | default: 0.55 }};">
 <table class="concert-table">
   <thead>
     <tr>
@@ -170,6 +173,7 @@ Available for touring and live drumming, from intimate club shows to larger even
     {% endfor %}
   </tbody>
 </table>
+</div>
 {% else %}
 <p><em>No past concerts listed yet.</em></p>
 {% endif %}

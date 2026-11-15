@@ -7,10 +7,9 @@
 #   project: (string) – which band/project
 #   notes: (optional string)
 #   youtube_url: (optional URL to YouTube video)
-#   show_highlight: (optional list of pages: home, about, projects, session; omitted/empty means not highlighted)
-#   highlight_title: (optional display title for a selected highlight)
-#   highlight_where: (optional custom display location for a selected highlight)
-#   highlight_order: (optional order for the curated home highlights)
+#   highlight_title: (optional title; entries with one appear in the homepage highlights)
+#   highlight_where: (optional custom display location for a homepage highlight)
+#   highlight_order: (optional order for the homepage highlights)
 #   bill_with: (optional list of other bands, copied from the notes)
 #   bill_relevance: (optional integer; lower values appear first in shared-stage lists)
 
@@ -34,7 +33,6 @@ past:
     project: "Balera"
     notes: "Punking Festival, with Le storie di Lisa, Rameric, Objct"
     youtube_url: "https://www.instagram.com/p/Dc3bkEciFiD/?img_index=1"
-    show_highlight: [projects]
     highlight_title: "Punking Festival"
     highlight_where: "Balera, Camping Alto Savio, San Piero in Bagno"
     highlight_order: 7
@@ -108,7 +106,6 @@ past:
     project: "Rotation stage"
     notes: "Playing in front of the whole 1000+ people of the community"
     youtube_url: ""
-    show_highlight: [about, projects]
     highlight_title: "Comunità San Patrignano"
     highlight_where: "Rotation Stage, Coriano"
     highlight_order: 6
@@ -180,7 +177,6 @@ past:
     project: "Drum Battle Palazzuolo Drum Camp"
     notes: "Competition between drummers, with a jury of professional musicians. I played an original song I composed for the event, in front of George Kollias, Gergo Borlai, Sebastian Lanser, Mario Riso and Andrea Bessone."
     youtube_url: "https://www.youtube.com/watch?v=Me8UW8w5ano"
-    show_highlight: [home, about, session]
     highlight_title: "Drum battle, Palazzuolo Drum Camp"
     highlight_order: 3
 
@@ -191,7 +187,6 @@ past:
     project: "VGDM di Michele Luppi"
     notes: "Final show of Visione Globale Della Musica, a singing project by Michele Luppi. I played drums for the monthly sessions during the year, and for the show alongside Michele Luppi (on vocals and keyboard) and other musicians."
     youtube_url: ""
-    show_highlight: [about, projects]
     highlight_title: "Visione Globale Della Musica (VGDM), final show"
     highlight_where: "Michele Luppi's VGDM project, Teatro della Regina, Cattolica"
     highlight_order: 4
@@ -221,7 +216,6 @@ past:
     project: "Reagents"
     notes: "Eurovision Song Contest 2025 San Marino national selection, semifinal. I played drums for the band, which was backing the singers."
     youtube_url: "https://www.youtube.com/watch?v=ImBpKfHnUvM&t=1580s"
-    show_highlight: [home, about, projects, session]
     highlight_title: "Eurovision 2025, San Marino national selection"
     highlight_where: "Reagents, Auditorium Little Tony, Serravalle (San Marino)"
     highlight_order: 1
@@ -233,7 +227,6 @@ past:
     project: "Effigy"
     notes: "Won the contest, which allowed us to record a song in a professional studio."
     youtube_url: "https://www.youtube.com/watch?v=8HlPgo5RC_g"
-    show_highlight: [about, projects]
     highlight_title: "Contest win with Effigy"
     highlight_where: "Effigy, Piazza Bertoldi, San Marino"
     highlight_order: 5
@@ -277,6 +270,5 @@ past:
     project: "Rockin 1000 Romagna"
     notes: "Live performance with 1000 musicians, raising funds for the flood victims in Emilia Romagna"
     youtube_url: "https://www.youtube.com/watch?v=9rfqkzqRzF8&list=PL7rBHh-SMjjd9CudO5WUELLuuDA6Kdd4g"
-    show_highlight: [home, about, projects, session]
     highlight_title: "Rockin'1000 Romagna"
     highlight_order: 2
