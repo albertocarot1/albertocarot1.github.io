@@ -14,7 +14,7 @@ I've played in front of the San Patrignano community, for 1,000+ people, and for
 
 <!-- home-cut -->
 
-<section class="session-feature session-feature--image-right session-feature--flow">
+<section class="session-feature session-feature--image-right session-feature--flow session-feature--vertical-photo">
   <div class="session-feature__media">{% include figure.html image_path="/assets/images/hi-alberto.jpg" alt="Alberto Caroli" caption="" %}</div>
   <div class="session-feature__content" markdown="1">
 ## Hi, I'm Alberto
@@ -31,7 +31,7 @@ Because I produce, mix, and master too, I listen to the whole record while I pla
   </div>
 </section>
 
-<section class="session-feature session-feature--image-left session-feature--flow">
+<section class="session-feature session-feature--image-left session-feature--flow session-feature--vertical-photo">
   <div class="session-feature__media">{% include figure.html image_path="/assets/images/on-the-road.jpg" alt="Alberto Caroli on the road performing live" caption="" %}</div>
   <div class="session-feature__content" markdown="1">
 ## On the road

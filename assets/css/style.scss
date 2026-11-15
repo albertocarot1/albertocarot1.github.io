@@ -3,7 +3,7 @@
 @import "{{ site.theme }}";
 @import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Space+Grotesk:wght@400;500;600;700&family=Figtree:wght@400;500;600;700&family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,700;12..96,800&display=swap');
 
-:root { --ink:#f3f3f3; --muted:#b7b7b7; --bg:#151515; --surface:#1e1e1e; --accent:#f0a500; --nav-height:76px; --navigation-gap:clamp(12px,2.2vw,30px); --image-bottom-fade:{{ site.image_bottom_fade | default: '20%' }}; }
+:root { --ink:#f3f3f3; --muted:#b7b7b7; --bg:#151515; --surface:#1e1e1e; --accent:#f0a500; --nav-height:76px; --navigation-gap:clamp(12px,2.2vw,30px); --home-preview-gutter:clamp(28px,5vw,56px); --image-bottom-fade:{{ site.image_bottom_fade | default: '20%' }}; }
 * { box-sizing:border-box; }
 html { scroll-behavior:smooth; scroll-padding-top:calc(var(--nav-height) + 14px); }
 body { margin:0; padding-top:var(--nav-height); background:var(--bg); color:var(--ink); font-family:'Figtree',sans-serif; line-height:1.6; }
@@ -62,10 +62,11 @@ blockquote.philosophy p { margin:0; }
 .section-inner { margin:0 auto; }
 .home-youtube { padding:clamp(24px,4vw,48px) 24px clamp(30px,4.5vw,60px); }
 .home-youtube .section-inner { max-width:1100px; }
-.home-testimonials { padding:0 24px clamp(18px,3vw,36px); }
-.home-testimonials .section-inner { max-width:1100px; }
+.home-testimonials { padding:0 0 clamp(18px,3vw,36px); }
+.home-testimonials .section-inner { max-width:none; }
 .credits.credits--home-strip { margin:0; }
-.credits.credits--home-preview.credits--home-strip { width:calc(100% - 48px); max-width:1100px; box-sizing:border-box; margin:24px auto; }
+.credits.credits--home-preview.credits--home-strip { width:calc(100% - var(--home-preview-gutter) - var(--home-preview-gutter)); max-width:none; box-sizing:border-box; margin:24px auto; }
+.home-testimonials .credits.credits--home-strip { width:calc(100% - var(--home-preview-gutter) - var(--home-preview-gutter)); max-width:none; margin:0 auto; }
 .credits--home-strip .testimonial-carousel--controls { display:grid; grid-template-columns:40px minmax(0,1fr) 40px; align-items:center; gap:clamp(8px,1.5vw,16px); }
 .credits--home-strip .testimonial-window { min-width:0; overflow:hidden; }
 .credits--home-strip .credits-track { --testimonial-gap:clamp(10px,1.5vw,18px); display:flex; align-items:center; gap:var(--testimonial-gap); }
@@ -88,7 +89,7 @@ blockquote.philosophy p { margin:0; }
   position:relative;
   isolation:isolate;
   overflow:hidden;
-  padding:clamp(28px,5vw,56px);
+  padding:var(--home-preview-gutter);
   background-color:var(--bg);
 }
 .section-intro::before,
@@ -200,9 +201,13 @@ blockquote.philosophy p { margin:0; }
 .session-feature__media .content-figure img {
   display:block;
   width:100%;
-  max-height:420px;
+  max-height:630px;
   aspect-ratio:4/3;
   object-fit:cover;
+}
+.session-feature--vertical-photo .session-feature__media .content-figure img {
+  max-height:none;
+  aspect-ratio:2/3;
 }
 .session-feature--portrait .session-feature__media .content-figure img {
   height:auto;
@@ -216,6 +221,12 @@ blockquote.philosophy p { margin:0; }
 }
 .session-feature--flow .session-feature__media {
   width:min(44%,420px);
+}
+.session-feature--room-photo .session-feature__media {
+  width:min(66%,630px);
+}
+.session-feature--room-photo .session-feature__media .content-figure img {
+  max-height:630px;
 }
 .session-feature--flow.session-feature--image-left .session-feature__media {
   float:left;
@@ -382,8 +393,7 @@ blockquote.philosophy p { margin:0; }
 .form .btn { font:inherit; font-weight:700; background:var(--accent); color:#111; border:0; padding:12px 20px; cursor:pointer; }
 @media (max-width:900px) { :root { --navigation-gap:17px; } .site-brand { font-size:1.5rem; } .hero-inner { gap:35px; } }
 @media (max-width:690px) {
-  .credits.credits--home-preview.credits--home-strip { width:calc(100% - 40px); }
-  :root { --nav-height:64px; }
+  :root { --nav-height:64px; --home-preview-gutter:22px; }
   .site-header { padding:0 14px; }
   .site-brand { font-size:1.15rem; line-height:.82; white-space:normal; }
   .site-brand span { display:block; }
@@ -392,7 +402,7 @@ blockquote.philosophy p { margin:0; }
   .hero-copy h1 { font-size:clamp(3.4rem,13vw,6rem); }
   .home-section { padding:0 0 31px; }
   .home-youtube { padding:24px 20px 31px; }
-  .home-testimonials { padding:0 20px 20px; }
+  .home-testimonials { padding:0 0 20px; }
   .credits.credits--home-strip .credit-quote { min-height:80px; padding:9px; }
   .section-intro { padding:28px 22px; }
   .preview-grid { grid-template-columns:repeat(2,minmax(0,1fr)); gap:12px; }
