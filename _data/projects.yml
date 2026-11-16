@@ -69,30 +69,8 @@ portfolio:
       - recording_engineer
       - mastering_engineer
 
-
-
 # Current active projects (Alberto is a member)
 current_projects:
-  - name: "Alibi"
-    years: "2024-present"
-    genre: "Pop rock in Italian"
-    link: ""
-    roles:
-      - drummer_live
-    socials: []
-
-  - name: "P(a)fanner's Flying Donkeys"
-    years: "2009-2013, 2020-present"
-    genre: "Punk/hard rock"
-    link: ""
-    roles:
-      - drummer_both
-      - composer
-      - lyricist
-      - backing_vocals
-      - producer
-    socials: []
-
   - name: "Balera"
     years: "2025-present"
     genre: "Doom/sludge metal"
@@ -132,7 +110,13 @@ current_projects:
       - drummer_both
       - bass
       - vocals
-    socials: []
+    socials: 
+      - platform: "instagram"
+        icon: "fab fa-instagram"
+        url: "https://www.instagram.com/rotation_stage_rsm/"
+      - platform: "facebook"
+        icon: "fab fa-facebook"
+        url: "https://www.facebook.com/RotationStageRSM/"
 
   - name: "ZEMIC"
     years: "2026-present"
@@ -152,7 +136,54 @@ current_projects:
         icon: "fab fa-youtube"
         url: "https://www.youtube.com/channel/UC3A6E7ZD6_Lg-1prd3cwSLg"
 
+  - name: "Alibi"
+    years: "2024-present"
+    genre: "Pop rock in Italian"
+    link: ""
+    roles:
+      - drummer_live
+    socials: 
+      - platform: "instagram"
+        icon: "fab fa-instagram"
+        url: "https://www.instagram.com/alibimusica/"
+
+  - name: "P(a)fanner's Flying Donkeys"
+    years: "2009-2013, 2020-present"
+    genre: "Punk/hard rock"
+    link: ""
+    roles:
+      - drummer_both
+      - composer
+      - lyricist
+      - backing_vocals
+      - producer
+    socials: 
+      - platform: "instagram"
+        icon: "fab fa-instagram"
+        url: "https://www.instagram.com/pafannersflyingdonkeys/"
+      - platform: "spotify"
+        icon: "fab fa-spotify"
+        url: "https://open.spotify.com/artist/330AWySWm5cnrVXCPkueAK?si=SZ7CqL-3R7WomOpfl7PrTA"
+
 past_projects:
+  - name: "Effigy"
+    years: "2024-2026"
+    genre: "Grunge/stoner rock"
+    description: "Lyrics in Italian."
+    roles:
+      - drummer_both
+      - composer
+      - lyricist
+      - backing_vocals
+      - producer
+    socials:
+      - platform: "instagram"
+        icon: "fab fa-instagram"
+        url: "https://www.instagram.com/effigy666/"
+      - platform: "youtube"
+        icon: "fab fa-youtube"
+        url: "https://www.youtube.com/@effigy666"
+
   - name: "Michele Luppi's VGDM Cattolica"
     years: "2024-2025"
     genre: "Rock classics"
@@ -197,23 +228,4 @@ past_projects:
     roles:
       - drummer_both
 
-  - name: "Effigy"
-    years: "2024-2026"
-    genre: "Grunge/stoner rock"
-    description: "Lyrics in Italian."
-    roles:
-      - drummer_both
-      - composer
-      - lyricist
-      - backing_vocals
-      - producer
-    socials:
-      - platform: "instagram"
-        icon: "fab fa-instagram"
-        url: "https://www.instagram.com/effigy666/"
-      - platform: "facebook"
-        icon: "fab fa-facebook"
-        url: "https://www.facebook.com/Effigy666/"
-      - platform: "youtube"
-        icon: "fab fa-youtube"
-        url: "https://www.youtube.com/@effigy666"
+
