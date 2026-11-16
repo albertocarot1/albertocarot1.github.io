@@ -199,6 +199,8 @@ Live, Effigy won the Piazza Bertoldi contest in San Marino in 2024, and the priz
               <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M13.5 21v-8h2.8l.4-3h-3.2V8.1c0-.9.3-1.5 1.6-1.5h1.7V3.9c-.3 0-1.3-.1-2.5-.1-2.5 0-4.2 1.5-4.2 4.3V10H7.3v3h2.8v8z"/></svg>
             {% when "youtube" %}
               <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="2" y="5" width="20" height="14" rx="4" fill="none" stroke="currentColor" stroke-width="2"/><path d="m10 9 5 3-5 3z" fill="currentColor"/></svg>
+            {% when "spotify" %}
+              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="2"/><path d="M6.5 9c4.1-1.2 8.3-.7 11.3 1.1M7.3 12c3.4-1 6.8-.6 9.4.9M8.1 15c2.6-.7 5.2-.4 7.3.7" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
             {% else %}
               <span aria-hidden="true">{{ social.platform | slice: 0 | upcase }}</span>
           {% endcase %}
