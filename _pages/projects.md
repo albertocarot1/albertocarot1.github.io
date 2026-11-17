@@ -8,7 +8,7 @@ hero_image: /assets/images/projects-background.jpg
 image_darkness: 0.55
 ---
 
-Records, collaborations and ongoing bands. Explore selected releases and the roles behind each production, from drumming and composing to recording, mixing and mastering.
+Records, collaborations and ongoing bands. Explore selected releases and my contributions to them, from drumming and composing to recording, mixing and mastering.
 
 Live, Effigy won the Piazza Bertoldi contest in San Marino in 2024, and the prize was recording a song in a professional studio.
 

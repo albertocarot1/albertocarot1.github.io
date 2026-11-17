@@ -1,3 +1,6 @@
 <div class="video-embed">
-  <iframe src="https://www.youtube.com/embed/{{ include.id | escape }}" title="{{ include.title | default: 'YouTube video' | escape }}" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
+  {% assign video_title = include.title | default: 'YouTube video' %}
+  <a class="video-embed__placeholder" href="https://www.youtube.com/watch?v={{ include.id | escape }}" target="_blank" rel="noopener noreferrer" data-youtube-id="{{ include.id | escape }}" data-youtube-title="{{ video_title | escape }}" aria-label="Play {{ video_title | escape }} on YouTube">
+    <img src="https://i.ytimg.com/vi/{{ include.id | escape }}/hqdefault.jpg" alt="" loading="lazy">
+  </a>
 </div>
