@@ -4,7 +4,7 @@ title: "About"
 layout: section
 section_slug: about
 has_detail: true
-hero_image: /assets/images/alberto-caroli.jpg
+hero_image: /assets/images/alberto-caroli.webp
 image_darkness: 0.55
 ---
 
@@ -15,7 +15,7 @@ I've played in front of the San Patrignano community, for 1,000+ people, and for
 <!-- home-cut -->
 
 <section class="session-feature session-feature--image-right session-feature--flow session-feature--vertical-photo">
-  <div class="session-feature__media">{% include figure.html image_path="/assets/images/hi-alberto.jpg" alt="Alberto Caroli" caption="" %}</div>
+  <div class="session-feature__media">{% include figure.html image_path="/assets/images/hi-alberto.webp" alt="Alberto Caroli" caption="" %}</div>
   <div class="session-feature__content" markdown="1">
 ## Hi, I'm Alberto
 
@@ -32,7 +32,7 @@ My background in production, mixing, and mastering gives me a producer's ear beh
 </section>
 
 <section class="session-feature session-feature--image-left session-feature--flow session-feature--vertical-photo">
-  <div class="session-feature__media">{% include figure.html image_path="/assets/images/on-the-road.jpg" alt="Alberto Caroli on the road performing live" caption="" %}</div>
+  <div class="session-feature__media">{% include figure.html image_path="/assets/images/on-the-road.webp" alt="Alberto Caroli on the road performing live" caption="" %}</div>
   <div class="session-feature__content" markdown="1">
 ## On the road
 
@@ -54,7 +54,7 @@ I do my best work with people who take their music seriously, and I try to be th
 
 I'm easy to work with, and I like to keep it that way. Tight budget? Tell me early and we'll find a way that works for both of us. Free work, or "we'll pay you when the single takes off"? That's not really my thing. Exposure doesn't fill the van's tank. I'll respect your craft, and I'd expect the same in return.
 
-<div class="about-testimonials-image">{% include figure.html image_path="/assets/images/about-testimonials.jpg" alt="Placeholder graphic for the testimonials photo" caption="" %}</div>
+<div class="about-testimonials-image">{% include figure.html image_path="/assets/images/about-testimonials.webp" alt="Placeholder graphic for the testimonials photo" caption="" %}</div>
 
 {% include credits.html testimonials=true home_strip=true heading="What people say" level=2 css=false %}
 

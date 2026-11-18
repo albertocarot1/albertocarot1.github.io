@@ -4,7 +4,7 @@ title: "Recording"
 layout: section
 section_slug: session
 has_detail: true
-hero_image: /assets/images/session-background.jpg
+hero_image: /assets/images/session-background.webp
 image_darkness: 0.55
 ---
 
@@ -36,7 +36,7 @@ My approach to writing, recording and mixing drum parts is built on a few core p
 </ul>
 
 <section class="session-feature session-feature--image-right session-feature--flow">
-  <div class="session-feature__media">{% include figure.html image_path="/assets/images/session-drum-chart.jpg" alt="Alberto writing a drum chart with song sections" caption="" %}</div>
+  <div class="session-feature__media">{% include figure.html image_path="/assets/images/session-drum-chart.webp" alt="Alberto writing a drum chart with song sections" caption="" %}</div>
   <div class="session-feature__content" markdown="1">
 ### What I need from you
 
@@ -87,7 +87,7 @@ I'm comfortable with all types of rock: soft rock and pop, hard rock, blues, pun
 Want a taste of my drumming style? Have a look at [my YouTube channel](https://www.youtube.com/@albecarolimusic).
 
 <section class="session-feature session-feature--image-left session-feature--flow session-feature--portrait">
-  <div class="session-feature__media">{% include figure.html image_path="/assets/images/session-drums.jpg" alt="Alberto's drum kit" caption="" %}</div>
+  <div class="session-feature__media">{% include figure.html image_path="/assets/images/session-drums.webp" alt="Alberto's drum kit" caption="" %}</div>
   <div class="session-feature__content" markdown="1">
 ## The Drums
 
@@ -123,7 +123,7 @@ I make sure that the sound of the drums is good from the get-go, tuning the snar
 The mics go through an **8-channel** audio interface and its transparent preamps. I record and mix in Reaper, but can export the audio tracks for compatibility with any DAW.
 
 <section class="session-feature session-feature--image-right session-feature--flow session-feature--room-photo">
-  <div class="session-feature__media">{% include figure.html image_path="/assets/images/session-studio-room.jpg" alt="Alberto's studio room" caption="" %}</div>
+  <div class="session-feature__media">{% include figure.html image_path="/assets/images/session-studio-room.webp" alt="Alberto's studio room" caption="" %}</div>
   <div class="session-feature__content" markdown="1">
 ## Studio Gear
 

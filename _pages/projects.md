@@ -4,7 +4,7 @@ title: "Projects"
 layout: section
 section_slug: projects
 has_detail: true
-hero_image: /assets/images/projects-background.jpg
+hero_image: /assets/images/projects-background.webp
 image_darkness: 0.55
 ---
 
@@ -176,7 +176,7 @@ Live, Effigy won the Piazza Bertoldi contest in San Marino in 2024, and the priz
 
 ## Current Projects
 
-<div class="image-backed-panel" style="--section-image: url('{{ '/assets/images/projects-current.jpg' | relative_url }}'); --image-darkness: {{ page.image_darkness | default: 0.55 }};">
+<div class="image-backed-panel" style="--section-image: url('{{ '/assets/images/projects-current.webp' | relative_url }}'); --image-darkness: {{ page.image_darkness | default: 0.55 }};">
 <p>Projects where Alberto is an active member.</p>
 
 {% for project in site.data.projects.current_projects %}

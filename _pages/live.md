@@ -4,7 +4,7 @@ title: "Live & Tours"
 layout: section
 section_slug: live
 has_detail: true
-hero_image: /assets/images/live-background.jpg
+hero_image: /assets/images/live-background.webp
 image_darkness: 0.55
 ---
 
@@ -91,7 +91,7 @@ Available for live shows and tours, from intimate club shows to larger events. I
 {% if site.data.live.upcoming and site.data.live.upcoming.size > 0 %}
 ## Next Dates
 
-<div class="image-backed-panel" style="--section-image: url('{{ '/assets/images/live-concerts.jpg' | relative_url }}'); --image-darkness: {{ page.image_darkness | default: 0.55 }};">
+<div class="image-backed-panel" style="--section-image: url('{{ '/assets/images/live-concerts.webp' | relative_url }}'); --image-darkness: {{ page.image_darkness | default: 0.55 }};">
 <table class="concert-table">
   <thead>
     <tr>
@@ -137,7 +137,7 @@ Available for live shows and tours, from intimate club shows to larger events. I
 ## Past Concerts
 
 {% if site.data.live.past and site.data.live.past.size > 0 %}
-<div class="image-backed-panel" style="--section-image: url('{{ '/assets/images/live-concerts.jpg' | relative_url }}'); --image-darkness: {{ page.image_darkness | default: 0.55 }};">
+<div class="image-backed-panel" style="--section-image: url('{{ '/assets/images/live-concerts.webp' | relative_url }}'); --image-darkness: {{ page.image_darkness | default: 0.55 }};">
 <table class="concert-table">
   <thead>
     <tr>
