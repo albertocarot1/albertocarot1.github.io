@@ -55,7 +55,8 @@ Videos and audio players are loaded lazily. Use the same includes in standalone 
 1. Verify home menu items scroll to the correct anchor with the header visible.
 2. Verify detail-page menu items open the other full pages, while Home and Contact return to the homepage anchors.
 3. Verify See all opens each full page.
-4. Test the contact form and Book a call link.
-5. Verify Live, Projects, and Session still render YAML-driven content.
-6. Test narrow browser widths and keyboard navigation.
-7. When satisfied, open a PR from `feature/scrolling-homepage` to `master` and merge to publish.
+4. Test the contact form's Formspree success and error states, the `?type=touring` selection, the no-JavaScript fallback, and the Book a call link.
+5. Before publishing, replace the `TODO(alberto)` contact/privacy placeholders and confirm the Formspree endpoint, retention period, and third-party data-processing terms.
+6. Verify Live, Projects, and Session still render YAML-driven content.
+7. Test narrow browser widths and keyboard navigation.
+8. When satisfied, open a PR from `feature/scrolling-homepage` to `master` and merge to publish.

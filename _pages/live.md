@@ -1,6 +1,6 @@
 ---
 permalink: /live/
-title: "Live"
+title: "Live & Tours"
 layout: section
 section_slug: live
 has_detail: true
@@ -8,7 +8,7 @@ hero_image: /assets/images/live-background.jpg
 image_darkness: 0.55
 ---
 
-Available for touring and live drumming, from intimate club shows to larger events. I come prepared, learn the set, and play for the song. Browse recent dates below, then [get in touch about your tour or show](/#contact).
+Available for live shows and tours, from intimate club shows to larger events. I come prepared, learn the set, and play for the song. Browse recent dates below, then [get in touch about a show or tour](/?type=touring#contact).
 
 <!-- home-cut -->
 

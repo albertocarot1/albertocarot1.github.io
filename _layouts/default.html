@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{% if page.is_home %}{{ site.title | escape }}{% else %}{{ page.title | escape }} · {{ site.title | escape }}{% endif %} | Live &amp; Session Drummer</title>
+  <title>{% if page.is_home %}{{ site.title | escape }}{% else %}{{ page.title | escape }} · {{ site.title | escape }}{% endif %} | Touring &amp; Session Drummer</title>
   <meta name="description" content="{{ page.description | default: site.description | strip_html | normalize_whitespace | escape }}">
   <link rel="canonical" href="{{ page.url | absolute_url }}">
   <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
@@ -32,6 +32,7 @@
         </svg>
       </a>
       <a href="{{ '/' | relative_url }}#contact">Contact</a>
+      <a href="{{ '/privacy/' | relative_url }}">Privacy</a>
     </div>
   </footer>
   {% if page.is_home or page.permalink == '/session/' %}
@@ -40,6 +41,8 @@
   {% if page.is_home or page.permalink == '/about/' or page.permalink == '/session/' %}
     <script src="{{ '/assets/js/testimonial-carousel.js' | relative_url }}" defer></script>
   {% endif %}
+  <script src="{{ '/assets/js/contact-form.js' | relative_url }}" defer></script>
+  <script src="{{ '/assets/js/youtube-embed.js' | relative_url }}" defer></script>
   {% if page.is_home %}
     <script>
       (function () {

@@ -8,7 +8,7 @@ hero_image: /assets/images/alberto-caroli.jpg
 image_darkness: 0.55
 ---
 
-I'm Alberto Caroli, a touring and live drummer based in Cesena, Italy. I'm available for in-person studio sessions and remote drum tracks recorded in my own studio and delivered online. I love to find the right part to serve the song, whether on stage or in the studio. Let's talk music!
+I'm Alberto Caroli, a touring and session drummer based in Cesena, Italy. I'm available for live shows and tours, in-person studio sessions, and remote drum tracks recorded in my own studio and delivered online. I love to find the right part to serve the song, whether on stage or in the studio. Let's talk music!
 
 I've played in front of the San Patrignano community, for 1,000+ people, and for the final show of Michele Luppi's VGDM project after a year of monthly sessions as its drummer.
 
@@ -19,7 +19,7 @@ I've played in front of the San Patrignano community, for 1,000+ people, and for
   <div class="session-feature__content" markdown="1">
 ## Hi, I'm Alberto
 
-I'm an Italian (based in Cesena) session and touring drummer, but also a composer, producer, and sound and lights engineer. From the multiple experiences in studios and on stages, I found what I really love: the drop falling at the right moment, the chorus opening up, and the room feeling it together. Rock, pop, and metal are where I feel most at home, and I love working with people who care about the music as much as I do.
+I'm an Italian drummer based in Cesena. I am also a composer, producer, mixing, recording and lights engineer. From my experiences in studios and on stages, I found what I really love: the drop falling at the right moment, the chorus opening up, and the room feeling it together. Rock, pop, and metal are where I feel most at home, and I love working with people who care about the music as much as I do.
 
 I know how much goes into a song, and how strange it can feel to hand it to someone else to play. That's why I like to start from your idea and work from there.
 
@@ -27,7 +27,7 @@ I know how much goes into a song, and how strange it can feel to hand it to some
 
 I play for the song, not for my ego. I'm happy to take direction, and I'm happy to bring ideas if you want them. I also pay attention to the details in the sound: why a snare cracks the way it does, why a room responds a certain way, and how all of that affects the feel of a take.
 
-Because I produce, mix, and master too, I listen to the whole record while I play: where the kick sits against the bass, which fill gets in the way of the vocal, and when the best thing to do is leave space and let the reverb do its thing.
+My background in production, mixing, and mastering gives me a producer's ear behind the kit: I shape drum parts around the song and the overall sound, so they feel right and sit naturally in the mix.
   </div>
 </section>
 
@@ -58,11 +58,11 @@ I'm easy to work with, and I like to keep it that way. Tight budget? Tell me ear
 
 {% include credits.html testimonials=true home_strip=true heading="What people say" level=2 css=false %}
 
-## Got a record or a tour/gigs coming up?
+## Got a recording or a live show/tour coming up?
 
 Write to me about it: the songs, a rough demo if you have one, the dates, and the sound you're chasing. The more you share, the faster I can tell you whether I'm the right drummer for it.
 
-[Send me a message](/#contact) or [let's have a call](https://calendly.com/acaroli1990/30min).
+[Send me a message](/#contact) or [let's have a call](https://calendly.com/acaroli1990/quickchat).
 
 ---
 <blockquote class="philosophy">

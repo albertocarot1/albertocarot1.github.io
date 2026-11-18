@@ -10,11 +10,11 @@ main:
     slug: about
     url: /about/
     has_detail: true
-  - title: "Live"
+  - title: "Live & Tours"
     slug: live
     url: /live/
     has_detail: true
-  - title: "Session"
+  - title: "Recording"
     slug: session
     url: /session/
     has_detail: true
