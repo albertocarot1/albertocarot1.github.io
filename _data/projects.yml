@@ -15,7 +15,7 @@ portfolio:
   # - title: "Sand Monolith"
   #   artist: "Sand Monolith"
   #   link: "https://soundcloud.com/sand-monolith/sets/sand-monolith/s-uEygiF2EO3J?si=adc179aae5d34995b5af4addb9f859c3&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing"
-  #   art: "/assets/images/portfolio/sand-monolith.jpg"
+  #   art: "/assets/images/portfolio/sand-monolith.webp"
   #   roles:
   #     - mixing_engineer
   #     - mastering_engineer
@@ -36,14 +36,14 @@ portfolio:
   - title: "Diluvio Universale"
     artist: "Effigy"
     link: "https://open.spotify.com/intl-it/track/0RoBYgHyFp9LPrKx3TIiht?si=01369732a33d447e"
-    art: "/assets/images/portfolio/diluvio-universale.jpg"
+    art: "/assets/images/portfolio/diluvio-universale.webp"
     roles:
       - drummer_studio
 
   - title: "Burning Up the Road"
     artist: "P(a)fanner's Flying Donkeys"
     link: "https://www.youtube.com/playlist?list=OLAK5uy_kgQTGWypvgzALFBIWpA0NkdYvICgP5o3Q"
-    art: "/assets/images/portfolio/burning-up-the-road.jpg"
+    art: "/assets/images/portfolio/burning-up-the-road.webp"
     roles:
       - drummer_studio
       - producer
@@ -54,7 +54,7 @@ portfolio:
   - title: "Hikikomori"
     artist: "Effigy"
     link: "https://www.youtube.com/watch?v=TKcGxzEgjmQ"
-    art: "/assets/images/portfolio/effigy-hikikomori-lars.jpg"
+    art: "/assets/images/portfolio/effigy-hikikomori-lars.webp"
     roles:
       - mixing_engineer
       - recording_engineer
@@ -63,7 +63,7 @@ portfolio:
   - title: "Lars"
     artist: "Effigy"
     link: "https://www.youtube.com/watch?v=caXtnjofwfI"
-    art: "/assets/images/portfolio/effigy-hikikomori-lars.jpg"
+    art: "/assets/images/portfolio/effigy-hikikomori-lars.webp"
     roles:
       - mixing_engineer
       - recording_engineer

@@ -4,7 +4,7 @@ title: "Contact"
 layout: section
 section_slug: contact
 has_detail: false
-hero_image: /assets/images/contact-background.jpg
+hero_image: /assets/images/contact-background.webp
 image_darkness: 0.55
 ---
 
